@@ -1,7 +1,7 @@
-<nav class="menu">
-  <ul>
+<nav id="nav" class="navbar navbar-default" role="navigation">
+  <ul class="nav navbar-nav">
     <?php foreach($pages->visible() AS $p): ?>
-    <li><a<?php echo ($p->isOpen()) ? ' class="active"' : '' ?> href="<?php echo $p->url() ?>"><?php echo html($p->title()) ?></a></li>
+    <li <?= ($p->isOpen()) ? ' class="active"' : '' ?>><a href="<?= $p->url() ?>"><?= html($p->title()) ?></a></li>
     <?php endforeach ?>
   </ul>
 </nav>
