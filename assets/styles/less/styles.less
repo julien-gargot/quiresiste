@@ -8,29 +8,21 @@
 /* =Layout
 -----------------------------------------------------------------------------*/
 
-#footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background-color: @navbar-default-bg;
-  .container { margin-top:@grid-gutter-width; margin-bottom: @grid-gutter-width; }
-}
 
 
 /* =Development
 -----------------------------------------------------------------------------*/
 
-#dev  { position: fixed; bottom:@grid-gutter-width; width: 100%; }
-
-#size { font-size: 10px; }
-
-@media (max-width: @screen-xs-max)                                 { #size:after { content:"Phones"; } }
-@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { #size:after { content:"Tablets"; } }
-@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { #size:after { content:"Desktops"; } }
-@media (min-width: @screen-lg-min)                                 { #size:after { content:"Large Desktops"; } }
-@media (orientation: landscape)                                    { #size:before { content:"Landscape, "; } }
-@media (orientation: portrait)                                     { #size:before { content:"Portrait, ";  } }
-
-#dev .row           { text-align: center; font-size: 10px; margin-bottom:0 !important; }
-#dev .row > div     { background-color: rgba(0, 255, 255, 0.3); box-shadow: 0 0 0 1px #0FF; }
-#dev .row > div > * { background-color: rgba(255, 255, 255, 0.7); overflow: hidden; min-height: 13px; }
+#dev  {
+  font-size: 10px;
+  position: fixed; bottom:@grid-gutter-width; width: 100%;
+  @media (max-width: @screen-xs-max)                                 { #size:after { content:"Phones"; } }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { #size:after { content:"Tablets"; } }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { #size:after { content:"Desktops"; } }
+  @media (min-width: @screen-lg-min)                                 { #size:after { content:"Large Desktops"; } }
+  @media (orientation: landscape)                                    { #size:before { content:"Landscape, "; } }
+  @media (orientation: portrait)                                     { #size:before { content:"Portrait, ";  } }
+  .row           { text-align: center; font-size: 10px; margin-bottom:0 !important; }
+  .row > div     { background-color: rgba(0, 255, 255, 0.3); box-shadow: 0 0 0 1px #0FF; }
+  .row > div > * { background-color: rgba(255, 255, 255, 0.7); overflow: hidden; min-height: 13px; }
+}
