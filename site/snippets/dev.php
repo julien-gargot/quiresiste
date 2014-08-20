@@ -1,6 +1,6 @@
 <!-- TOOLS -->
 <div id="dev">
-  <div class="container">
+  <div class="container-fluid">
     <div id="grid" class="row">
       <? for ($i=1; $i < 13; $i++) : ?>
       <div class="col col-xs-1"><div class="in"><?= $i ?></div></div>
