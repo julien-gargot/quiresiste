@@ -3,3 +3,5 @@ config.codekit
 panel/
 site/panel
 docs
+content
+thumbs
