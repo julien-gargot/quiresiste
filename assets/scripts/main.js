@@ -17,13 +17,13 @@ jQuery(document).ready(function($) {
 
 function initTabs() {
 
-  $('section:nth-of-type(2) article [class*="container"]').each(function(i) {
+  $('section:nth-of-type(2) article').each(function(i) {
 
     var _this = $(this);
     var $navtabs = $('<nav>').append( $('<ul>').addClass('nav nav-tabs').attr('role','tablist') );
     var $tabs = $('<div>').attr('class','tab-content');
 
-    $('h3', _this).each(function(j) {
+    $('[class*="container"] h3', _this).each(function(j) {
 
       var id = 'tab-'+i+'-'+j;
 
@@ -53,8 +53,9 @@ function initTabs() {
 
     });
 
-    _this.append( $navtabs );
-    _this.append( $tabs );
+    $('[class*="container"]',_this)
+      .append( $navtabs )
+      .append( $tabs );
 
   });
 
