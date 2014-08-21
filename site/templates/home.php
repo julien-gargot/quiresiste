@@ -2,11 +2,19 @@
 
 <section id="content">
 
-  <article class="snap"><div class="in"><div class="container-fluid">
+  <article><div class="in"><div class="container-fluid">
 
     <h1><?= html($page->title()) ?></h1>
 
     <?= kirbytext($page->text()) ?>
+
+    <ol>
+      <?php foreach($pages->find('qui-resiste')->children()->visible() as $article): ?>
+      <li>
+        <h2><a href="#<?= $article->uid() ?>"><?= html($article->title()) ?></a></h2>
+      </li>
+      <?php endforeach ?>
+    <ol>
 
   </div></div></article>
 
@@ -16,7 +24,7 @@
 <!--
   <?php foreach($pages->find('qui-resiste')->children()->visible() as $article): ?>
 
-  --><article class="snap"><div class="in"><div class="container-fluid">
+  --><article id="<?= $article->uid() ?>"><div class="in"><div class="container-fluid">
 
     <h2><?= html($article->title()) ?></h2>
 
@@ -30,7 +38,7 @@
 
 <section id="abc">
 
-  <article class="snap"><div class="in"><div class="container-fluid">
+  <article><div class="in"><div class="container-fluid">
 
     <?php $abc = $pages->find('abecedaire') ?>
 

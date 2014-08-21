@@ -7,9 +7,11 @@ jQuery(document).ready(function($) {
 
   if( supportsTouch ) {
     $(window).on('touchstart', scrollYStart);
-    $(window).on('touchend touchcancel',  scrollYStop);
+    // $(window).on('touchend touchcancel',  scrollYStop);
+    $(window).on('scrollstop', {latency: 650}, scrollYStop);
     $('body > section').on('touchstart', scrollXStart);
-    $('body > section').on('touchend touchcancel',  scrollXStop);
+    // $('body > section').on('touchend touchcancel',  scrollXStop);
+    $('body > section').on('scrollstop', {latency: 650}, scrollXStop);
   }
   else {
     $(window).on('scrollstart', {latency: 2000}, scrollYStart);
@@ -21,19 +23,23 @@ jQuery(document).ready(function($) {
 });
 
 function scrollYStart(event) {
-  // console.log("vertical start", event);
-  startY = $(event.currentTarget).scrollTop();
+  if( ontastic ) {
+    console.log("vertical start", event);
+    startY = $(event.currentTarget).scrollTop();
+  }
 }
 
 function scrollYStop(event) {
 
-  // console.log("vertical stop", event);
+  console.log("vertical stop ("+ontastic+")", event);
 
-  if( ontastic ) {
+  var value  = $(event.currentTarget).scrollTop();
+  var diff = Math.abs(startY - value);
+
+  if( ontastic && diff > 0 ) {
 
     ontastic = false;
 
-    var value  = $(event.currentTarget).scrollTop();
     var total  = $(event.currentTarget).height();
     var ratio  = Math.round( value / total );
 
@@ -46,21 +52,28 @@ function scrollYStop(event) {
 }
 
 function scrollXStart(event) {
-  // console.log("horizontal start", event);
-  startX = $(event.currentTarget).scrollLeft();
+  if( ontastic ) {
+    console.log("horizontal start", event);
+    startX = $(event.currentTarget).scrollLeft();
+  }
 }
 
 function scrollXStop(event) {
 
-  // console.log("horizontal stop", event);
+  console.log("horizontal stop ("+ontastic+")", event);
 
-  if( ontastic ) {
+  var value  = $(event.currentTarget).scrollLeft();
+  var diff = Math.abs(startX - value);
+
+  if( ontastic && diff > 0 ) {
 
     ontastic = false;
 
-    var value  = $(event.currentTarget).scrollLeft();
     var total  = $(event.currentTarget).width();
     var ratio  = Math.round( value / total );
+    console.log("value",value);
+    console.log("total",total);
+    console.log("ratio",ratio);
 
     $(event.currentTarget).animate({ scrollLeft: ratio * total +"px" }, 500, "swing", function() {
       setTimeout(function(){ontastic = true;},500);
