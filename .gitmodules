@@ -4,9 +4,6 @@
 [submodule "assets/libraries/bootstrap"]
 	path = assets/libraries/bootstrap
 	url = https://github.com/twbs/bootstrap.git
-[submodule "assets/libraries/TouchSwipe"]
-	path = assets/libraries/TouchSwipe
-	url = https://github.com/mattbryson/TouchSwipe-Jquery-Plugin.git
 [submodule "assets/libraries/scrollstop"]
 	path = assets/libraries/scrollstop
 	url = https://github.com/ssorallen/jquery-scrollstop.git
