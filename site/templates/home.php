@@ -2,7 +2,7 @@
 
 <section id="content">
 
-  <article><div class="in"><div class="container-fluid">
+  <article class="snap"><div class="in"><div class="container-fluid">
 
     <h1><?= html($page->title()) ?></h1>
 
@@ -16,7 +16,7 @@
 <!--
   <?php foreach($pages->find('qui-resiste')->children()->visible() as $article): ?>
 
-  --><article><div class="in"><div class="container-fluid">
+  --><article class="snap"><div class="in"><div class="container-fluid">
 
     <h2><?= html($article->title()) ?></h2>
 
@@ -30,7 +30,7 @@
 
 <section id="abc">
 
-  <article><div class="in"><div class="container-fluid">
+  <article class="snap"><div class="in"><div class="container-fluid">
 
     <?php $abc = $pages->find('abecedaire') ?>
 

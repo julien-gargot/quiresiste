@@ -5,7 +5,8 @@
   <?php snippet('dev') ?>
 
   <?=  js('assets/libraries/jquery.min.js') ?>
-  <?=  js('assets/libraries/jquery.scrollevents.js') ?>
+  <?=  js('assets/libraries/scrollstop/jquery.scrollstop.js') ?>
+  <?=  js('assets/libraries/scrollsnap/src/jquery.easing.min.js') ?>
   <?=  js('assets/libraries/bootstrap/dist/js/bootstrap.min.js') ?>
   <?=  js('assets/scripts/main.js') ?>
 
