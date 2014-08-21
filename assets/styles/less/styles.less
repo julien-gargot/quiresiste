@@ -37,12 +37,13 @@ body {
 
         position: absolute;
         top: 0; right: 0; bottom: 0; left: 0;
-        margin: @grid-gutter-width;
-        padding: @grid-gutter-width;
         overflow: auto;
+        margin: @grid-gutter-width;
         border: @font-size-base solid red;
 
+        > .container,
         > .container-fluid {
+
 
 
         }
@@ -52,6 +53,10 @@ body {
     }
 
   }
+
+  > section:first-of-type > article > .in { margin: @grid-gutter-width @grid-gutter-width 0 @grid-gutter-width; border-bottom:0px transparent; }
+  > section:nth-of-type(2) > article > .in { margin: 0 @grid-gutter-width @grid-gutter-width @grid-gutter-width; border-top:0px transparent; }
+  > section:nth-of-type(3) > article > .in { border-color: transparent; }
 
 }
 
