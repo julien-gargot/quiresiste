@@ -11,6 +11,7 @@
 
 html, body { position: relative; width: 100%; height: 100%; }
 
+// Screen grid system. You do not want to change it.
 body {
 
   overflow-x: hidden; -webkit-overflow-scrolling: touch;
@@ -41,13 +42,6 @@ body {
         margin: @grid-gutter-width;
         border: @font-size-base solid red;
 
-        > .container,
-        > .container-fluid {
-
-
-
-        }
-
       }
 
     }
@@ -60,6 +54,17 @@ body {
 
 }
 
+
+.container,
+.container-fluid {
+  // Work here for theming content.
+
+  .row {
+
+    > section { float: none; display: inline-block; vertical-align: top; }
+  }
+
+}
 
 /* =Development
 -----------------------------------------------------------------------------*/
