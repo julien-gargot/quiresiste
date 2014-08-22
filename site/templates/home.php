@@ -30,6 +30,9 @@
 
     <?= kirbytext($article->text()) ?>
 
+    <h3>Informations</h3>
+    <?= kirbytext($article->informations()) ?>
+
   </div></div></article><!--
 
   <?php endforeach ?>
