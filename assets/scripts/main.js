@@ -27,7 +27,7 @@ function initTabs() {
 
       var id = 'tab-'+i+'-'+j;
 
-      var $tab = $('<div>').attr('id',id).addClass('tab-pane');
+      var $tab = $('<div>').attr('id',id).addClass('tab-pane fade');
 
       var $a = $('<li>').append(
         $('<a>').attr({
@@ -38,7 +38,7 @@ function initTabs() {
       );
 
       if( j==0 ) {
-        $tab.addClass('active');
+        $tab.addClass('active in');
         $a.addClass('active');
       }
 
@@ -64,12 +64,48 @@ function initTabs() {
 
 function initScroll() {
   if( supportsTouch ) {
-    $(window).on('touchstart', scrollYStart);
-    // $(window).on('scroll', scrollYStop);
-    $(window).on('touchend touchcancel', scrollYStop);
-    $('body > section').on('touchstart', scrollXStart);
-    // $('body > section').on('scroll',scrollXStop);
-    $('body > section').on('touchend touchcancel', scrollXStop);
+    // $(window).on('touchstart', scrollYStart);
+    // // $(window).on('scroll', scrollYStop);
+    // $(window).on('touchend touchcancel', scrollYStop);
+    // $('body > section').on('touchstart', scrollXStart);
+    // // $('body > section').on('scroll',scrollXStop);
+    // $('body > section').on('touchend touchcancel', scrollXStop);
+
+
+      var posx, posy, ix, iy, dx, dy = 0;
+      var stepx = $('article').width();
+      var stepy = $('article').height();
+      var s = 100;
+
+      $(window).on({
+        'touchstart': function(event) {
+          ix = event.originalEvent.pageX;
+          posx = $('#qui').scrollLeft();
+          iy = event.originalEvent.pageY;
+          posy = $('body').scrollTop();
+        },
+        'touchmove': function(event) {
+          event.preventDefault();
+          dx = ix - event.originalEvent.pageX;
+          dy = iy - event.originalEvent.pageY;
+        },
+        'touchend': function(event) {
+
+          if( $(event.target).parents('#qui').length > 0 ) {
+            if( dx > s )
+              $('#qui').animate({ scrollLeft: posx + stepx +"px" }, 200, "swing");
+            else if( dx < -s )
+              $('#qui').animate({ scrollLeft: posx - stepx +"px" }, 200, "swing");
+          }
+
+          if( dy > s )
+            $('html, body').animate({ scrollTop: posy + stepy +"px" }, 200, "swing");
+          else if( dy < -s )
+            $('html, body').animate({ scrollTop: posy - stepy +"px" }, 200, "swing");
+        }
+      });
+
+
   }
   else {
     $(window).on('scrollstart', {latency: 2000}, scrollYStart);
