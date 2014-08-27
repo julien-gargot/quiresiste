@@ -1,5 +1,7 @@
 @import "bootstrap.less";
 
+@Red-line-color : #FF3300;
+
 
 /* =Import the fonts
 -----------------------------------------------------------------------------*/
@@ -12,6 +14,16 @@
 /* =Typography
 -----------------------------------------------------------------------------*/
 
+h1, h2, h3 {margin-top: 0px; margin-bottom: 0px;}
+h1,h2,h3,p,a,a:hover{color:black; text-decoration:none;}
+
+
+h1 {font-family:"ITCFranklinGothicStd-DmCp"; i {font-family:"ITCFranklinGothicStd-DmCpIt";}}
+h2 { font-family: "ITCFranklinGothicStd-Hvy";}
+h3 { font-family: "ITCFranklinGothicStd-Dm";}
+p {font-family:"ITCFranklinGothicStd-Med" ;}
+
+li {list-style-type:none;}
 
 
 
@@ -44,6 +56,7 @@ body {
       white-space: normal;
       position: relative; width: 100%; height: 100%;
 
+      /* Removed for now
       > .in {
 
         position: absolute;
@@ -53,6 +66,7 @@ body {
         border: @font-size-base solid red;
 
       }
+      */
 
     }
 
@@ -76,10 +90,94 @@ body {
 
 }
 
+/* =Background blocs
+-----------------------------------------------------------------------------*/
+
+
+
+  .content{ .container-red-line {
+                          position: absolute;
+                          width: 100%;
+                          height:100%;
+                          bottom:0%;
+                          top: 20%;
+                            #red-line{
+                              position: relative;
+                              border : 43px solid @Red-line-color;
+                              border-bottom : none;
+                              width: 80%;
+                              height: 100%;
+                        }
+                    }
+                }
+
+    #qui{ .container-red-line {
+                          background-color: black;
+                          position: absolute;
+                          width: 100%;
+                          height:100%;
+                            #red-line{
+                              position: relative;
+                              border : 43px solid @Red-line-color;
+                              border-top : none;
+                              width: 80%;
+                              height: 80%;
+                        }
+                    }
+                }
+
+/* =button
+-----------------------------------------------------------------------------*/
+
+
+.box-shadow-button(@size) {-moz-box-shadow: 6px 6px #000000;
+  -webkit-box-shadow: @size @size #000000;
+  box-shadow: @size @size #000000;
+  width:108px;
+  height:90px;}
+
+.button-link {
+  text-transform: uppercase;  
+  border: solid 3px black;
+  font-weight: bold;
+  padding: 3px 3px 3px 3px;
+  background-color: none;
+  .box-shadow-button(6px);
+  h1 {font-size: 15px;margin-top: -5px;}
+  h2 {font-size: 45px;margin-top: -10px;}
+  overflow:hidden;
+  margin-top: 20px;
+      &::first-line{
+        margin-top:0px;
+      }
+      &:active{  
+        position: relative;
+        margin-left: 6px;
+        top: 6px;
+        .box-shadow-button(0px);
+      }
+}
+
+#menu .col-sm-4 {
+  min-width:120px;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* =Development
 -----------------------------------------------------------------------------*/
+/* Removed for now
+
 body > section > article { box-shadow: 0px 0px 0px 1px #F0F inset; }
-body > section > article > .in { box-shadow: 0px 0px 0px 1px #0FF inset; }
+body > section > article > .in { box-shadow: 0px 0px 0px 1px #0FF inset; } */
 
 
 #dev  {
@@ -96,3 +194,5 @@ body > section > article > .in { box-shadow: 0px 0px 0px 1px #0FF inset; }
   .row > div     { background-color: rgba(0, 255, 255, 0.3); box-shadow: 0 0 0 1px #0FF; }
   .row > div > * { background-color: rgba(255, 255, 255, 0.7); overflow: hidden; min-height: 13px; }
 }
+
+

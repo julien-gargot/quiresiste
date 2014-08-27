@@ -1,30 +1,53 @@
 <?php snippet('header') ?>
 
-<section id="content">
+<section class="content" id="menu">
+
+  <div class="container-red-line">
+        <div class="container-fluid" id="red-line">
+        </div>
+  </div>
 
   <article><div class="in"><div class="container-fluid">
 
-    <h1><?= html($page->title()) ?></h1>
+    <div class="row">
+      <div class="col-sm-6">
+            <h1><?= html($page->title()) ?></h1>
 
-    <?= kirbytext($page->text()) ?>
+            <?= kirbytext($page->text()) ?>
 
-    <ol>
-      <?php foreach($pages->find('qui-resiste')->children()->visible() as $article): ?>
-      <li>
-        <h2><a href="#<?= $article->uid() ?>"><?= html($article->title()) ?></a></h2>
-      </li>
-      <?php endforeach ?>
-    <ol>
-
+      </div>
+      <div class="col-sm-6">
+            <ol>
+              <?php foreach($pages->find('qui-resiste')->children()->visible() as $article): ?>
+              <div class="col-sm-4">
+              <li>
+                <a href="#<?= $article->uid() ?>"><div class="button-link"><h2><?= html($article->numero()) ?></h2><h1><?= html($article->title()) ?></h1></div></a>
+              </li>
+              </div>
+              <?php endforeach ?>
+            </div>
+            <ol>
+        </div>
+      </div>
   </div></div></article>
 
 </section>
 
 <section id="qui">
+
+ <div class="container-red-line">
+        <div class="container-fluid" id="red-line">
+        </div>
+  </div>
+
+
+
 <!--
   <?php foreach($pages->find('qui-resiste')->children()->visible() as $article): ?>
 
-  --><article id="<?= $article->uid() ?>"><div class="in"><div class="container-fluid">
+  --><article id="<?= $article->uid() ?>">
+
+  <div class="in"><div class="container-fluid">
 
     <h2><?= html($article->title()) ?></h2>
 

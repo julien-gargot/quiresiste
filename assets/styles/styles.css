@@ -6215,6 +6215,39 @@ button.close {
 -----------------------------------------------------------------------------*/
 /* =Typography
 -----------------------------------------------------------------------------*/
+h1,
+h2,
+h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+h1,
+h2,
+h3,
+p,
+a,
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+h1 {
+  font-family: "ITCFranklinGothicStd-DmCp";
+}
+h1 i {
+  font-family: "ITCFranklinGothicStd-DmCpIt";
+}
+h2 {
+  font-family: "ITCFranklinGothicStd-Hvy";
+}
+h3 {
+  font-family: "ITCFranklinGothicStd-Dm";
+}
+p {
+  font-family: "ITCFranklinGothicStd-Med";
+}
+li {
+  list-style-type: none;
+}
 /* =Layout
 -----------------------------------------------------------------------------*/
 html,
@@ -6257,16 +6290,17 @@ body > section > article {
   position: relative;
   width: 100%;
   height: 100%;
-}
-body > section > article > .in {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: auto;
-  margin: 30px;
-  border: 14px solid #ff0000;
+  /* Removed for now
+      > .in {
+
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        overflow: auto;
+        margin: @grid-gutter-width;
+        border: @font-size-base solid red;
+
+      }
+      */
 }
 body > section:first-of-type > article > .in {
   margin: 30px 30px 0 30px;
@@ -6285,14 +6319,81 @@ body > section:nth-of-type(3) > article > .in {
   display: inline-block;
   vertical-align: top;
 }
+/* =Background blocs
+-----------------------------------------------------------------------------*/
+.content .container-red-line {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0%;
+  top: 20%;
+}
+.content .container-red-line #red-line {
+  position: relative;
+  border: 43px solid #ff3300;
+  border-bottom: none;
+  width: 80%;
+  height: 100%;
+}
+#qui .container-red-line {
+  background-color: black;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#qui .container-red-line #red-line {
+  position: relative;
+  border: 43px solid #ff3300;
+  border-top: none;
+  width: 80%;
+  height: 80%;
+}
+/* =button
+-----------------------------------------------------------------------------*/
+.button-link {
+  text-transform: uppercase;
+  border: solid 3px black;
+  font-weight: bold;
+  padding: 3px 3px 3px 3px;
+  background-color: none;
+  -moz-box-shadow: 6px 6px #000000;
+  -webkit-box-shadow: 6px 6px #000000;
+  box-shadow: 6px 6px #000000;
+  width: 108px;
+  height: 90px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+.button-link h1 {
+  font-size: 15px;
+  margin-top: -5px;
+}
+.button-link h2 {
+  font-size: 45px;
+  margin-top: -10px;
+}
+.button-link::first-line {
+  margin-top: 0px;
+}
+.button-link:active {
+  position: relative;
+  margin-left: 6px;
+  top: 6px;
+  -moz-box-shadow: 6px 6px #000000;
+  -webkit-box-shadow: 0px 0px #000000;
+  box-shadow: 0px 0px #000000;
+  width: 108px;
+  height: 90px;
+}
+#menu .col-sm-4 {
+  min-width: 120px;
+}
 /* =Development
 -----------------------------------------------------------------------------*/
-body > section > article {
-  box-shadow: 0px 0px 0px 1px #F0F inset;
-}
-body > section > article > .in {
-  box-shadow: 0px 0px 0px 1px #0FF inset;
-}
+/* Removed for now
+
+body > section > article { box-shadow: 0px 0px 0px 1px #F0F inset; }
+body > section > article > .in { box-shadow: 0px 0px 0px 1px #0FF inset; } */
 #dev {
   display: none;
   font-size: 10px;
