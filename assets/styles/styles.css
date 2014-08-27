@@ -6232,6 +6232,8 @@ a:hover {
 }
 h1 {
   font-family: "ITCFranklinGothicStd-DmCp";
+  text-align: center;
+  font-size: 50px;
 }
 h1 i {
   font-family: "ITCFranklinGothicStd-DmCpIt";
@@ -6240,7 +6242,7 @@ h2 {
   font-family: "ITCFranklinGothicStd-Hvy";
 }
 h3 {
-  font-family: "ITCFranklinGothicStd-Dm";
+  font-family: "ITCFranklinGothicStd-Demi";
 }
 p {
   font-family: "ITCFranklinGothicStd-Med";
@@ -6321,6 +6323,18 @@ body > section:nth-of-type(3) > article > .in {
 }
 /* =Background blocs
 -----------------------------------------------------------------------------*/
+#logoQR {
+  width: 100%;
+}
+#logoQR img {
+  width: 100%;
+  height: auto;
+}
+#conteneur-image {
+  position: fixed;
+  z-index: -1;
+  overflow: hidden;
+}
 .content .container-red-line {
   position: absolute;
   width: 100%;
@@ -6334,6 +6348,7 @@ body > section:nth-of-type(3) > article > .in {
   border-bottom: none;
   width: 80%;
   height: 100%;
+  opacity: 0.8;
 }
 #qui .container-red-line {
   background-color: black;
@@ -6350,7 +6365,7 @@ body > section:nth-of-type(3) > article > .in {
 }
 /* =button
 -----------------------------------------------------------------------------*/
-.button-link {
+#box-grid .button-link {
   text-transform: uppercase;
   border: solid 3px black;
   font-weight: bold;
@@ -6362,20 +6377,20 @@ body > section:nth-of-type(3) > article > .in {
   width: 108px;
   height: 90px;
   overflow: hidden;
-  margin-top: 20px;
 }
-.button-link h1 {
+#box-grid .button-link h1 {
   font-size: 15px;
   margin-top: -5px;
+  text-align: left;
 }
-.button-link h2 {
+#box-grid .button-link h2 {
   font-size: 45px;
   margin-top: -10px;
 }
-.button-link::first-line {
+#box-grid .button-link::first-line {
   margin-top: 0px;
 }
-.button-link:active {
+#box-grid .button-link:active {
   position: relative;
   margin-left: 6px;
   top: 6px;
@@ -6385,8 +6400,14 @@ body > section:nth-of-type(3) > article > .in {
   width: 108px;
   height: 90px;
 }
-#menu .col-sm-4 {
+#box-grid .col-sm-4 {
   min-width: 120px;
+  margin-top: 20px;
+}
+#box-grid .col-sm-4:first-child,
+#box-grid .col-sm-4:nth-child(2),
+#box-grid .col-sm-4:nth-child(3) {
+  margin-top: 0px;
 }
 /* =Development
 -----------------------------------------------------------------------------*/

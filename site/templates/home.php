@@ -2,6 +2,8 @@
 
 <section class="content" id="menu">
 
+<div id="conteneur-image"><img src="assets/images/BACKGROUND_yo.jpg" width="6300" height="5609" id="bgimg"></div>
+
   <div class="container-red-line">
         <div class="container-fluid" id="red-line">
         </div>
@@ -11,12 +13,24 @@
 
     <div class="row">
       <div class="col-sm-6">
+          <div class="col-sm-12" id="logoQR">
+            <img src="assets/images/titreQuiresiste.png"></img>
+          </div>  
+          <div class="col-sm-12">
             <h1><?= html($page->title()) ?></h1>
-
-            <?= kirbytext($page->text()) ?>
+          </div>
+          <div class="col-sm-4">
+            <h3>Introduction</h3>
+          </div>
+          <div class="col-sm-4">
+            <h3>Tuto</h3>
+          </div>
+          <div class="col-sm-4">
+            <h3>Crédits</h3>
+          </div>
 
       </div>
-      <div class="col-sm-6">
+      <div class="col-sm-6" id="box-grid">
             <ol>
               <?php foreach($pages->find('qui-resiste')->children()->visible() as $article): ?>
               <div class="col-sm-4">

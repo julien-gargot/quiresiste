@@ -18,9 +18,9 @@ h1, h2, h3 {margin-top: 0px; margin-bottom: 0px;}
 h1,h2,h3,p,a,a:hover{color:black; text-decoration:none;}
 
 
-h1 {font-family:"ITCFranklinGothicStd-DmCp"; i {font-family:"ITCFranklinGothicStd-DmCpIt";}}
+h1 {font-family:"ITCFranklinGothicStd-DmCp"; i {font-family:"ITCFranklinGothicStd-DmCpIt";} text-align: center; font-size: 50px;}
 h2 { font-family: "ITCFranklinGothicStd-Hvy";}
-h3 { font-family: "ITCFranklinGothicStd-Dm";}
+h3 { font-family: "ITCFranklinGothicStd-Demi";}
 p {font-family:"ITCFranklinGothicStd-Med" ;}
 
 li {list-style-type:none;}
@@ -93,7 +93,15 @@ body {
 /* =Background blocs
 -----------------------------------------------------------------------------*/
 
+  #logoQR {
+    width: 100%;
+    img{
+      width: 100%;
+      height:auto;
+    }
+    }
 
+  #conteneur-image{position:fixed; z-index:-1; overflow:hidden;}
 
   .content{ .container-red-line {
                           position: absolute;
@@ -107,11 +115,12 @@ body {
                               border-bottom : none;
                               width: 80%;
                               height: 100%;
+                              opacity: 0.8;
                         }
                     }
                 }
 
-    #qui{ .container-red-line {
+  #qui{ .container-red-line {
                           background-color: black;
                           position: absolute;
                           width: 100%;
@@ -129,7 +138,7 @@ body {
 /* =button
 -----------------------------------------------------------------------------*/
 
-
+#box-grid {
 .box-shadow-button(@size) {-moz-box-shadow: 6px 6px #000000;
   -webkit-box-shadow: @size @size #000000;
   box-shadow: @size @size #000000;
@@ -143,10 +152,9 @@ body {
   padding: 3px 3px 3px 3px;
   background-color: none;
   .box-shadow-button(6px);
-  h1 {font-size: 15px;margin-top: -5px;}
+  h1 {font-size: 15px;margin-top: -5px; text-align: left;}
   h2 {font-size: 45px;margin-top: -10px;}
   overflow:hidden;
-  margin-top: 20px;
       &::first-line{
         margin-top:0px;
       }
@@ -157,9 +165,11 @@ body {
         .box-shadow-button(0px);
       }
 }
-
-#menu .col-sm-4 {
+.col-sm-4 {
   min-width:120px;
+  margin-top: 20px;
+  &:first-child, &:nth-child(2), &:nth-child(3) {margin-top:0px;}
+}
 }
 
 

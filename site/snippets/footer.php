@@ -10,6 +10,7 @@
   <?=  js('assets/libraries/bootstrap/dist/js/bootstrap.min.js') ?>
   <?=  js('http://dev/Development/iscroll/build/iscroll.js') ?>
   <?=  js('assets/scripts/main.js') ?>
+  <?=  js('assets/scripts/resize-background.js') ?>
 
 </body>
 
