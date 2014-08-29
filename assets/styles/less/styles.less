@@ -1,4 +1,5 @@
 @import "bootstrap.less";
+@import "variables.less";
 @Red-line-color : #FF3300;
 
 
@@ -62,19 +63,6 @@ body {
       vertical-align: top;
       white-space: normal;
       position: relative; width: 100%; height: 100%;
-
-      /* Removed for now
-      > .in {
-
-        position: absolute;
-        top: 0; right: 0; bottom: 0; left: 0;
-        overflow: auto;
-        margin: @grid-gutter-width;
-        border: @font-size-base solid red;
-
-      }
-      */
-
     }
 
   }
@@ -155,36 +143,27 @@ body {
 
 /* =button
 -----------------------------------------------------------------------------*/
+#panel-soustitre .button-link {
+  .design-button-link(2px, 4px, black, 3px);
+   width: 100px;
+  text-align: center;
+  &:first-child{float: right;}
+}
 
 #box-grid {
 max-width: 450px;
-.box-shadow-button(@size) {-moz-box-shadow: 6px 6px #000000;
-  -webkit-box-shadow: @size @size #000000;
-  box-shadow: @size @size #000000;
-  width:108px;
-  height:90px;
-  
-  }
-
 .button-link {
-  text-transform: uppercase;  
-  border: solid 3px black;
-  padding: 3px 3px 3px 3px;
-  background-color: none;
-  .box-shadow-button(6px);
+  .design-button-link(3px, 6px, black, 6px);
+  width:108px;
+  height: 90px;
   h4{margin-top: -5px; text-align: left;}
   h2 {font-size: 45px;margin-top: -10px;}
-  overflow:hidden;
       &::first-line{
         margin-top:0px;
       }
-      &:active{  
-        position: relative;
-        margin-left: 6px;
-        top: 6px;
-        .box-shadow-button(0px);
-      }
 }
+
+
 .col-sm-4 {
   min-width:120px;
   margin-top: 20px;
@@ -192,53 +171,20 @@ max-width: 450px;
 }
 }
 
-
-/* .nav-tabs > li > a, .nav-tabs > li:active > a, .nav-tabs > li.active > a{.border-top-radius(0); background-color: none; }*/
-
- .nav-tabs {
-  border: 0px solid white;
-  > li {
-    float: left;
-    // Make the list-items overlay the bottom border
-    margin-bottom: 0px;
-
-    // Actual tabs (as links)
-    > a {
-      margin-right: 2px;
-      border: 3px solid white;
-      border-radius: 0 0 0 0;
-      &:hover {
-        border-color: white white white white;
-      }
-    }
-
-    // Active state, and its :hover to override normal :hover
-    &.active > a {
-      &,
-      &:hover,
-      &:focus {
-        color: black;
-        background-color: transparent;
-        border: 3px solid white;
-        cursor: default;
-      }
-    }
-  }
-  // pulling this in mainly for less shorthand
-  &.nav-justified {
-    .nav-justified();
-    .nav-tabs-justified();
-  }
+#menu {
+  .design_button (black, black)
 }
+
+
+#qui {
+  .design_button (white, white)
+}
+
+
 
 
 /* =Development
 -----------------------------------------------------------------------------*/
-/* Removed for now
-
-body > section > article { box-shadow: 0px 0px 0px 1px #F0F inset; }
-body > section > article > .in { box-shadow: 0px 0px 0px 1px #0FF inset; } */
-
 
 #dev  {
   display: none;

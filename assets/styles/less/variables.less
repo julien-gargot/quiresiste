@@ -1,0 +1,85 @@
+.box-shadow-button(@size, @color) {-moz-box-shadow: 6px 6px @color;
+  -webkit-box-shadow: @size @size @color;
+  box-shadow: @size @size @color;
+  }
+
+.design-button-link(@border-width, @border-shadow, @border-color, @decalage) {
+  text-transform: uppercase;
+  border: solid @border-width @border-color;
+  font-weight: bold;
+  padding: 3px 3px 3px 3px;
+  background-color: transparent;
+  overflow:hidden;
+  -moz-box-shadow: @border-shadow @border-shadow @border-color;
+  -webkit-box-shadow: @border-shadow @border-shadow @border-color;
+  box-shadow: @border-shadow @border-shadow @border-color;
+    &:hover{
+    color:@border-color;
+  }
+
+  &:active{
+    position: relative;
+    color:@border-color;
+    margin-left: @decalage;
+    top:@decalage;
+    -moz-box-shadow: 0px 0px @border-color;
+    -webkit-box-shadow: 0px 0px @border-color;
+     ox-shadow: 0px 0px @border-color;
+  }
+}
+
+
+/*--------------------Bouton Nav tag--------------------*/
+
+.design_button (@color-shadow, @color-border) {
+  .nav > li > a {
+        position: relative;
+        display: block;
+        padding: 3px 7px;
+        }
+
+ .nav-tabs {
+  border: 0px solid @color-border;
+  text-transform: uppercase;
+  > li {
+    float: left;
+    margin-bottom: 20px;
+    margin-right: 20px;
+
+    > a {
+      margin-right: 2px;
+      border: 1.5px solid @color-border;
+      border-radius: 0 0 0 0;
+      .box-shadow-button(3px, @color-shadow);
+      &:hover {
+        border-color: @color-border @color-border @color-border @color-border;
+        background-color: transparent;
+
+      }
+    }
+
+    // Active state, and its :hover to override normal :hover
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        border: 1.5px solid white;
+        cursor: default;
+        position: relative;
+        margin-left: 6px;
+        top: 6px;
+        .box-shadow-button(0px, @color-shadow);
+      }
+    }
+  }
+  // pulling this in mainly for less shorthand
+  &.nav-justified {
+    .nav-justified();
+    .nav-tabs-justified();
+  }
+}
+}
+
+/*--------------------Btn--------------------*/
+

@@ -3,6 +3,8 @@
 @import "webfont/franklin-Demi-Condensed-Italic/styles.css";
 @import "webfont/franklin-Heavy/styles.css";
 @import "webfont/franklin-Medium/styles.css";
+/*--------------------Bouton Nav tag--------------------*/
+/*--------------------Btn--------------------*/
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -6327,17 +6329,6 @@ body > section > article {
   position: relative;
   width: 100%;
   height: 100%;
-  /* Removed for now
-      > .in {
-
-        position: absolute;
-        top: 0; right: 0; bottom: 0; left: 0;
-        overflow: auto;
-        margin: @grid-gutter-width;
-        border: @font-size-base solid red;
-
-      }
-      */
 }
 body > section:first-of-type > article > .in {
   margin: 30px 30px 0 30px;
@@ -6408,20 +6399,61 @@ body > section:nth-of-type(3) > article > .in {
 }
 /* =button
 -----------------------------------------------------------------------------*/
+#panel-soustitre .button-link {
+  text-transform: uppercase;
+  border: solid 2px #000000;
+  font-weight: bold;
+  padding: 3px 3px 3px 3px;
+  background-color: transparent;
+  overflow: hidden;
+  -moz-box-shadow: 4px 4px #000000;
+  -webkit-box-shadow: 4px 4px #000000;
+  box-shadow: 4px 4px #000000;
+  width: 100px;
+  text-align: center;
+}
+#panel-soustitre .button-link:hover {
+  color: #000000;
+}
+#panel-soustitre .button-link:active {
+  position: relative;
+  color: #000000;
+  margin-left: 3px;
+  top: 3px;
+  -moz-box-shadow: 0px 0px #000000;
+  -webkit-box-shadow: 0px 0px #000000;
+  ox-shadow: 0px 0px #000000;
+}
+#panel-soustitre .button-link:first-child {
+  float: right;
+}
 #box-grid {
   max-width: 450px;
 }
 #box-grid .button-link {
   text-transform: uppercase;
-  border: solid 3px black;
+  border: solid 3px #000000;
+  font-weight: bold;
   padding: 3px 3px 3px 3px;
-  background-color: none;
+  background-color: transparent;
+  overflow: hidden;
   -moz-box-shadow: 6px 6px #000000;
   -webkit-box-shadow: 6px 6px #000000;
   box-shadow: 6px 6px #000000;
   width: 108px;
   height: 90px;
-  overflow: hidden;
+}
+#box-grid .button-link:hover {
+  color: #000000;
+}
+#box-grid .button-link:active {
+  position: relative;
+  color: #000000;
+  margin-left: 6px;
+  top: 6px;
+  -moz-box-shadow: 0px 0px #000000;
+  -webkit-box-shadow: 0px 0px #000000;
+  ox-shadow: 0px 0px #000000;
 }
 #box-grid .button-link h4 {
   margin-top: -5px;
@@ -6434,16 +6466,6 @@ body > section:nth-of-type(3) > article > .in {
 #box-grid .button-link::first-line {
   margin-top: 0px;
 }
-#box-grid .button-link:active {
-  position: relative;
-  margin-left: 6px;
-  top: 6px;
-  -moz-box-shadow: 6px 6px #000000;
-  -webkit-box-shadow: 0px 0px #000000;
-  box-shadow: 0px 0px #000000;
-  width: 108px;
-  height: 90px;
-}
 #box-grid .col-sm-4 {
   min-width: 120px;
   margin-top: 20px;
@@ -6453,80 +6475,174 @@ body > section:nth-of-type(3) > article > .in {
 #box-grid .col-sm-4:nth-child(3) {
   margin-top: 0px;
 }
-/* .nav-tabs > li > a, .nav-tabs > li:active > a, .nav-tabs > li.active > a{.border-top-radius(0); background-color: none; }*/
-.nav-tabs {
-  border: 0px solid white;
+#menu .nav > li > a {
+  position: relative;
+  display: block;
+  padding: 3px 7px;
 }
-.nav-tabs > li {
+#menu .nav-tabs {
+  border: 0px solid #000000;
+  text-transform: uppercase;
+}
+#menu .nav-tabs > li {
   float: left;
-  margin-bottom: 0px;
+  margin-bottom: 20px;
+  margin-right: 20px;
 }
-.nav-tabs > li > a {
+#menu .nav-tabs > li > a {
   margin-right: 2px;
-  border: 3px solid white;
+  border: 1.5px solid #000000;
   border-radius: 0 0 0 0;
+  -moz-box-shadow: 6px 6px #000000;
+  -webkit-box-shadow: 3px 3px #000000;
+  box-shadow: 3px 3px #000000;
 }
-.nav-tabs > li > a:hover {
-  border-color: white white white white;
-}
-.nav-tabs > li.active > a,
-.nav-tabs > li.active > a:hover,
-.nav-tabs > li.active > a:focus {
-  color: black;
+#menu .nav-tabs > li > a:hover {
+  border-color: #000000 #000000 #000000 #000000;
   background-color: transparent;
-  border: 3px solid white;
-  cursor: default;
 }
-.nav-tabs.nav-justified {
+#menu .nav-tabs > li.active > a,
+#menu .nav-tabs > li.active > a:hover,
+#menu .nav-tabs > li.active > a:focus {
+  background-color: transparent;
+  border: 1.5px solid white;
+  cursor: default;
+  position: relative;
+  margin-left: 6px;
+  top: 6px;
+  -moz-box-shadow: 6px 6px #000000;
+  -webkit-box-shadow: 0px 0px #000000;
+  box-shadow: 0px 0px #000000;
+}
+#menu .nav-tabs.nav-justified {
   width: 100%;
   border-bottom: 0;
 }
-.nav-tabs.nav-justified > li {
+#menu .nav-tabs.nav-justified > li {
   float: none;
 }
-.nav-tabs.nav-justified > li > a {
+#menu .nav-tabs.nav-justified > li > a {
   text-align: center;
   margin-bottom: 5px;
 }
-.nav-tabs.nav-justified > .dropdown .dropdown-menu {
+#menu .nav-tabs.nav-justified > .dropdown .dropdown-menu {
   top: auto;
   left: auto;
 }
 @media (min-width: 768px) {
-  .nav-tabs.nav-justified > li {
+  #menu .nav-tabs.nav-justified > li {
     display: table-cell;
     width: 1%;
   }
-  .nav-tabs.nav-justified > li > a {
+  #menu .nav-tabs.nav-justified > li > a {
     margin-bottom: 0;
   }
 }
-.nav-tabs.nav-justified > li > a {
+#menu .nav-tabs.nav-justified > li > a {
   margin-right: 0;
   border-radius: 4px;
 }
-.nav-tabs.nav-justified > .active > a,
-.nav-tabs.nav-justified > .active > a:hover,
-.nav-tabs.nav-justified > .active > a:focus {
+#menu .nav-tabs.nav-justified > .active > a,
+#menu .nav-tabs.nav-justified > .active > a:hover,
+#menu .nav-tabs.nav-justified > .active > a:focus {
   border: 1px solid #dddddd;
 }
 @media (min-width: 768px) {
-  .nav-tabs.nav-justified > li > a {
+  #menu .nav-tabs.nav-justified > li > a {
     border-bottom: 1px solid #dddddd;
     border-radius: 4px 4px 0 0;
   }
-  .nav-tabs.nav-justified > .active > a,
-  .nav-tabs.nav-justified > .active > a:hover,
-  .nav-tabs.nav-justified > .active > a:focus {
+  #menu .nav-tabs.nav-justified > .active > a,
+  #menu .nav-tabs.nav-justified > .active > a:hover,
+  #menu .nav-tabs.nav-justified > .active > a:focus {
+    border-bottom-color: #ffffff;
+  }
+}
+#qui .nav > li > a {
+  position: relative;
+  display: block;
+  padding: 3px 7px;
+}
+#qui .nav-tabs {
+  border: 0px solid #ffffff;
+  text-transform: uppercase;
+}
+#qui .nav-tabs > li {
+  float: left;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+#qui .nav-tabs > li > a {
+  margin-right: 2px;
+  border: 1.5px solid #ffffff;
+  border-radius: 0 0 0 0;
+  -moz-box-shadow: 6px 6px #ffffff;
+  -webkit-box-shadow: 3px 3px #ffffff;
+  box-shadow: 3px 3px #ffffff;
+}
+#qui .nav-tabs > li > a:hover {
+  border-color: #ffffff #ffffff #ffffff #ffffff;
+  background-color: transparent;
+}
+#qui .nav-tabs > li.active > a,
+#qui .nav-tabs > li.active > a:hover,
+#qui .nav-tabs > li.active > a:focus {
+  background-color: transparent;
+  border: 1.5px solid white;
+  cursor: default;
+  position: relative;
+  margin-left: 6px;
+  top: 6px;
+  -moz-box-shadow: 6px 6px #ffffff;
+  -webkit-box-shadow: 0px 0px #ffffff;
+  box-shadow: 0px 0px #ffffff;
+}
+#qui .nav-tabs.nav-justified {
+  width: 100%;
+  border-bottom: 0;
+}
+#qui .nav-tabs.nav-justified > li {
+  float: none;
+}
+#qui .nav-tabs.nav-justified > li > a {
+  text-align: center;
+  margin-bottom: 5px;
+}
+#qui .nav-tabs.nav-justified > .dropdown .dropdown-menu {
+  top: auto;
+  left: auto;
+}
+@media (min-width: 768px) {
+  #qui .nav-tabs.nav-justified > li {
+    display: table-cell;
+    width: 1%;
+  }
+  #qui .nav-tabs.nav-justified > li > a {
+    margin-bottom: 0;
+  }
+}
+#qui .nav-tabs.nav-justified > li > a {
+  margin-right: 0;
+  border-radius: 4px;
+}
+#qui .nav-tabs.nav-justified > .active > a,
+#qui .nav-tabs.nav-justified > .active > a:hover,
+#qui .nav-tabs.nav-justified > .active > a:focus {
+  border: 1px solid #dddddd;
+}
+@media (min-width: 768px) {
+  #qui .nav-tabs.nav-justified > li > a {
+    border-bottom: 1px solid #dddddd;
+    border-radius: 4px 4px 0 0;
+  }
+  #qui .nav-tabs.nav-justified > .active > a,
+  #qui .nav-tabs.nav-justified > .active > a:hover,
+  #qui .nav-tabs.nav-justified > .active > a:focus {
     border-bottom-color: #ffffff;
   }
 }
 /* =Development
 -----------------------------------------------------------------------------*/
-/* Removed for now
-
-body > section > article { box-shadow: 0px 0px 0px 1px #F0F inset; }
-body > section > article > .in { box-shadow: 0px 0px 0px 1px #0FF inset; } */
 #dev {
   display: none;
   font-size: 10px;

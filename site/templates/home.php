@@ -19,16 +19,49 @@
           <div class="col-sm-12">
             <h1><?= html($page->title()) ?></h1>
           </div>
-          <div class="col-sm-4">
-            <h3>Introduction</h3>
-          </div>
-          <div class="col-sm-4">
-            <h3>Tuto</h3>
-          </div>
-          <div class="col-sm-4">
-            <h3>Crédits</h3>
-          </div>
+          <div class="row" id="panel-soustitre">
+                    <div class="col-sm-6" id="panel-soustitre">
+                        <a data-toggle="modal" href="#infos"><div class="button-link"><h4>Introduction</h4></div></a>
 
+                    <div class="modal" id="infos">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">x</button>
+                            <h4 class="modal-title">introduction</h4>
+                          </div>
+                          <div class="modal-body">
+                            Le Tigre (Panthera tigris) est un mammifère carnivore de la famille des félidés...
+                          </div>
+                          <div class="modal-footer">
+                            <button class="btn btn-info" data-dismiss="modal">Fermer</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    <div class="col-sm-6" id="panel-soustitre">
+                        <a data-toggle="modal" href="#infos"><div class="button-link"><h4>Tutorial</h4></div></a>
+
+                    <div class="modal" id="infos">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">x</button>
+                            <h4 class="modal-title">introduction</h4>
+                          </div>
+                          <div class="modal-body">
+                            Le Tigre (Panthera tigris) est un mammifère carnivore de la famille des félidés...
+                          </div>
+                          <div class="modal-footer">
+                            <button class="btn btn-info" data-dismiss="modal">Fermer</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+          </div>
       </div>
       <div class="col-sm-6" id="box-grid">
             <ol>
@@ -65,7 +98,7 @@
     <div class="col-sm-6">
     <h1>N°<?= html($article->numero()) ?> <?= html($article->title()) ?></h1>
     </div>
-    <div class="panel-QR col-sm-6"><?= kirbytext($article->text()) ?></div>
+    <div class="panel-QR col-sm-4"><?= kirbytext($article->text()) ?></div>
     
     
     
