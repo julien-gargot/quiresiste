@@ -6217,23 +6217,26 @@ button.close {
 -----------------------------------------------------------------------------*/
 h1,
 h2,
-h3 {
+h3,
+h4 {
   margin-top: 0px;
   margin-bottom: 0px;
 }
 h1,
 h2,
 h3,
+h4,
 p,
 a,
+li,
 a:hover {
-  color: black;
   text-decoration: none;
 }
 h1 {
   font-family: "ITCFranklinGothicStd-DmCp";
   text-align: center;
   font-size: 50px;
+  text-transform: uppercase;
 }
 h1 i {
   font-family: "ITCFranklinGothicStd-DmCpIt";
@@ -6244,11 +6247,43 @@ h2 {
 h3 {
   font-family: "ITCFranklinGothicStd-Demi";
 }
-p {
+h4 {
+  font-family: "ITCFranklinGothicStd-DmCp";
+  font-size: 15px;
+}
+h4 i {
+  font-family: "ITCFranklinGothicStd-DmCpIt";
+}
+p,
+li {
   font-family: "ITCFranklinGothicStd-Med";
 }
 li {
   list-style-type: none;
+}
+/* =menu
+        ---------------------------------------------------------------------*/
+#menu h1,
+#menu h2,
+#menu h3,
+#menu h4,
+#menu p,
+#menu a,
+#menu li,
+#menu a:hover {
+  color: black;
+}
+/* =Qui résiste
+        ---------------------------------------------------------------------*/
+#qui h1,
+#qui h2,
+#qui h3,
+#qui h4,
+#qui p,
+#qui a,
+#qui li,
+#qui a:hover {
+  color: white;
 }
 /* =Layout
 -----------------------------------------------------------------------------*/
@@ -6351,7 +6386,6 @@ body > section:nth-of-type(3) > article > .in {
   opacity: 0.8;
 }
 #qui .container-red-line {
-  background-color: black;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -6363,12 +6397,23 @@ body > section:nth-of-type(3) > article > .in {
   width: 80%;
   height: 80%;
 }
+#qui {
+  background-color: #000000;
+}
+#qui .in {
+  margin-top: 20px;
+}
+#abc {
+  background-color: #000000;
+}
 /* =button
 -----------------------------------------------------------------------------*/
+#box-grid {
+  max-width: 450px;
+}
 #box-grid .button-link {
   text-transform: uppercase;
   border: solid 3px black;
-  font-weight: bold;
   padding: 3px 3px 3px 3px;
   background-color: none;
   -moz-box-shadow: 6px 6px #000000;
@@ -6378,8 +6423,7 @@ body > section:nth-of-type(3) > article > .in {
   height: 90px;
   overflow: hidden;
 }
-#box-grid .button-link h1 {
-  font-size: 15px;
+#box-grid .button-link h4 {
   margin-top: -5px;
   text-align: left;
 }
@@ -6408,6 +6452,74 @@ body > section:nth-of-type(3) > article > .in {
 #box-grid .col-sm-4:nth-child(2),
 #box-grid .col-sm-4:nth-child(3) {
   margin-top: 0px;
+}
+/* .nav-tabs > li > a, .nav-tabs > li:active > a, .nav-tabs > li.active > a{.border-top-radius(0); background-color: none; }*/
+.nav-tabs {
+  border: 0px solid white;
+}
+.nav-tabs > li {
+  float: left;
+  margin-bottom: 0px;
+}
+.nav-tabs > li > a {
+  margin-right: 2px;
+  border: 3px solid white;
+  border-radius: 0 0 0 0;
+}
+.nav-tabs > li > a:hover {
+  border-color: white white white white;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: black;
+  background-color: transparent;
+  border: 3px solid white;
+  cursor: default;
+}
+.nav-tabs.nav-justified {
+  width: 100%;
+  border-bottom: 0;
+}
+.nav-tabs.nav-justified > li {
+  float: none;
+}
+.nav-tabs.nav-justified > li > a {
+  text-align: center;
+  margin-bottom: 5px;
+}
+.nav-tabs.nav-justified > .dropdown .dropdown-menu {
+  top: auto;
+  left: auto;
+}
+@media (min-width: 768px) {
+  .nav-tabs.nav-justified > li {
+    display: table-cell;
+    width: 1%;
+  }
+  .nav-tabs.nav-justified > li > a {
+    margin-bottom: 0;
+  }
+}
+.nav-tabs.nav-justified > li > a {
+  margin-right: 0;
+  border-radius: 4px;
+}
+.nav-tabs.nav-justified > .active > a,
+.nav-tabs.nav-justified > .active > a:hover,
+.nav-tabs.nav-justified > .active > a:focus {
+  border: 1px solid #dddddd;
+}
+@media (min-width: 768px) {
+  .nav-tabs.nav-justified > li > a {
+    border-bottom: 1px solid #dddddd;
+    border-radius: 4px 4px 0 0;
+  }
+  .nav-tabs.nav-justified > .active > a,
+  .nav-tabs.nav-justified > .active > a:hover,
+  .nav-tabs.nav-justified > .active > a:focus {
+    border-bottom-color: #ffffff;
+  }
 }
 /* =Development
 -----------------------------------------------------------------------------*/

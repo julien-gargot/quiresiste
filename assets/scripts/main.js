@@ -23,7 +23,8 @@ function initTabs() {
     var $navtabs = $('<nav>').append( $('<ul>').addClass('nav nav-tabs').attr('role','tablist') );
     var $tabs = $('<div>').attr('class','tab-content');
 
-    $('[class*="container"] h3', _this).each(function(j) {
+
+    $('[class*="container"] h4', _this).each(function(j) {
 
       var id = 'tab-'+i+'-'+j;
 
@@ -43,7 +44,7 @@ function initTabs() {
       }
 
       $(this)
-        .nextUntil( "h3" )
+        .nextUntil( "h4" )
         .appendTo( $tab );
 
       $('ul', $navtabs).append( $a );
@@ -53,7 +54,7 @@ function initTabs() {
 
     });
 
-    $('[class*="container"]',_this)
+    $('[class*="panel-QR"]',_this)
       .append( $navtabs )
       .append( $tabs );
 

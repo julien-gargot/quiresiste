@@ -60,16 +60,15 @@
   <?php foreach($pages->find('qui-resiste')->children()->visible() as $article): ?>
 -->
   <article id="<?= $article->uid() ?>">
-  <div class="in"><div class="container-fluid">
-    
-    <div class="col-sm-6">
-    <h1>N°<?= html($article->numero()) ?> <?= html($article->title()) ?></h1>
-    </div>
-    <div class="panel-QR col-sm-6"><?= kirbytext($article->text()) ?></div>
-    
-    
-    
-  </div></div></article><!--
+  <div class="in"><div class="row">
+          <div class="col-sm-6">
+          <h1>N°<?= html($article->numero()) ?> <?= html($article->title()) ?></h1>
+          </div>
+              <?= kirbytext($article->text()) ?>
+              <h3>Informations</h3>
+              <?= kirbytext($article->informations()) ?>
+</div>
+</div></article><!--
 
   <?php endforeach ?>
 -->
