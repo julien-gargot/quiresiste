@@ -4,17 +4,29 @@
 
   <article><div class="in"><div class="container-fluid">
 
-    <h1><?= html($page->title()) ?></h1>
+    <div class="row">
 
-    <?= kirbytext($page->text()) ?>
+      <div class="col-sm-6 tabulize">
 
-    <ol>
-      <?php foreach($pages->find('qui-resiste')->children()->visible() as $article): ?>
-      <li>
-        <h2><a href="#<?= $article->uid() ?>"><?= html($article->title()) ?></a></h2>
-      </li>
-      <?php endforeach ?>
-    <ol>
+        <h1><?= html($page->title()) ?></h1>
+
+        <?= kirbytext($page->text()) ?>
+
+      </div>
+
+      <div class="col-sm-6">
+
+        <ol id="qui-grid" class="row">
+          <?php foreach($pages->find('qui-resiste')->children()->visible() as $article): ?>
+          <li class="col-sm-4">
+            <h2><a href="#<?= $article->uid() ?>"><?= html($article->title()) ?></a></h2>
+          </li>
+          <?php endforeach ?>
+        <ol>
+
+      </div>
+
+    </div>
 
   </div></div></article>
 
@@ -24,7 +36,7 @@
 <!--
   <?php foreach($pages->find('qui-resiste')->children()->visible() as $article): ?>
 
-  --><article id="<?= $article->uid() ?>"><div class="in"><div class="container-fluid">
+  --><article id="<?= $article->uid() ?>" class="tabulize"><div class="in"><div class="container-fluid">
 
     <h2><?= html($article->title()) ?></h2>
 
@@ -41,7 +53,7 @@
 
 <section id="abc">
 
-  <article><div class="in"><div class="container-fluid">
+  <article><div class="in"><div class="container">
 
     <?php $abc = $pages->find('abecedaire') ?>
 

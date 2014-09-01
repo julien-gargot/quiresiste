@@ -8,19 +8,66 @@ var leaveTouch = true;
 jQuery(document).ready(function($) {
 
   // TABS
-  initTabs();
+  initTabsHome();
+  initTabsQuiResiste();
 
   // SCROLL
   initScroll();
 
 });
 
-function initTabs() {
+function initTabsHome() {
 
-  $('section:nth-of-type(2) article').each(function(i) {
+  $('#content .tabulize').each(function(i) {
 
     var _this = $(this);
-    var $navtabs = $('<nav>').append( $('<ul>').addClass('nav nav-tabs').attr('role','tablist') );
+    var $navtabs = $('<nav>').append( $('<ul>').addClass('nav nav-pills').attr('role','tablist') );
+    var $tabs = $('<div>').attr('class','tab-content');
+
+    $('h3', _this).each(function(j) {
+
+      var id = 'tab-'+i+'-'+j;
+
+      var $tab = $('<div>').attr('id',id).addClass('tab-pane fade');
+
+      var $a = $('<li>').append(
+        $('<a>').attr({
+          'href':'#'+id,
+          'role':"tab",
+          'data-toggle':"tab"
+        }).addClass('btn btn-default').html( $(this).html() )
+      );
+
+      if( j==0 ) {
+        $tab.addClass('active in');
+        $a.addClass('active');
+      }
+
+      $(this)
+        .nextUntil( "h3" )
+        .appendTo( $tab );
+
+      $('ul', $navtabs).append( $a );
+      $tabs.append( $tab );
+
+      $(this).remove();
+
+    });
+
+    $(_this)
+      .append( $navtabs )
+      .append( $tabs );
+
+  });
+
+}
+
+function initTabsQuiResiste() {
+
+  $('#qui article.tabulize').each(function(i) {
+
+    var _this = $(this);
+    var $navtabs = $('<nav>').append( $('<ul>').addClass('nav nav-pills').attr('role','tablist') );
     var $tabs = $('<div>').attr('class','tab-content');
 
     $('[class*="container"] h3', _this).each(function(j) {
@@ -34,7 +81,7 @@ function initTabs() {
           'href':'#'+id,
           'role':"tab",
           'data-toggle':"tab"
-        }).html( $(this).html() )
+        }).addClass('btn btn-default').html( $(this).html() )
       );
 
       if( j==0 ) {

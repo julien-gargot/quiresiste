@@ -18,6 +18,6 @@
 
 <body>
 
-  <header id="header">
-    <h1><a href="<?= url() ?>"><img src="<?= url('assets/images/logo.png') ?>" width="115" height="41" alt="<?= html($site->title()) ?>" /></a></h1>
+  <header id="header" class="col-xs-6 col-sm-5 col-md-3 col-xs-offset-1 col-md-offset-1">
+    <h1><a href="<?= url() ?>"><img src="<?= url('assets/images/logo.png') ?>" alt="<?= html($site->title()) ?>" /></a></h1>
   </header>

@@ -3,25 +3,52 @@
 /* =Typography
 -----------------------------------------------------------------------------*/
 
+a { text-transform: uppercase; }
+a:hover, a:active, a:focus { outline:0!important; }
 
+.btn-default {
+  border:1px solid @btn-default-border;
+  .box-shadow(3px 3px 0px 0px @btn-default-border);
+
+  .active > &,
+  &:hover,
+  &:active {
+    color:@link-hover-color;
+    .translate(3px,3px);
+    .box-shadow(0px 0px 0px 0px @btn-default-border);
+  }
+}
+
+#qui-grid {
+  h2 {
+    font-size: @font-size-small;
+  }
+}
 
 /* =Layout
 -----------------------------------------------------------------------------*/
-@header-heigth:      0px;
-@outer-space:        100px;
-@outer-border-size:  ceil((@outer-space * 0.5));
-@outer-border-color: rgba(255, 0, 0, 0.5);
+@header-heigth:      auto;
+@footer-heigth:      0px;
+@outer-space:        ceil((@grid-gutter-width * 3));
+@outer-border-width: ceil((@outer-space * 0.5));
+@outer-border-color: rgba(255, 51, 0, 0.8);
 
 html, body { position: relative; width: 100%; height: 100%; }
 
-// Screen grid system. You do not want to change it.
+/*
+ * Screen grid system. You do not want to change it.
+ */
 body {
 
   overflow-x: hidden; -webkit-overflow-scrolling: touch;
 
-  > header, > footer { position: fixed; right: 0; left: 0; height: @header-heigth; z-index: 1; background-color: rgba(122, 122, 122, 0.5); overflow: hidden; }
-  > header { top: 0;}
-  > footer { bottom: 0; }
+  > header, > footer { position: absolute!important; right: 0; left: 0; z-index: 1; overflow: hidden; }
+
+  > header {
+    top: 0; height: @header-heigth;
+    h1 { margin-top: ceil((@grid-gutter-width * 1.5)); .translate(-20px,0); }
+    img { display: block; width:100%; height: auto; }
+  }
 
   > section {
 
@@ -42,30 +69,64 @@ body {
         position: absolute;
         top: 0; right: 0; bottom: 0; left: 0;
         overflow: auto;
-        margin: @outer-space;
-        border: @outer-border-size solid @outer-border-color;
-
+        margin: ceil((@outer-space * 1.5)) @outer-space @outer-space @outer-space;
+        border: @outer-border-width solid @outer-border-color;
+        @media (max-width: @screen-xs-max) {
+          margin: ceil((@outer-space * 0.5));
+          border-width: ceil((@outer-border-width * 0.5));
+        }
       }
 
     }
 
   }
 
-  > section:first-of-type  > article > .in { margin-bottom: 0; border-bottom:0px transparent; }
-  > section:nth-of-type(2) > article > .in { margin-top: 0; border-top:0px transparent; }
-  > section:nth-of-type(3) > article > .in { border-color: transparent; }
+  > section:first-of-type {
+    background: url('../images/background.jpg') center no-repeat fixed;
+    background-size: cover;
+    > article > .in { margin-bottom: 0; border-bottom:0px transparent; overflow: visible; }
+    .container, .container-fluid { margin-left:-@outer-space; margin-right:-@outer-space; }
+  }
 
+  > section:nth-of-type(2) {
+    > article > .in { margin-top: 0; border-top:0px transparent; }
+  }
+
+  > section:nth-of-type(3) {
+    > article > .in { border-color: transparent; }
+  }
+
+  > footer { bottom: 0; height: @footer-heigth;  }
 }
 
 
 .container,
 .container-fluid {
-  // Work here for theming content.
-
   .row {
-
     > section { float: none; display: inline-block; vertical-align: top; }
+  }
 
+  /*
+   * Work here for theming content.
+   */
+
+  // Buttons
+  .nav-pills > li > .btn {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .nav-pills > li + li {
+    margin-left: 10px;
+  }
+  #qui-grid {
+    padding: 0; margin-bottom: 0;
+    list-style: none;
+    li {
+      h2 {
+        margin:0;
+        .btn-default;
+      }
+    }
   }
 
 }
