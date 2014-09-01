@@ -28,9 +28,9 @@ li {list-style-type:none;}
         ---------------------------------------------------------------------*/
 #menu {h1,h2,h3,h4,p,a,li,a:hover{color:black;}}
         
-        /* =Qui résiste
+        /* =Qui résiste, ABC
         ---------------------------------------------------------------------*/
-#qui {h1,h2,h3,h4,p,a,li,a:hover{color:white;}}
+#qui, #abc {h1,h2,h3,h4,p,a,li,a:hover{color:white;}}
 
 
 
@@ -130,14 +130,17 @@ body {
                 }
 
 #qui {
-  background-color: black
-}
-#qui .in {
+  background-color: black;
+  .in {
   margin-top: 20px;
+}
 }
 
 #abc {
-  background-color: black
+  background-color: black;
+  .in{
+    margin-top:20px;
+  }
 }
 
 
@@ -178,6 +181,13 @@ max-width: 450px;
 
 #qui {
   .design_button (white, white)
+}
+
+#abc .button-link {
+  .design-button-link(2px, 4px, white, 3px);
+  float:left;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 

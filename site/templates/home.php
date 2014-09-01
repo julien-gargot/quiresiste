@@ -116,18 +116,22 @@
 
     <?php $alphabetise = alphabetise($pages->find('abecedaire')->children()->visible()->sortby('title'), array('key' => 'title')); ?>
 
-    <h2><?= $abc->title() ?></h2>
+    <h1><?= $abc->title() ?></h1>
 
     <div class="row"><!--
       <?php foreach($alphabetise as $letter => $items): ?>
-      --><section class="col-xs-12  col-sm-4  col-md-3  col-lg-2">
+      --><section class="col-xs-12  col-sm-3  col-md-3  col-lg-2">
         <h3><?php echo strtoupper($letter) ?></h3>
         <ul>
           <?php foreach($items as $item): ?>
           <li>
             <a href="<?php echo $item->url()?>">
-              <?php echo $item->title()?>
-              <?= kirbytext($item->text()) ?>
+              <div class="button-link">
+                <h4>
+                  <?php echo $item->title()?>
+                  <?= kirbytext($item->text()) ?>
+                </h4>
+            </div>
             </a>
           </li>
           <?php endforeach ?>
