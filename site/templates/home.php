@@ -83,25 +83,27 @@
 <section id="qui">
 
 <!-- /!\ pb fond noir -->
-  <div class="container-red-line">
-        <div class="container-fluid" id="red-line">
-        </div>
-  </div> 
+
 
 
 <!--
   <?php foreach($pages->find('qui-resiste')->children()->visible() as $article): ?>
 -->
   <article id="<?= $article->uid() ?>">
-  <div class="in"><div class="container-fluid">
+  
+  <div class="container-red-line">
+    <div class="container-fluid" id="red-line">
+  </div></div>
+     
+  <div class="in">
+
+    <div class="container-fluid">
     
     <div class="col-sm-6">
     <h1>N°<?= html($article->numero()) ?> <?= html($article->title()) ?></h1>
     </div>
     <div class="panel-QR col-sm-4"><?= kirbytext($article->text()) ?></div>
-    
-    
-    
+          
   </div></div></article><!--
 
   <?php endforeach ?>
