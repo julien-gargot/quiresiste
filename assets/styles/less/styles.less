@@ -7,7 +7,10 @@
 
 /* =Layout
 -----------------------------------------------------------------------------*/
-@header-heigth: 0px;
+@header-heigth:      0px;
+@outer-space:        100px;
+@outer-border-size:  ceil((@outer-space * 0.5));
+@outer-border-color: rgba(255, 0, 0, 0.5);
 
 html, body { position: relative; width: 100%; height: 100%; }
 
@@ -39,8 +42,8 @@ body {
         position: absolute;
         top: 0; right: 0; bottom: 0; left: 0;
         overflow: auto;
-        margin: @grid-gutter-width;
-        border: @font-size-base solid red;
+        margin: @outer-space;
+        border: @outer-border-size solid @outer-border-color;
 
       }
 
@@ -48,8 +51,8 @@ body {
 
   }
 
-  > section:first-of-type > article > .in { margin: @grid-gutter-width @grid-gutter-width 0 @grid-gutter-width; border-bottom:0px transparent; }
-  > section:nth-of-type(2) > article > .in { margin: 0 @grid-gutter-width @grid-gutter-width @grid-gutter-width; border-top:0px transparent; }
+  > section:first-of-type  > article > .in { margin-bottom: 0; border-bottom:0px transparent; }
+  > section:nth-of-type(2) > article > .in { margin-top: 0; border-top:0px transparent; }
   > section:nth-of-type(3) > article > .in { border-color: transparent; }
 
 }
@@ -62,6 +65,7 @@ body {
   .row {
 
     > section { float: none; display: inline-block; vertical-align: top; }
+
   }
 
 }
