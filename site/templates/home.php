@@ -1,32 +1,29 @@
 <?php snippet('header') ?>
 
-<section id="content">
+<section id="home">
 
   <article><div class="in"><div class="container-fluid">
 
-    <div class="row">
+    <header>
 
-      <div class="col-sm-6 tabulize">
+      <h1><?= html($page->title()) ?></h1>
 
-        <h1><?= html($page->title()) ?></h1>
+      <?= kirbytext($page->text()) ?>
 
-        <?= kirbytext($page->text()) ?>
+    </header>
 
-      </div>
+    <nav>
 
-      <div class="col-sm-6">
+      <ol class="row">
+        <?php foreach($pages->find('qui-resiste')->children()->visible() as $article): ?>
+        <li class="col-sm-4">
+          <h2><a href="#<?= $article->uid() ?>"><?= html($article->title()) ?></a></h2>
+        </li>
+        <?php endforeach ?>
+      <ol>
 
-        <ol id="qui-grid" class="row">
-          <?php foreach($pages->find('qui-resiste')->children()->visible() as $article): ?>
-          <li class="col-sm-4">
-            <h2><a href="#<?= $article->uid() ?>"><?= html($article->title()) ?></a></h2>
-          </li>
-          <?php endforeach ?>
-        <ol>
+    </nav>
 
-      </div>
-
-    </div>
 
   </div></div></article>
 
@@ -36,14 +33,39 @@
 <!--
   <?php foreach($pages->find('qui-resiste')->children()->visible() as $article): ?>
 
-  --><article id="<?= $article->uid() ?>" class="tabulize"><div class="in"><div class="container-fluid">
+  --><article id="<?= $article->uid() ?>"><div class="in"><div class="container-fluid">
 
-    <h2><?= html($article->title()) ?></h2>
+        <header>
 
-    <?= kirbytext($article->text()) ?>
+          <h2><?= html($article->title()) ?></h2>
 
-    <h3>Informations</h3>
-    <?= kirbytext($article->informations()) ?>
+        </header>
+
+        <section>
+
+          <?= kirbytext($article->text()) ?>
+
+          <h3>Informations</h3>
+
+          <?= kirbytext($article->informations()) ?>
+
+        </section>
+
+        <aside>
+          <ul class="nav nav-pills nav-stacked sounds">
+            <?php foreach (related($article->related()) as $related): ?>
+            <li><a href="<?php echo $related->url() ?>"><span class="glyphicon glyphicon-volume-up"></span> <?php echo html($related->title()) ?></a></li>
+            <?php endforeach ?>
+          </ul>
+          <ul class="nav nav-pills nav-stacked galleries">
+            <?php foreach ($article->children()->visible() as $gallery): ?>
+            <li><a href="<?php echo $gallery->url() ?>"><?php echo html($gallery->title()) ?></a></li>
+            <?php endforeach ?>
+          </ul>
+        </aside>
+
+      </div>
+
 
   </div></div></article><!--
 

@@ -8,7 +8,7 @@ var leaveTouch = true;
 jQuery(document).ready(function($) {
 
   // TABS
-  initTabsHome();
+  // initTabsHome();
   initTabsQuiResiste();
 
   // SCROLL
@@ -18,7 +18,7 @@ jQuery(document).ready(function($) {
 
 function initTabsHome() {
 
-  $('#content .tabulize').each(function(i) {
+  $('#home .content').each(function(i) {
 
     var _this = $(this);
     var $navtabs = $('<nav>').append( $('<ul>').addClass('nav nav-pills').attr('role','tablist') );
@@ -64,13 +64,13 @@ function initTabsHome() {
 
 function initTabsQuiResiste() {
 
-  $('#qui article.tabulize').each(function(i) {
+  $('#qui .content').each(function(i) {
 
     var _this = $(this);
     var $navtabs = $('<nav>').append( $('<ul>').addClass('nav nav-pills').attr('role','tablist') );
     var $tabs = $('<div>').attr('class','tab-content');
 
-    $('[class*="container"] h3', _this).each(function(j) {
+    $('h3', _this).each(function(j) {
 
       var id = 'tab-'+i+'-'+j;
 
@@ -81,7 +81,7 @@ function initTabsQuiResiste() {
           'href':'#'+id,
           'role':"tab",
           'data-toggle':"tab"
-        }).addClass('btn btn-default').html( $(this).html() )
+        }).addClass('btn btn-primary').html( $(this).html() )
       );
 
       if( j==0 ) {
@@ -100,7 +100,7 @@ function initTabsQuiResiste() {
 
     });
 
-    $('[class*="container"]',_this)
+    $(_this)
       .append( $navtabs )
       .append( $tabs );
 

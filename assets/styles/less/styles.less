@@ -3,26 +3,42 @@
 /* =Typography
 -----------------------------------------------------------------------------*/
 
+/*
+ * Work here to theme typography of common things.
+ */
 a { text-transform: uppercase; }
 a:hover, a:active, a:focus { outline:0!important; }
 
-.btn-default {
-  border:1px solid @btn-default-border;
-  .box-shadow(3px 3px 0px 0px @btn-default-border);
+#home {
 
-  .active > &,
-  &:hover,
-  &:active {
-    color:@link-hover-color;
-    .translate(3px,3px);
-    .box-shadow(0px 0px 0px 0px @btn-default-border);
-  }
+  /*
+   * Work here to theme typography of “home” screen.
+   */
+
+  color: black!important;
+
+  a { color: inherit; }
+
+  ol { counter-reset: quiresite; }
+  h2:before { content: counter(quiresite); display: block; font-size: @font-size-h1; }
+  h2 { counter-increment: quiresite; font-size: @font-size-small; }
+
 }
 
-#qui-grid {
-  h2 {
-    font-size: @font-size-small;
-  }
+#qui {
+
+  /*
+   * Work here to theme typography of “Qui? Résiste” screens.
+   */
+
+}
+
+#abc {
+
+  /*
+   * Work here to theme typography of “abécédaire” screen.
+   */
+
 }
 
 /* =Layout
@@ -46,7 +62,7 @@ body {
 
   > header {
     top: 0; height: @header-heigth;
-    h1 { margin-top: ceil((@grid-gutter-width * 1.5)); .translate(-20px,0); }
+    h1 { margin-top: ceil(((@outer-space * 1.5) - @outer-border-width)); margin-left: ceil((@outer-space - @outer-border-width)); }
     img { display: block; width:100%; height: auto; }
   }
 
@@ -71,10 +87,26 @@ body {
         overflow: auto;
         margin: ceil((@outer-space * 1.5)) @outer-space @outer-space @outer-space;
         border: @outer-border-width solid @outer-border-color;
+
+        // .container,
+        // .container-fluid {
+        //   margin-left: -@outer-space - @outer-border-width;
+        //   margin-right: -@outer-space - @outer-border-width;
+        // }
+
         @media (max-width: @screen-xs-max) {
           margin: ceil((@outer-space * 0.5));
           border-width: ceil((@outer-border-width * 0.5));
+
+          // .container,
+          // .container-fluid {
+          //   margin-left: ceil(((-@outer-space - @outer-border-width)*0.5));
+          //   margin-right: ceil(((-@outer-space - @outer-border-width)*0.5));
+          // }
         }
+
+
+
       }
 
     }
@@ -82,54 +114,179 @@ body {
   }
 
   > section:first-of-type {
-    background: url('../images/background.jpg') center no-repeat fixed;
-    background-size: cover;
     > article > .in { margin-bottom: 0; border-bottom:0px transparent; overflow: visible; }
-    .container, .container-fluid { margin-left:-@outer-space; margin-right:-@outer-space; }
   }
 
   > section:nth-of-type(2) {
-    > article > .in { margin-top: 0; border-top:0px transparent; }
+    > article > .in { margin-top: 0; border-top:0px transparent; overflow: visible; }
+    // .container,
+    // .container-fluid {
+    //   margin-top: @outer-space;
+    // }
   }
 
   > section:nth-of-type(3) {
-    > article > .in { border-color: transparent; }
+    > article > .in { border: 0px transparent; margin:0;
+      // .container,
+      // .container-fluid {
+      //   margin-left: 0;
+      //   margin-right: 0;
+      // }
+    }
   }
 
   > footer { bottom: 0; height: @footer-heigth;  }
 }
 
-
-.container,
-.container-fluid {
-  .row {
-    > section { float: none; display: inline-block; vertical-align: top; }
-  }
+#home {
 
   /*
-   * Work here for theming content.
+   * Work here to theme “home” screen.
    */
 
-  // Buttons
-  .nav-pills > li > .btn {
-    margin-right: 10px;
-    margin-bottom: 10px;
+  background: url('../images/background.jpg') center no-repeat fixed;
+  background-size: cover;
+
+  .container,
+  .container-fluid {
+
+    // margin-top:-@outer-space;
+
+    header {
+      position:absolute;
+      top: 0;
+      left: 0;
+      width: 400px;
+    }
+
+    nav {
+      position:absolute;
+      top: 0;
+      right: 0;
+      width: 400px;
+
+      ol {
+        padding: 0; margin-bottom: 0;
+        list-style: none;
+        li {
+          h2 {
+            margin:0;
+            .btn-default;
+          }
+        }
+      }
+
+    }
+
   }
-  .nav-pills > li + li {
-    margin-left: 10px;
-  }
-  #qui-grid {
-    padding: 0; margin-bottom: 0;
-    list-style: none;
-    li {
-      h2 {
-        margin:0;
-        .btn-default;
+}
+
+#qui {
+
+  /*
+   * Work here to theme “Qui? Résiste” screens.
+   */
+
+  .container,
+  .container-fluid {
+
+    header {
+      position:absolute;
+      top: 0;
+      left: 0;
+      width: 400px;
+    }
+
+    section {
+      position:absolute;
+      top: 0;
+      left: 50%;
+      width: 400px;
+    }
+
+    aside {
+      .sounds {
+        position:absolute;
+        bottom: -@outer-space;
+        right: -@outer-space;
+        background-color: orange;
+      }
+      .galleries {
+        li { position:absolute; }
+        li:first-of-type  {
+          top: 50%;
+          left: -@outer-space;
+          background-color: blue;
+        }
+        li:nth-of-type(2) {
+          top: 50%;
+          right: -@outer-space;
+          background-color: green;
+        }
+        li:nth-of-type(3) {
+          bottom: -@outer-space;
+          right: 50%;
+          background-color: pink;
+        }
+
       }
     }
+
   }
+}
+
+#abc {
+
+  /*
+   * Work here to theme “abécédaire” screen.
+   */
 
 }
+
+/* =Bootstrap Upgrade
+-----------------------------------------------------------------------------*/
+@btn-shadow-width:   ceil((@font-size-base * 0.5));
+@btn-shadow-x:       @btn-shadow-width;
+@btn-shadow-y:       ceil((@btn-shadow-width * 0.75));
+
+.btn-default,
+.btn-primary {
+  margin-right:  ceil((@btn-shadow-width * 2));
+  margin-bottom: ceil((@btn-shadow-width * 2));
+  border:1px solid;
+
+  .active > &,
+  &:hover,
+  &:active {
+    .translate(@btn-shadow-x,@btn-shadow-y);
+    .box-shadow(0px 0px 0px 0px transparent);
+  }
+}
+
+.btn-default {
+  border-color:@btn-default-border;
+  .box-shadow(@btn-shadow-x @btn-shadow-y 0px 0px @btn-default-border);
+}
+
+.btn-primary {
+  border-color:@btn-primary-border;
+  .box-shadow(@btn-shadow-x @btn-shadow-y 0px 0px @btn-primary-border);
+  .active > &,
+  &:hover,
+  &:active {
+    color:@btn-primary-color!important;
+  }
+}
+
+.nav-pills {
+  > li,
+  > li.active {
+    > a,
+    > a:hover,
+    > a:focus { background-color: transparent; }
+  }
+}
+
 
 /* =Development
 -----------------------------------------------------------------------------*/
@@ -138,7 +295,7 @@ body > section > article > .in { box-shadow: 0px 0px 0px 1px #0FF inset; }
 
 
 #dev  {
-  display: none;
+  // display: none;
   font-size: 10px;
   position: fixed; bottom:@grid-gutter-width; width: 100%;
   @media (max-width: @screen-xs-max)                                 { #size:after { content:"Phones"; } }
