@@ -11,6 +11,9 @@ jQuery(document).ready(function($) {
   // initTabsHome();
   initTabsQuiResiste();
 
+  //
+  initGalleries();
+
   // SCROLL
   initScroll();
 
@@ -108,6 +111,21 @@ function initTabsQuiResiste() {
 
 }
 
+function initGalleries() {
+  $('a[data-toggle="modal"]').on('click', function(event) {
+    var src =    $(this).attr('data-src');
+    var target = $(this).attr('data-target');
+    console.log(src);
+    $(target + ' iframe').attr({'src':src});
+  });
+  $('.modal').on('hidden.bs.modal', function (e) {
+    $(this).find("iframe").attr({'src':''});
+  });
+}
+
+/*
+ * SCROLL STUFF
+ */
 
 function initScroll() {
   if( supportsTouch ) {

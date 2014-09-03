@@ -20,6 +20,9 @@
           <h2><a href="#<?= $article->uid() ?>"><?= html($article->title()) ?></a></h2>
         </li>
         <?php endforeach ?>
+        <li class="col-sm-4">
+          <h2><a href="#abc"><span class="glyphicon glyphicon-volume-up"></span></a></h2>
+        </li>
       <ol>
 
     </nav>
@@ -58,9 +61,29 @@
             <?php endforeach ?>
           </ul>
           <ul class="nav nav-pills nav-stacked galleries">
+            <? $i = 0 ?>
             <?php foreach ($article->children()->visible() as $gallery): ?>
-            <li><a href="<?php echo $gallery->url() ?>"><?php echo html($gallery->title()) ?></a></li>
-            <?php endforeach ?>
+            <li>
+              <!-- Button trigger modal -->
+              <a data-toggle="modal" data-target="#gallery<?= $i ?>" data-src="<?= $gallery->url() ?>">
+                Launch demo modal
+              </a>
+
+              <!-- Modal -->
+              <div class="modal fade" id="gallery<?= $i ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <iframe frameborder="0"></iframe>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <?php $i++; endforeach ?>
           </ul>
         </aside>
 
