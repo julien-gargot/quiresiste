@@ -8,8 +8,9 @@ var leaveTouch = true;
 jQuery(document).ready(function($) {
 
   // TABS
+  initTabs();
   // initTabsHome();
-  initTabsQuiResiste();
+  // initTabsQuiResiste();
 
   //
   initGalleries();
@@ -18,6 +19,52 @@ jQuery(document).ready(function($) {
   initScroll();
 
 });
+
+function initTabs() {
+
+  $('.tabulize').each(function(i) {
+
+    var _this = $(this);
+    var $navtabs = $('<nav>').append( $('<ul>').addClass('nav nav-pills').attr('role','tablist') );
+    var $tabs = $('<div>').attr('class','tab-content');
+
+    $('h3', _this).each(function(j) {
+
+      var id = 'tab-'+i+'-'+j;
+
+      var $tab = $('<div>').attr('id',id).addClass('tab-pane fade');
+
+      var $a = $('<li>').append(
+        $('<a>').attr({
+          'href':'#'+id,
+          'role':"tab",
+          'data-toggle':"tab"
+        }).addClass('btn btn-primary').html( $(this).html() )
+      );
+
+      if( j==0 ) {
+        $tab.addClass('active in');
+        $a.addClass('active');
+      }
+
+      $(this)
+        .nextUntil( "h3" )
+        .appendTo( $tab );
+
+      $('ul', $navtabs).append( $a );
+      $tabs.append( $tab );
+
+      $(this).remove();
+
+    });
+
+    $(_this)
+      .append( $navtabs )
+      .append( $tabs );
+
+  });
+
+}
 
 function initTabsHome() {
 
@@ -67,7 +114,7 @@ function initTabsHome() {
 
 function initTabsQuiResiste() {
 
-  $('#qui .content').each(function(i) {
+  $('#qui .tabulize').each(function(i) {
 
     var _this = $(this);
     var $navtabs = $('<nav>').append( $('<ul>').addClass('nav nav-pills').attr('role','tablist') );

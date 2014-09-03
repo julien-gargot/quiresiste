@@ -4,7 +4,7 @@
 
   <article><div class="in"><div class="container-fluid">
 
-    <header>
+    <header class="tabulize">
 
       <h1><?= html($page->title()) ?></h1>
 
@@ -44,7 +44,7 @@
 
         </header>
 
-        <section>
+        <section class="tabulize">
 
           <?= kirbytext($article->text()) ?>
 
