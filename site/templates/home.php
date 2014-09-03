@@ -57,7 +57,13 @@
         <aside>
           <ul class="nav nav-pills nav-stacked sounds">
             <?php foreach (related($article->related()) as $related): ?>
-            <li><a href="<?php echo $related->url() ?>"><span class="glyphicon glyphicon-volume-up"></span> <?php echo html($related->title()) ?></a></li>
+            <li>
+              <a href=""><span class="glyphicon glyphicon-volume-up"></span> <?php echo html($related->title()) ?></a>
+              <audio controls>
+                <source src="<?php echo $related->url() ?>" type="audio/mpeg">
+                Your browser does not support this audio format.
+              </audio>
+            </li>
             <?php endforeach ?>
           </ul>
           <ul class="nav nav-pills nav-stacked galleries">
