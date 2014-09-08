@@ -46,7 +46,7 @@ a:hover, a:active, a:focus { outline:0!important; }
 -----------------------------------------------------------------------------*/
 @header-heigth:      auto;
 @footer-heigth:      0px;
-@outer-space:        ceil((@grid-gutter-width * 3));
+@outer-space:        ceil((@grid-gutter-width * 6));
 @outer-border-width: ceil((@outer-space * 0.5));
 @outer-border-color: rgba(255, 51, 0, 0.8);
 
@@ -134,23 +134,26 @@ body {
       position:absolute;
       top: 0;
       left: 0;
-      width: 400px;
+      width: 50%;
     }
 
     nav {
       position:absolute;
       top: 0;
       right: 0;
-      width: 400px;
+      width: 50%;
 
       ol {
         padding: 0; margin-bottom: 0;
         list-style: none;
         li {
+          margin-bottom: @grid-gutter-width;
           h2 {
             margin:0;
             .btn-default;
           }
+
+          &.col-sm-4:nth-child(3n+1) { clear: left; }
         }
       }
 
@@ -172,14 +175,14 @@ body {
       position:absolute;
       top: 0;
       left: 0;
-      width: 400px;
+      width: 40%;
     }
 
     section {
       position:absolute;
       top: 0;
       left: 50%;
-      width: 400px;
+      width: 60%;
     }
 
     aside {
@@ -253,8 +256,8 @@ body.abc {
 
 .btn-default,
 .btn-primary {
-  margin-right:  ceil((@btn-shadow-width * 2));
-  margin-bottom: ceil((@btn-shadow-width * 2));
+  margin-right:  ceil((@btn-shadow-width));
+  margin-bottom: ceil((@btn-shadow-width));
   border:1px solid;
 
   .active > &,
@@ -283,6 +286,7 @@ body.abc {
 .nav-pills {
   > li,
   > li.active {
+    margin: 0 @grid-gutter-width @grid-gutter-width 0;
     > a,
     > a:hover,
     > a:focus { background-color: transparent; }

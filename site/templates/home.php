@@ -16,11 +16,11 @@
 
       <ol class="row">
         <?php foreach($pages->find('qui-resiste')->children()->visible() as $article): ?>
-        <li class="col-sm-4">
+        <li class="col-xs-6 col-sm-4">
           <h2><a href="#<?= $article->uid() ?>"><?= html($article->title()) ?></a></h2>
         </li>
         <?php endforeach ?>
-        <li class="col-sm-4">
+        <li class="col-xs-6 col-sm-4">
           <h2><a href="#abc"><span class="glyphicon glyphicon-volume-up"></span></a></h2>
         </li>
       <ol>
