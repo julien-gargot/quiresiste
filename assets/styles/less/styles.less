@@ -22,7 +22,7 @@ a:hover, a:active, a:focus { outline:0!important; }
   ol { counter-reset: quiresite; }
   h2:before { content: counter(quiresite); display: block; font-size: @font-size-h1; }
   h2 { counter-increment: quiresite; font-size: @font-size-small; }
-  h2:last-of-type:before { content:""; }
+  li:last-of-type h2:before { content:""; }
 
 }
 
