@@ -8,7 +8,7 @@
 
       <h1><?= html($page->title()) ?></h1>
 
-      <?= kirbytext($page->text()) ?>
+    
 
     </header>
 

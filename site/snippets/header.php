@@ -18,6 +18,6 @@
 
 <body class="<?= $page->template() ?>">
 
-  <header id="header" class="col-xs-6 col-sm-5 col-lg-3">
+  <header id="header">
     <h1><a href="<?= url() ?>"><img src="<?= url('assets/images/logo.png') ?>" alt="<?= html($site->title()) ?>" /></a></h1>
   </header>

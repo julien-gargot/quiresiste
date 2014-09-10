@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'Franklin Gothic';
+  src: url('webfonts/webfonts/2BEE1B_0_0.eot');
+  src: url('webfonts/webfonts/2BEE1B_0_0.eot?#iefix') format('embedded-opentype'), url('webfonts/webfonts/2BEE1B_0_0.woff') format('woff'), url('webfonts/webfonts/2BEE1B_0_0.ttf') format('truetype');
+  font-weight: 100;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: 'Franklin Gothic';
+  src: url('webfonts/webfonts/2BEE1B_1_0.eot');
+  src: url('webfonts/webfonts/2BEE1B_1_0.eot?#iefix') format('embedded-opentype'), url('webfonts/webfonts/2BEE1B_1_0.woff') format('woff'), url('webfonts/webfonts/2BEE1B_1_0.ttf') format('truetype');
+  font-weight: 500;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: 'Franklin Gothic';
+  src: url('webfonts/webfonts/2BEE1B_2_0.eot');
+  src: url('webfonts/webfonts/2BEE1B_2_0.eot?#iefix') format('embedded-opentype'), url('webfonts/webfonts/2BEE1B_2_0.woff') format('woff'), url('webfonts/webfonts/2BEE1B_2_0.ttf') format('truetype');
+  font-weight: 500;
+  font-stretch: condensed;
+}

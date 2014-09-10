@@ -1,0 +1,40 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 2879003, 2014-09-08T07:30:40-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Franklin Gothic Book by URW++
+ * URL: http://www.myfonts.com/fonts/urw/franklin-gothic/t-book/
+ * 
+ * Webfont: Franklin Gothic Demi by URW++
+ * URL: http://www.myfonts.com/fonts/urw/franklin-gothic/t-demi/
+ * 
+ * Webfont: Franklin Gothic Comp Demi by URW++
+ * URL: http://www.myfonts.com/fonts/urw/franklin-gothic/t-demi-compressed/
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2879003
+ * Licensed pageviews: 10,000
+ * Webfonts copyright: (URW)++,Copyright 2006 by (URW)++ Design &amp; Development
+ * 
+ * © 2014 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/2bee1b");
+
+  
+@font-face {font-family: 'FranklinGothicURW-Boo';src: url('webfonts/2BEE1B_0_0.eot');src: url('webfonts/2BEE1B_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2BEE1B_0_0.woff') format('woff'),url('webfonts/2BEE1B_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'FranklinGothicURW-Dem';src: url('webfonts/2BEE1B_1_0.eot');src: url('webfonts/2BEE1B_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2BEE1B_1_0.woff') format('woff'),url('webfonts/2BEE1B_1_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'FranklinGothicURWCom-Dem';src: url('webfonts/2BEE1B_2_0.eot');src: url('webfonts/2BEE1B_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2BEE1B_2_0.woff') format('woff'),url('webfonts/2BEE1B_2_0.ttf') format('truetype');}
+ 

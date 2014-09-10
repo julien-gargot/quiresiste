@@ -7,7 +7,8 @@
  * Work here to theme typography of common things.
  */
 a { text-transform: uppercase; }
-a:hover, a:active, a:focus { outline:0!important; }
+a:hover, a:active, a:focus { outline:0!important;  text-decoration:none; }
+
 
 #home {
 
@@ -17,11 +18,18 @@ a:hover, a:active, a:focus { outline:0!important; }
 
   color: black!important;
 
-  a { color: inherit; }
+  a{color: inherit;}
+
+  h1 {
+   font-stretch:condensed;
+   .text-center;
+   text-transform: uppercase;
+  }
+  
 
   ol { counter-reset: quiresite; }
-  h2:before { content: counter(quiresite); display: block; font-size: @font-size-h1; }
-  h2 { counter-increment: quiresite; font-size: @font-size-small; }
+  h2:before { content: counter(quiresite); display: block; font-size: @font-size-h1; font-stretch:normal; line-height: 42px;}
+  h2 {counter-increment: quiresite; font-size: 15px; font-stretch:condensed; }
   li:last-of-type h2:before { content:""; }
 
 }
@@ -31,6 +39,13 @@ a:hover, a:active, a:focus { outline:0!important; }
   /*
    * Work here to theme typography of “Qui? Résiste” screens.
    */
+  a:hover, a:active, a:focus{color:white;}
+  h2 {
+   font-stretch:condensed;
+   .text-center;
+   text-transform: uppercase;
+   font-size: @font-size-h1;
+  }
 
 }
 
@@ -62,8 +77,9 @@ body {
   > header, > footer { position: absolute!important; right: 0; left: 0; z-index: 1; overflow: hidden; }
 
   > header {
+    width: 46%;
     top: 0; height: @header-heigth;
-    h1 { margin-top: ceil(((@outer-space * 1.5) - @outer-border-width)); margin-left: ceil((@outer-space - @outer-border-width)); }
+    h1 { margin-top: ceil((@outer-space - @outer-border-width)); margin-left: ceil((@outer-space - @outer-border-width)); }
     img { display: block; width:100%; height: auto; }
   }
 
@@ -86,7 +102,7 @@ body {
         position: absolute;
         top: 0; right: 0; bottom: 0; left: 0;
         overflow: auto;
-        margin: ceil((@outer-space * 1.5)) @outer-space @outer-space @outer-space;
+        margin: @outer-space @outer-space @outer-space @outer-space;
         border: @outer-border-width solid @outer-border-color;
 
         @media (max-width: @screen-xs-max) {
@@ -132,16 +148,16 @@ body {
 
     header {
       position:absolute;
-      top: 0;
-      left: 0;
-      width: 50%;
+      top: 77px;
+      left: -13%;
+      width: 58%;
     }
 
     nav {
       position:absolute;
-      top: 0;
-      right: 0;
-      width: 50%;
+      top: -15%;
+      right: -10%;
+      width: 55%;
 
       ol {
         padding: 0; margin-bottom: 0;
@@ -149,8 +165,12 @@ body {
         li {
           margin-bottom: @grid-gutter-width;
           h2 {
+            padding-left: 5px;
+            padding-right: 5px;
             margin:0;
             .btn-default;
+            height: 100px;
+            width:110px;
           }
 
           &.col-sm-4:nth-child(3n+1) { clear: left; }
@@ -180,9 +200,9 @@ body {
 
     section {
       position:absolute;
-      top: 0;
+      top: 5%;
       left: 50%;
-      width: 60%;
+      width: 40%;
     }
 
     aside {
@@ -198,17 +218,20 @@ body {
         li:first-of-type  {
           top: 50%;
           left: -@outer-space;
-          background-color: blue;
+          .btn-primary;
+          .button-left-side;
+          
         }
         li:nth-of-type(2) {
           top: 50%;
           right: -@outer-space;
-          background-color: green;
+          .btn-primary;
+          .rotate(-90deg);
         }
         li:nth-of-type(3) {
           bottom: -@outer-space;
           right: 50%;
-          background-color: pink;
+          .btn-primary;
         }
 
         iframe { width: 100%; height: 600px; }
@@ -258,7 +281,7 @@ body.abc {
 .btn-primary {
   margin-right:  ceil((@btn-shadow-width));
   margin-bottom: ceil((@btn-shadow-width));
-  border:1px solid;
+  border-style: solid;
 
   .active > &,
   &:hover,
@@ -269,17 +292,30 @@ body.abc {
 }
 
 .btn-default {
+  border-width: 3px;
   border-color:@btn-default-border;
   .box-shadow(@btn-shadow-x @btn-shadow-y 0px 0px @btn-default-border);
 }
 
 .btn-primary {
+  border-width: 2px;
   border-color:@btn-primary-border;
   .box-shadow(@btn-shadow-x @btn-shadow-y 0px 0px @btn-primary-border);
+  line-height: 0.3;
+
   .active > &,
   &:hover,
   &:active {
     color:@btn-primary-color!important;
+  }
+  .button-left-side{
+    .box-shadow(@btn-shadow-x -@btn-shadow-y 0px 0px @btn-primary-border);
+    .rotate(90deg);
+      &:hover, &:active {
+          .translate(@btn-shadow-x,@btn-shadow-y);
+          .rotate(90deg);
+          .box-shadow(0px 0px 0px 0px transparent);
+        }
   }
 }
 
@@ -301,7 +337,7 @@ body > section > article > .in { box-shadow: 0px 0px 0px 1px #0FF inset; }
 
 
 #dev  {
-  // display: none;
+  display: none;
   font-size: 10px;
   position: fixed; bottom:@grid-gutter-width; width: 100%;
   @media (max-width: @screen-xs-max)                                 { #size:after { content:"Phones"; } }
