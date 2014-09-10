@@ -8,6 +8,9 @@
  */
 a { text-transform: uppercase; }
 a:hover, a:active, a:focus { outline:0!important;  text-decoration:none; }
+ul li {
+  list-style-type: none; 
+}
 
 
 #home {
@@ -54,6 +57,20 @@ a:hover, a:active, a:focus { outline:0!important;  text-decoration:none; }
   /*
    * Work here to theme typography of “abécédaire” screen.
    */
+
+   .container{width:95%};
+  h2 {
+   font-stretch:condensed;
+   .text-center;
+   text-transform: uppercase;
+   font-size: @font-size-h1;
+   margin-bottom: 3%;
+  }
+  h3{
+    margin-bottom: -1em;
+    &:first-of-type{margin-top:0px;
+    }
+  }
 
 }
 
@@ -194,15 +211,23 @@ body {
     header {
       position:absolute;
       top: 0;
-      left: 0;
+      left: -6%;
       width: 40%;
     }
 
     section {
       position:absolute;
       top: 5%;
-      left: 50%;
-      width: 40%;
+      left: 39%;
+      width: 50%;
+    }
+
+    .tab-content{
+     // width: 120%;
+     // float: right;
+     // -webkit-columns: 2;
+     // -moz-columns: 2;
+     // columns: 2;
     }
 
     aside {
@@ -226,10 +251,10 @@ body {
           top: 50%;
           right: -@outer-space;
           .btn-primary;
-          .rotate(-90deg);
+          .button-right-side;
         }
         li:nth-of-type(3) {
-          bottom: -@outer-space;
+          bottom: -4%;
           right: 50%;
           .btn-primary;
         }
@@ -247,12 +272,25 @@ body {
   /*
    * Work here to theme “abécédaire” screen.
    */
+   section {
+      width: 100%;
+      -webkit-columns: 4;
+      -moz-columns: 4;
+      columns: 4;
+      li {
+        .btn-primary;
+        line-height: 1em;
+        margin-bottom: 20px;
+        display:inline-block;
+        padding: 3px 3px 3px 3px;
+      }
+   }
 
 }
 
 body.gallery,
 body.abc {
-  > header { display: none; }
+  > header { display: none;}
 }
 
 body.gallery {
@@ -312,8 +350,16 @@ body.abc {
     .box-shadow(@btn-shadow-x -@btn-shadow-y 0px 0px @btn-primary-border);
     .rotate(90deg);
       &:hover, &:active {
-          .translate(@btn-shadow-x,@btn-shadow-y);
-          .rotate(90deg);
+          .transform(rotate(90deg) translate(@btn-shadow-x,-@btn-shadow-y));
+          .box-shadow(0px 0px 0px 0px transparent);
+        }
+  }
+
+    .button-right-side{
+    .box-shadow(-@btn-shadow-x @btn-shadow-y 0px 0px @btn-primary-border);
+    .rotate(-90deg);
+      &:hover, &:active {
+          .transform(rotate(-90deg) translate(-@btn-shadow-x,@btn-shadow-y));
           .box-shadow(0px 0px 0px 0px transparent);
         }
   }

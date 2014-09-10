@@ -108,9 +108,9 @@
 
     <h2><?= $abc->title() ?></h2>
 
-    <div class="row"><!--
+    <section><!--
       <?php foreach($alphabetise as $letter => $items): ?>
-      --><section class="col-xs-12  col-sm-4  col-md-3  col-lg-2">
+      -->
         <h3><?= strtoupper($letter) ?></h3>
         <ul>
           <?php foreach($items as $item): ?>
@@ -122,9 +122,9 @@
           </li>
           <?php endforeach ?>
         </ul>
-      </section><!--
+      <!--
       <?php endforeach ?>
-    --></div>
+    --></section>
 
   </div></div></article>
 
