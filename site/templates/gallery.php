@@ -6,18 +6,18 @@
   <article id="carousel-gallery" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
-      <? $i = 0 ?>
+      <?php $i = 0 ?>
       <?php foreach($page->images() as $image): ?>
-      <li data-target="#carousel-gallery" data-slide-to="<?= $i ?>" <? if($i==0) echo 'class="active"' ?>></li>
+      <li data-target="#carousel-gallery" data-slide-to="<?= $i ?>" <?php if($i==0) echo 'class="active"' ?>></li>
       <?php $i++; endforeach ?>
     </ol>
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
-      <? $i = 0 ?>
+      <?php $i = 0 ?>
       <?php foreach($page->images() as $image): ?>
-      <figure class="item <? if($i==0) echo 'active' ?>">
-        <img src="<?php echo $image->url() ?>" alt="">
+      <figure class="item <?php if($i==0) echo 'active' ?>">
+        <img src="<?= $image->url() ?>" alt="">
         <figcaption class="carousel-caption">
           <h3><?= $image->title() ?></h3>
           <?= kirbytext($image->text()) ?>

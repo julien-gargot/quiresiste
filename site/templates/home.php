@@ -48,10 +48,6 @@
 
           <?= kirbytext($article->text()) ?>
 
-          <h3>Informations</h3>
-
-          <?= kirbytext($article->informations()) ?>
-
         </section>
 
         <aside>
@@ -67,7 +63,7 @@
             <?php endforeach ?>
           </ul>
           <ul class="nav nav-pills nav-stacked galleries">
-            <? $i = 0 ?>
+            <?php $i = 0 ?>
             <?php foreach ($article->children()->visible() as $gallery): ?>
             <li>
               <!-- Button trigger modal -->
@@ -115,12 +111,12 @@
     <div class="row"><!--
       <?php foreach($alphabetise as $letter => $items): ?>
       --><section class="col-xs-12  col-sm-4  col-md-3  col-lg-2">
-        <h3><?php echo strtoupper($letter) ?></h3>
+        <h3><?= strtoupper($letter) ?></h3>
         <ul>
           <?php foreach($items as $item): ?>
           <li>
             <a href="<?php echo $item->url()?>">
-              <?php echo $item->title()?>
+              <?= $item->title()?>
               <?= kirbytext($item->text()) ?>
             </a>
           </li>
