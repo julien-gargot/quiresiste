@@ -25,7 +25,7 @@ a:hover, a:active, a:focus { outline:0!important;  text-decoration:none; }
    .text-center;
    text-transform: uppercase;
   }
-  
+
 
   ol { counter-reset: quiresite; }
   h2:before { content: counter(quiresite); display: block; font-size: @font-size-h1; font-stretch:normal; line-height: 42px;}
@@ -220,7 +220,7 @@ body {
           left: -@outer-space;
           .btn-primary;
           .button-left-side;
-          
+
         }
         li:nth-of-type(2) {
           top: 50%;
@@ -327,6 +327,13 @@ body.abc {
     > a:hover,
     > a:focus { background-color: transparent; }
   }
+}
+
+.transform(@params) {
+  -webkit-transform: @params;
+      -ms-transform: @params; // IE9 only
+       -o-transform: @params;
+          transform: @params;
 }
 
 
