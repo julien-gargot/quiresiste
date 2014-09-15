@@ -30,9 +30,9 @@ ul li {
   }
 
 
-  ol { counter-reset: quiresite; }
-  h2:before { content: counter(quiresite); display: block; font-size: @font-size-h1; font-stretch:normal; line-height: 42px;}
-  h2 {counter-increment: quiresite; font-size: 15px; font-stretch:condensed; }
+  ol { counter-reset: quiresiste; }
+  h2:before { content: counter(quiresiste); display: block; font-size: @font-size-h1; font-stretch:normal; line-height: 42px;}
+  h2 {counter-increment: quiresiste; font-size: 15px; font-stretch:condensed; }
   li:last-of-type h2:before { content:""; }
 
 }
@@ -42,7 +42,15 @@ ul li {
   /*
    * Work here to theme typography of “Qui? Résiste” screens.
    */
+  counter-reset: numeros;
+
   a:hover, a:active, a:focus{color:white;}
+
+  h2:before {
+    counter-increment: numeros;
+    content: "N°" counter(numeros) " ";
+  } 
+   
   h2 {
    font-stretch:condensed;
    .text-center;

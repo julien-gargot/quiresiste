@@ -8,8 +8,6 @@
 
       <h1><?= html($page->title()) ?></h1>
 
-    
-
     </header>
 
     <nav>
@@ -116,6 +114,7 @@
           <?php foreach($items as $item): ?>
           <li>
             <a href="<?php echo $item->url()?>">
+              <span class="glyphicon glyphicon-volume-up"></span>
               <?= $item->title()?>
               <?= kirbytext($item->text()) ?>
             </a>

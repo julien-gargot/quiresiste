@@ -6259,17 +6259,17 @@ ul li {
   text-transform: uppercase;
 }
 #home ol {
-  counter-reset: quiresite;
+  counter-reset: quiresiste;
 }
 #home h2:before {
-  content: counter(quiresite);
+  content: counter(quiresiste);
   display: block;
   font-size: 44px;
   font-stretch: normal;
   line-height: 42px;
 }
 #home h2 {
-  counter-increment: quiresite;
+  counter-increment: quiresiste;
   font-size: 15px;
   font-stretch: condensed;
 }
@@ -6280,11 +6280,16 @@ ul li {
   /*
    * Work here to theme typography of “Qui? Résiste” screens.
    */
+  counter-reset: numeros;
 }
 #qui a:hover,
 #qui a:active,
 #qui a:focus {
   color: white;
+}
+#qui h2:before {
+  counter-increment: numeros;
+  content: "N°" counter(numeros) " ";
 }
 #qui h2 {
   font-stretch: condensed;
