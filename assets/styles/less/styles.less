@@ -6,7 +6,11 @@
 /*
  * Work here to theme typography of common things.
  */
-a { text-transform: uppercase; }
+
+body {line-height: normal;}
+a { text-transform: uppercase;
+}
+ul, ol {padding-left:0px;}
 a:hover, a:active, a:focus { outline:0!important;  text-decoration:none; }
 ul li {
   list-style-type: none; 
@@ -18,10 +22,11 @@ ul li {
   /*
    * Work here to theme typography of “home” screen.
    */
-
   color: black!important;
 
   a{color: inherit;}
+  span.glyphicon-volume-up {font-size: 42px;}
+  p {font-weight: 100;font-stretch:normal;font-size: 12px;}
 
   h1 {
    font-stretch:condensed;
@@ -29,12 +34,10 @@ ul li {
    text-transform: uppercase;
   }
 
-
-  ol { counter-reset: quiresiste; }
-  h2:before { content: counter(quiresiste); display: block; font-size: @font-size-h1; font-stretch:normal; line-height: 42px;}
-  h2 {counter-increment: quiresiste; font-size: 15px; font-stretch:condensed; }
-  li:last-of-type h2:before { content:""; }
-
+        ol { counter-reset: quiresiste; }
+        nav h2:before { content: counter(quiresiste); display: block; font-size: @font-size-h1; font-stretch:normal; line-height: 42px;}
+        h2 {counter-increment: quiresiste; font-size: 15px; font-stretch:condensed; }
+        li:last-of-type h2:before { content:""; }
 }
 
 #qui {
@@ -42,7 +45,7 @@ ul li {
   /*
    * Work here to theme typography of “Qui? Résiste” screens.
    */
-  counter-reset: numeros;
+  counter-reset: numeros; 
 
   a:hover, a:active, a:focus{color:white;}
 
@@ -66,7 +69,8 @@ ul li {
    * Work here to theme typography of “abécédaire” screen.
    */
 
-   .container{width:95%};
+  .container{width:95%};
+  ul, ol {padding-left:30px;}
   h2 {
    font-stretch:condensed;
    .text-center;
@@ -167,6 +171,43 @@ body {
 
   background: url('../images/background.jpg') center no-repeat fixed;
   background-size: cover;
+
+
+  .tabulize a {
+    display:inline-block;
+    width: 30.9%;
+    margin-top: 42.5%;
+  }
+
+  modal-content {
+    box-shadow: none
+  }
+  .modal-header {
+    border-bottom: none;
+  }
+  .modal-footer {
+    border-top: none;
+  }
+
+  #introduction-box{
+  .modal-dialog {
+    width: 61%;
+  }
+  .modal-body{
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+  }
+}
+
+#credits-box{
+  .modal-dialog {
+    width: 30%;
+  }
+}
+
+
+
 
   .container,
   .container-fluid {

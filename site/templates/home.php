@@ -7,8 +7,59 @@
     <header class="tabulize">
 
       <h1><?= html($page->title()) ?></h1>
-
+    <!-- Btn trigger modal -->
+              <a class="btn btn-default" data-toggle="modal" data-target="#introduction-box"> Introduction </a>
+              <a class="btn btn-default" data-toggle="modal" data-target="#tutorial-box"> Tutorial </a>
+              <a class="btn btn-default" data-toggle="modal" data-target="#credits-box"> crédits </a>
     </header>
+    <!-- Modal -->
+    <div class="modal fade" id="introduction-box" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">Introduction</h4>
+          </div>
+          <div class="modal-body">
+            <p><?= kirbytext($page->introduction()) ?></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">FERMER</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="tutorial-box" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">TUTORIAL</h4>
+          </div>
+          <div class="modal-body">
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">FERMER</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="credits-box" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">Crédits</h4>
+          </div>
+          <div class="modal-body">
+            <p><?= kirbytext($page->credits()) ?></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">FERMER</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <nav>
 
@@ -19,7 +70,7 @@
         </li>
         <?php endforeach ?>
         <li class="col-xs-6 col-sm-4">
-          <h2><a href="#abc"><span class="glyphicon glyphicon-volume-up"></span></a></h2>
+          <h2><a href="#abc"><span class="glyphicon glyphicon-volume-up"></span>Abécédaire</a></h2>
         </li>
       <ol>
 
