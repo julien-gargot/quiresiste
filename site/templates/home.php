@@ -36,7 +36,8 @@
             <h4 class="modal-title" id="myModalLabel">TUTORIAL</h4>
           </div>
           <div class="modal-body">
-            
+              <img src="<?= url('assets/images/tutorial.png') ?>"></img>
+              <?= kirbytext($page->tutorial()) ?>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">FERMER</button>
