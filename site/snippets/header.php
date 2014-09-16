@@ -12,8 +12,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-capable" content="yes">
 
-  <?php $time = time() ?>
-  <?= css('assets/styles/styles.css?version='.$time) ?>
+  <?= css('assets/styles/styles.css?version='.time()) ?>
 
 </head>
 
