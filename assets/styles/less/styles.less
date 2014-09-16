@@ -13,7 +13,7 @@ a { text-transform: uppercase;
 ul, ol {padding-left:0px;}
 a:hover, a:active, a:focus { outline:0!important;  text-decoration:none; }
 ul li {
-  list-style-type: none; 
+  list-style-type: none;
 }
 
 
@@ -34,10 +34,10 @@ ul li {
    text-transform: uppercase;
   }
 
-        ol { counter-reset: quiresiste; }
-        nav h2:before { content: counter(quiresiste); display: block; font-size: @font-size-h1; font-stretch:normal; line-height: 42px;}
-        h2 {counter-increment: quiresiste; font-size: 15px; font-stretch:condensed; }
-        li:last-of-type h2:before { content:""; }
+  ol { counter-reset: quiresiste; }
+  nav h2:before { content: counter(quiresiste); display: block; font-size: @font-size-h1; font-stretch:normal; line-height: 42px;}
+  h2 {counter-increment: quiresiste; font-size: 15px; font-stretch:condensed; }
+  li:last-of-type h2:before { content:""; }
 }
 
 #qui {
@@ -45,15 +45,15 @@ ul li {
   /*
    * Work here to theme typography of “Qui? Résiste” screens.
    */
-  counter-reset: numeros; 
+  counter-reset: numeros;
 
   a:hover, a:active, a:focus{color:white;}
 
   h2:before {
     counter-increment: numeros;
     content: "N°" counter(numeros) " ";
-  } 
-   
+  }
+
   h2 {
    font-stretch:condensed;
    .text-center;
@@ -103,7 +103,7 @@ body {
 
   overflow-x: hidden; -webkit-overflow-scrolling: touch;
 
-  > header, > footer { position: absolute!important; right: 0; left: 0; z-index: 1; overflow: hidden; }
+  > header, > footer { position: absolute!important; right: 0; left: 0; overflow: hidden; }
 
   > header {
     width: 46%;
@@ -169,8 +169,8 @@ body {
    * Work here to theme “home” screen.
    */
 
-  background: url('../images/background.jpg') center no-repeat fixed;
-  background-size: cover;
+  background: url('../images/background.jpg') 0 0 no-repeat fixed;
+  background-size: 100% auto;
 
 
   .tabulize a {
@@ -298,27 +298,56 @@ body {
       }
       .galleries {
 
-        li { position:absolute; }
+        li { position:static; }
+        li > a { position:absolute; }
+        li > a:first-of-type { z-index: 1; }
+        li > a:last-of-type { z-index: 0; }
+        li > a:last-of-type img { width: 150px; height: auto; }
+
+
         li:first-of-type  {
-          top: 50%;
-          left: -@outer-space;
-          .btn-primary;
-          .button-left-side;
+
+          a:first-of-type {
+            top: 50%;
+            left: -@outer-space;
+            .btn-primary;
+            .button-left-side;
+          }
+
+          a:last-of-type {
+            top: 50%;
+            left: -@outer-space;
+          }
 
         }
         li:nth-of-type(2) {
-          top: 50%;
-          right: -@outer-space;
-          .btn-primary;
-          .button-right-side;
+
+          a:first-of-type {
+            top: 50%;
+            right: -@outer-space;
+            .btn-primary;
+            .button-right-side;
+          }
+
+          a:last-of-type {
+            top: 50%;
+            right: -@outer-space;
+          }
         }
         li:nth-of-type(3) {
-          bottom: -4%;
-          right: 50%;
-          .btn-primary;
-        }
 
-        iframe { width: 100%; height: 600px; }
+          a:first-of-type {
+            bottom: -4%;
+            right: 50%;
+            .btn-primary;
+          }
+
+          a:last-of-type {
+            bottom: -4%;
+            right: 50%;
+          }
+
+        }
 
       }
     }
@@ -366,7 +395,7 @@ body.abc {
 
 }
 
-
+.modal iframe { width: 100%; height: 600px; }
 
 /* =Bootstrap Upgrade
 -----------------------------------------------------------------------------*/
@@ -382,7 +411,8 @@ body.abc {
 
   .active > &,
   &:hover,
-  &:active {
+  &:active,
+  &:focus {
     .translate(@btn-shadow-x,@btn-shadow-y);
     .box-shadow(0px 0px 0px 0px transparent);
   }
@@ -402,25 +432,30 @@ body.abc {
 
   .active > &,
   &:hover,
-  &:active {
+  &:active,
+  &:focus {
     color:@btn-primary-color!important;
   }
-  .button-left-side{
+  .button-left-side {
     .box-shadow(@btn-shadow-x -@btn-shadow-y 0px 0px @btn-primary-border);
     .rotate(90deg);
-      &:hover, &:active {
-          .transform(rotate(90deg) translate(@btn-shadow-x,-@btn-shadow-y));
-          .box-shadow(0px 0px 0px 0px transparent);
-        }
+    &:hover,
+    &:active,
+    &:focus {
+      .transform(rotate(90deg) translate(@btn-shadow-x,-@btn-shadow-y));
+      .box-shadow(0px 0px 0px 0px transparent);
+    }
   }
 
-    .button-right-side{
+  .button-right-side {
     .box-shadow(-@btn-shadow-x @btn-shadow-y 0px 0px @btn-primary-border);
     .rotate(-90deg);
-      &:hover, &:active {
-          .transform(rotate(-90deg) translate(-@btn-shadow-x,@btn-shadow-y));
-          .box-shadow(0px 0px 0px 0px transparent);
-        }
+    &:hover,
+    &:active,
+    &:focus {
+      .transform(rotate(-90deg) translate(-@btn-shadow-x,@btn-shadow-y));
+      .box-shadow(0px 0px 0px 0px transparent);
+    }
   }
 }
 

@@ -7,10 +7,11 @@ var leaveTouch = true;
 
 jQuery(document).ready(function($) {
 
+  //
+  initClickIOS();
+
   // TABS
   initTabs();
-  // initTabsHome();
-  // initTabsQuiResiste();
 
   //
   initGalleries();
@@ -19,6 +20,18 @@ jQuery(document).ready(function($) {
   initScroll();
 
 });
+
+function initClickIOS() {
+
+  // Open links with javascript for standalone app.
+  $('body').on('click', 'a', function(event) {
+    event.preventDefault();
+    /* Act on the event */
+    if( $(this).attr("href") )
+      window.location.href = $(this).attr("href");
+  });
+
+}
 
 function initTabs() {
 
