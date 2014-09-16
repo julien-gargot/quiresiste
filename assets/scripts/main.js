@@ -4,8 +4,12 @@ var startY = 0;
 var ontasticX = true;
 var ontasticY = true;
 var leaveTouch = true;
+var stepx = 0;
+var stepy = 0;
 
 jQuery(document).ready(function($) {
+
+  console.log("version 1");
 
   //
   initClickIOS();
@@ -189,11 +193,12 @@ function initGalleries() {
 
 function initScroll() {
 
+  stepx = $('article').width();
+  stepy = $('article').height();
+
   if( supportsTouch ) {
 
     var ix, iy, dx, dy = 0;
-    var stepx = $('article').width();
-    var stepy = $('article').height();
     var s = 100;
     var nx = ny = 0;
 
@@ -214,26 +219,27 @@ function initScroll() {
         if( dx > s && ny == 1 ) {
           if( nx < $('#qui > article').length ) {
             nx ++;
-            moveCamera((nx * stepx), (ny * stepy));
+            moveCamera(nx,ny);
           }
         } else if( dx < -s && ny == 1 ) {
           if( nx > 0 ) {
             nx --;
-            moveCamera((nx * stepx), (ny * stepy));
-          } else {
-            shakeCamera((nx * stepx), (ny * stepy));
+            moveCamera(nx,ny);
           }
         } else if( dy > s ) {
           if( ny < 3 ) {
             ny ++;
-            moveCamera((nx * stepx), (ny * stepy));
+            moveCamera(nx,ny);
           }
         } else if( dy < -s ) {
           if( ny > 0 ) {
             ny --;
-            moveCamera((nx * stepx), (ny * stepy));
+            moveCamera(nx,ny);
           }
         }
+
+
+        console.log("["+nx+','+ny+"]");
       }
     });
 
@@ -247,8 +253,8 @@ function initScroll() {
 }
 
 function moveCamera(x,y) {
-  $('#qui').animate({ scrollLeft: x +"px" }, 200, "swing");
-  $('html, body').animate({ scrollTop: y +"px" }, 200, "swing");
+  $('#qui').animate({ scrollLeft: (x * stepx) +"px" }, 200, "swing");
+  $('html, body').animate({ scrollTop: (y * stepy) +"px" }, 200, "swing");
 }
 
 function shakeCamera(x,y) {
