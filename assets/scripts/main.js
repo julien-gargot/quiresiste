@@ -188,48 +188,54 @@ function initGalleries() {
  */
 
 function initScroll() {
+
   if( supportsTouch ) {
-    // $(window).on('touchstart', scrollYStart);
-    // // $(window).on('scroll', scrollYStop);
-    // $(window).on('touchend touchcancel', scrollYStop);
-    // $('body > section').on('touchstart', scrollXStart);
-    // // $('body > section').on('scroll',scrollXStop);
-    // $('body > section').on('touchend touchcancel', scrollXStop);
 
+    var ix, iy, dx, dy = 0;
+    var stepx = $('article').width();
+    var stepy = $('article').height();
+    var s = 100;
+    var nx = ny = 0;
 
-      var posx, posy, ix, iy, dx, dy = 0;
-      var stepx = $('article').width();
-      var stepy = $('article').height();
-      var s = 100;
+    $(window).on({
+      'touchstart': function(event) {
+        ix = event.originalEvent.pageX;
+        iy = event.originalEvent.pageY;
+        nx = Math.floor( $('#qui').scrollLeft() / stepx );
+        ny = Math.floor( $('body').scrollTop() / stepy );
+      },
+      'touchmove': function(event) {
+        event.preventDefault();
+        dx = ix - event.originalEvent.pageX;
+        dy = iy - event.originalEvent.pageY;
+      },
+      'touchend': function(event) {
 
-      $(window).on({
-        'touchstart': function(event) {
-          ix = event.originalEvent.pageX;
-          posx = $('#qui').scrollLeft();
-          iy = event.originalEvent.pageY;
-          posy = $('body').scrollTop();
-        },
-        'touchmove': function(event) {
-          event.preventDefault();
-          dx = ix - event.originalEvent.pageX;
-          dy = iy - event.originalEvent.pageY;
-        },
-        'touchend': function(event) {
-
-          if( $(event.target).parents('#qui').length > 0 ) {
-            if( dx > s )
-              $('#qui').animate({ scrollLeft: posx + stepx +"px" }, 200, "swing");
-            else if( dx < -s )
-              $('#qui').animate({ scrollLeft: posx - stepx +"px" }, 200, "swing");
+        if( dx > s && ny == 1 ) {
+          if( nx < $('#qui > article').length ) {
+            nx ++;
+            moveCamera((nx * stepx), (ny * stepy));
           }
-
-          if( dy > s )
-            $('html, body').animate({ scrollTop: posy + stepy +"px" }, 200, "swing");
-          else if( dy < -s )
-            $('html, body').animate({ scrollTop: posy - stepy +"px" }, 200, "swing");
+        } else if( dx < -s && ny == 1 ) {
+          if( nx > 0 ) {
+            nx --;
+            moveCamera((nx * stepx), (ny * stepy));
+          } else {
+            shakeCamera((nx * stepx), (ny * stepy));
+          }
+        } else if( dy > s ) {
+          if( ny < 3 ) {
+            ny ++;
+            moveCamera((nx * stepx), (ny * stepy));
+          }
+        } else if( dy < -s ) {
+          if( ny > 0 ) {
+            ny --;
+            moveCamera((nx * stepx), (ny * stepy));
+          }
         }
-      });
-
+      }
+    });
 
   }
   else {
@@ -238,6 +244,15 @@ function initScroll() {
     $('body > section').on('scrollstart', {latency: 2000}, scrollXStart);
     $('body > section').on('scrollstop', {latency: 100}, scrollXStop);
   }
+}
+
+function moveCamera(x,y) {
+  $('#qui').animate({ scrollLeft: x +"px" }, 200, "swing");
+  $('html, body').animate({ scrollTop: y +"px" }, 200, "swing");
+}
+
+function shakeCamera(x,y) {
+
 }
 
 function scrollYStart(event) {
