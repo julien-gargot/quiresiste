@@ -37,15 +37,15 @@
             <!-- Button trigger modal -->
             <a data-toggle="modal" data-target="#gallery-<?= $i ?>-<?= $j ?>" data-src="<?= $gallery->url() ?>">
               <?= $gallery->title() ?>
-              <? if ($article->hasImages()): ?>
+              <?php if ($article->hasImages()): ?>
                 <!-- <img src="<?= $article->images()->find($gallery->dirname.'.png')->url() ?>" alt=""> -->
-              <? endif ?>
+              <?php endif ?>
             </a>
-            <? if ($article->hasImages()): ?>
+            <?php if ($article->hasImages()): ?>
             <a data-toggle="modal" data-target="#gallery-<?= $i ?>-<?= $j ?>" data-src="<?= $gallery->url() ?>">
               <img src="<?= $article->images()->find($gallery->dirname.'.png')->url() ?>" alt="">
             </a>
-            <? endif ?>
+            <?php endif ?>
           </li>
           <?php $j++; endforeach ?>
         </ul>
