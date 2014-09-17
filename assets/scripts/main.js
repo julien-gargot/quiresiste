@@ -40,7 +40,7 @@ function initClickIOS() {
 function initTabs() {
 
   $('.tabulize').each(function(i) {
-
+    console.log("...");
     var _this = $(this);
     var $navtabs = $('<nav>').append( $('<ul>').addClass('nav nav-pills').attr('role','tablist') );
     var $tabs = $('<div>').attr('class','tab-content');

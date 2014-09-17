@@ -6622,7 +6622,10 @@ fieldset[disabled] #home .container-fluid nav ol li h2.active {
   position: absolute;
   bottom: -90px;
   right: -90px;
-  background-color: orange;
+}
+#qui .container aside .sounds audio,
+#qui .container-fluid aside .sounds audio {
+  display: none;
 }
 #qui .container aside .galleries li,
 #qui .container-fluid aside .galleries li {
@@ -6648,8 +6651,8 @@ fieldset[disabled] #home .container-fluid nav ol li h2.active {
 }
 #qui .container aside .galleries li.references a:first-of-type,
 #qui .container-fluid aside .galleries li.references a:first-of-type {
-  top: 41%;
-  left: -26px;
+  top: 35%;
+  left: 52px;
   color: #ffffff;
   background-color: transparent;
   margin-right: 7px;
@@ -6662,6 +6665,10 @@ fieldset[disabled] #home .container-fluid nav ol li h2.active {
   line-height: 0.3;
   -webkit-box-shadow: 7px -6px 0px 0px #ffffff;
   box-shadow: 7px -6px 0px 0px #ffffff;
+  -webkit-transform-origin: top left;
+  -moz-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   -o-transform: rotate(90deg);
@@ -6760,21 +6767,25 @@ fieldset[disabled] #qui .container-fluid aside .galleries li.references a:first-
 #qui .container-fluid aside .galleries li.references a:first-of-type:focus {
   color: #ffffff !important;
 }
-#qui .container aside .galleries li.references a:first-of-type .button-left-side,
-#qui .container-fluid aside .galleries li.references a:first-of-type .button-left-side {
+#qui .container aside .galleries li.references a:first-of-type .btn-left-side,
+#qui .container-fluid aside .galleries li.references a:first-of-type .btn-left-side {
   -webkit-box-shadow: 7px -6px 0px 0px #ffffff;
   box-shadow: 7px -6px 0px 0px #ffffff;
+  -webkit-transform-origin: top left;
+  -moz-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-#qui .container aside .galleries li.references a:first-of-type .button-left-side:hover,
-#qui .container-fluid aside .galleries li.references a:first-of-type .button-left-side:hover,
-#qui .container aside .galleries li.references a:first-of-type .button-left-side:active,
-#qui .container-fluid aside .galleries li.references a:first-of-type .button-left-side:active,
-#qui .container aside .galleries li.references a:first-of-type .button-left-side:focus,
-#qui .container-fluid aside .galleries li.references a:first-of-type .button-left-side:focus {
+#qui .container aside .galleries li.references a:first-of-type .btn-left-side:hover,
+#qui .container-fluid aside .galleries li.references a:first-of-type .btn-left-side:hover,
+#qui .container aside .galleries li.references a:first-of-type .btn-left-side:active,
+#qui .container-fluid aside .galleries li.references a:first-of-type .btn-left-side:active,
+#qui .container aside .galleries li.references a:first-of-type .btn-left-side:focus,
+#qui .container-fluid aside .galleries li.references a:first-of-type .btn-left-side:focus {
   -webkit-transform: rotate(90deg) translate(7px, -6px);
   -ms-transform: rotate(90deg) translate(7px, -6px);
   -o-transform: rotate(90deg) translate(7px, -6px);
@@ -6782,21 +6793,25 @@ fieldset[disabled] #qui .container-fluid aside .galleries li.references a:first-
   -webkit-box-shadow: 0px 0px 0px 0px transparent;
   box-shadow: 0px 0px 0px 0px transparent;
 }
-#qui .container aside .galleries li.references a:first-of-type .button-right-side,
-#qui .container-fluid aside .galleries li.references a:first-of-type .button-right-side {
+#qui .container aside .galleries li.references a:first-of-type .btn-right-side,
+#qui .container-fluid aside .galleries li.references a:first-of-type .btn-right-side {
   -webkit-box-shadow: -7px 6px 0px 0px #ffffff;
   box-shadow: -7px 6px 0px 0px #ffffff;
+  -webkit-transform-origin: top right;
+  -moz-transform-origin: top right;
+  -ms-transform-origin: top right;
+  transform-origin: top right;
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
-#qui .container aside .galleries li.references a:first-of-type .button-right-side:hover,
-#qui .container-fluid aside .galleries li.references a:first-of-type .button-right-side:hover,
-#qui .container aside .galleries li.references a:first-of-type .button-right-side:active,
-#qui .container-fluid aside .galleries li.references a:first-of-type .button-right-side:active,
-#qui .container aside .galleries li.references a:first-of-type .button-right-side:focus,
-#qui .container-fluid aside .galleries li.references a:first-of-type .button-right-side:focus {
+#qui .container aside .galleries li.references a:first-of-type .btn-right-side:hover,
+#qui .container-fluid aside .galleries li.references a:first-of-type .btn-right-side:hover,
+#qui .container aside .galleries li.references a:first-of-type .btn-right-side:active,
+#qui .container-fluid aside .galleries li.references a:first-of-type .btn-right-side:active,
+#qui .container aside .galleries li.references a:first-of-type .btn-right-side:focus,
+#qui .container-fluid aside .galleries li.references a:first-of-type .btn-right-side:focus {
   -webkit-transform: rotate(-90deg) translate(-7px, 6px);
   -ms-transform: rotate(-90deg) translate(-7px, 6px);
   -o-transform: rotate(-90deg) translate(-7px, 6px);
@@ -6830,12 +6845,12 @@ fieldset[disabled] #qui .container-fluid aside .galleries li.references a:first-
 #qui .container-fluid aside .galleries li.references a:last-of-type img {
   height: auto;
   width: 150%;
-  right: 0px;
+  float: right;
 }
 #qui .container aside .galleries li.originaux a:first-of-type,
 #qui .container-fluid aside .galleries li.originaux a:first-of-type {
-  top: 61%;
-  right: -27px;
+  top: 29%;
+  right: 43px;
   color: #ffffff;
   background-color: transparent;
   margin-right: 7px;
@@ -6848,6 +6863,10 @@ fieldset[disabled] #qui .container-fluid aside .galleries li.references a:first-
   line-height: 0.3;
   -webkit-box-shadow: -7px 6px 0px 0px #ffffff;
   box-shadow: -7px 6px 0px 0px #ffffff;
+  -webkit-transform-origin: top right;
+  -moz-transform-origin: top right;
+  -ms-transform-origin: top right;
+  transform-origin: top right;
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
@@ -6946,21 +6965,25 @@ fieldset[disabled] #qui .container-fluid aside .galleries li.originaux a:first-o
 #qui .container-fluid aside .galleries li.originaux a:first-of-type:focus {
   color: #ffffff !important;
 }
-#qui .container aside .galleries li.originaux a:first-of-type .button-left-side,
-#qui .container-fluid aside .galleries li.originaux a:first-of-type .button-left-side {
+#qui .container aside .galleries li.originaux a:first-of-type .btn-left-side,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type .btn-left-side {
   -webkit-box-shadow: 7px -6px 0px 0px #ffffff;
   box-shadow: 7px -6px 0px 0px #ffffff;
+  -webkit-transform-origin: top left;
+  -moz-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-#qui .container aside .galleries li.originaux a:first-of-type .button-left-side:hover,
-#qui .container-fluid aside .galleries li.originaux a:first-of-type .button-left-side:hover,
-#qui .container aside .galleries li.originaux a:first-of-type .button-left-side:active,
-#qui .container-fluid aside .galleries li.originaux a:first-of-type .button-left-side:active,
-#qui .container aside .galleries li.originaux a:first-of-type .button-left-side:focus,
-#qui .container-fluid aside .galleries li.originaux a:first-of-type .button-left-side:focus {
+#qui .container aside .galleries li.originaux a:first-of-type .btn-left-side:hover,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type .btn-left-side:hover,
+#qui .container aside .galleries li.originaux a:first-of-type .btn-left-side:active,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type .btn-left-side:active,
+#qui .container aside .galleries li.originaux a:first-of-type .btn-left-side:focus,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type .btn-left-side:focus {
   -webkit-transform: rotate(90deg) translate(7px, -6px);
   -ms-transform: rotate(90deg) translate(7px, -6px);
   -o-transform: rotate(90deg) translate(7px, -6px);
@@ -6968,21 +6991,25 @@ fieldset[disabled] #qui .container-fluid aside .galleries li.originaux a:first-o
   -webkit-box-shadow: 0px 0px 0px 0px transparent;
   box-shadow: 0px 0px 0px 0px transparent;
 }
-#qui .container aside .galleries li.originaux a:first-of-type .button-right-side,
-#qui .container-fluid aside .galleries li.originaux a:first-of-type .button-right-side {
+#qui .container aside .galleries li.originaux a:first-of-type .btn-right-side,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type .btn-right-side {
   -webkit-box-shadow: -7px 6px 0px 0px #ffffff;
   box-shadow: -7px 6px 0px 0px #ffffff;
+  -webkit-transform-origin: top right;
+  -moz-transform-origin: top right;
+  -ms-transform-origin: top right;
+  transform-origin: top right;
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
-#qui .container aside .galleries li.originaux a:first-of-type .button-right-side:hover,
-#qui .container-fluid aside .galleries li.originaux a:first-of-type .button-right-side:hover,
-#qui .container aside .galleries li.originaux a:first-of-type .button-right-side:active,
-#qui .container-fluid aside .galleries li.originaux a:first-of-type .button-right-side:active,
-#qui .container aside .galleries li.originaux a:first-of-type .button-right-side:focus,
-#qui .container-fluid aside .galleries li.originaux a:first-of-type .button-right-side:focus {
+#qui .container aside .galleries li.originaux a:first-of-type .btn-right-side:hover,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type .btn-right-side:hover,
+#qui .container aside .galleries li.originaux a:first-of-type .btn-right-side:active,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type .btn-right-side:active,
+#qui .container aside .galleries li.originaux a:first-of-type .btn-right-side:focus,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type .btn-right-side:focus {
   -webkit-transform: rotate(-90deg) translate(-7px, 6px);
   -ms-transform: rotate(-90deg) translate(-7px, 6px);
   -o-transform: rotate(-90deg) translate(-7px, 6px);
@@ -7124,21 +7151,25 @@ fieldset[disabled] #qui .container-fluid aside .galleries li.revue a:first-of-ty
 #qui .container-fluid aside .galleries li.revue a:first-of-type:focus {
   color: #ffffff !important;
 }
-#qui .container aside .galleries li.revue a:first-of-type .button-left-side,
-#qui .container-fluid aside .galleries li.revue a:first-of-type .button-left-side {
+#qui .container aside .galleries li.revue a:first-of-type .btn-left-side,
+#qui .container-fluid aside .galleries li.revue a:first-of-type .btn-left-side {
   -webkit-box-shadow: 7px -6px 0px 0px #ffffff;
   box-shadow: 7px -6px 0px 0px #ffffff;
+  -webkit-transform-origin: top left;
+  -moz-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-#qui .container aside .galleries li.revue a:first-of-type .button-left-side:hover,
-#qui .container-fluid aside .galleries li.revue a:first-of-type .button-left-side:hover,
-#qui .container aside .galleries li.revue a:first-of-type .button-left-side:active,
-#qui .container-fluid aside .galleries li.revue a:first-of-type .button-left-side:active,
-#qui .container aside .galleries li.revue a:first-of-type .button-left-side:focus,
-#qui .container-fluid aside .galleries li.revue a:first-of-type .button-left-side:focus {
+#qui .container aside .galleries li.revue a:first-of-type .btn-left-side:hover,
+#qui .container-fluid aside .galleries li.revue a:first-of-type .btn-left-side:hover,
+#qui .container aside .galleries li.revue a:first-of-type .btn-left-side:active,
+#qui .container-fluid aside .galleries li.revue a:first-of-type .btn-left-side:active,
+#qui .container aside .galleries li.revue a:first-of-type .btn-left-side:focus,
+#qui .container-fluid aside .galleries li.revue a:first-of-type .btn-left-side:focus {
   -webkit-transform: rotate(90deg) translate(7px, -6px);
   -ms-transform: rotate(90deg) translate(7px, -6px);
   -o-transform: rotate(90deg) translate(7px, -6px);
@@ -7146,21 +7177,25 @@ fieldset[disabled] #qui .container-fluid aside .galleries li.revue a:first-of-ty
   -webkit-box-shadow: 0px 0px 0px 0px transparent;
   box-shadow: 0px 0px 0px 0px transparent;
 }
-#qui .container aside .galleries li.revue a:first-of-type .button-right-side,
-#qui .container-fluid aside .galleries li.revue a:first-of-type .button-right-side {
+#qui .container aside .galleries li.revue a:first-of-type .btn-right-side,
+#qui .container-fluid aside .galleries li.revue a:first-of-type .btn-right-side {
   -webkit-box-shadow: -7px 6px 0px 0px #ffffff;
   box-shadow: -7px 6px 0px 0px #ffffff;
+  -webkit-transform-origin: top right;
+  -moz-transform-origin: top right;
+  -ms-transform-origin: top right;
+  transform-origin: top right;
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
-#qui .container aside .galleries li.revue a:first-of-type .button-right-side:hover,
-#qui .container-fluid aside .galleries li.revue a:first-of-type .button-right-side:hover,
-#qui .container aside .galleries li.revue a:first-of-type .button-right-side:active,
-#qui .container-fluid aside .galleries li.revue a:first-of-type .button-right-side:active,
-#qui .container aside .galleries li.revue a:first-of-type .button-right-side:focus,
-#qui .container-fluid aside .galleries li.revue a:first-of-type .button-right-side:focus {
+#qui .container aside .galleries li.revue a:first-of-type .btn-right-side:hover,
+#qui .container-fluid aside .galleries li.revue a:first-of-type .btn-right-side:hover,
+#qui .container aside .galleries li.revue a:first-of-type .btn-right-side:active,
+#qui .container-fluid aside .galleries li.revue a:first-of-type .btn-right-side:active,
+#qui .container aside .galleries li.revue a:first-of-type .btn-right-side:focus,
+#qui .container-fluid aside .galleries li.revue a:first-of-type .btn-right-side:focus {
   -webkit-transform: rotate(-90deg) translate(-7px, 6px);
   -ms-transform: rotate(-90deg) translate(-7px, 6px);
   -o-transform: rotate(-90deg) translate(-7px, 6px);
@@ -7266,17 +7301,21 @@ fieldset[disabled] #abc section li.active {
 #abc section li:focus {
   color: #ffffff !important;
 }
-#abc section li .button-left-side {
+#abc section li .btn-left-side {
   -webkit-box-shadow: 7px -6px 0px 0px #ffffff;
   box-shadow: 7px -6px 0px 0px #ffffff;
+  -webkit-transform-origin: top left;
+  -moz-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-#abc section li .button-left-side:hover,
-#abc section li .button-left-side:active,
-#abc section li .button-left-side:focus {
+#abc section li .btn-left-side:hover,
+#abc section li .btn-left-side:active,
+#abc section li .btn-left-side:focus {
   -webkit-transform: rotate(90deg) translate(7px, -6px);
   -ms-transform: rotate(90deg) translate(7px, -6px);
   -o-transform: rotate(90deg) translate(7px, -6px);
@@ -7284,17 +7323,21 @@ fieldset[disabled] #abc section li.active {
   -webkit-box-shadow: 0px 0px 0px 0px transparent;
   box-shadow: 0px 0px 0px 0px transparent;
 }
-#abc section li .button-right-side {
+#abc section li .btn-right-side {
   -webkit-box-shadow: -7px 6px 0px 0px #ffffff;
   box-shadow: -7px 6px 0px 0px #ffffff;
+  -webkit-transform-origin: top right;
+  -moz-transform-origin: top right;
+  -ms-transform-origin: top right;
+  transform-origin: top right;
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
-#abc section li .button-right-side:hover,
-#abc section li .button-right-side:active,
-#abc section li .button-right-side:focus {
+#abc section li .btn-right-side:hover,
+#abc section li .btn-right-side:active,
+#abc section li .btn-right-side:focus {
   -webkit-transform: rotate(-90deg) translate(-7px, 6px);
   -ms-transform: rotate(-90deg) translate(-7px, 6px);
   -o-transform: rotate(-90deg) translate(-7px, 6px);
@@ -7362,17 +7405,21 @@ body.abc {
 .btn-primary:focus {
   color: #ffffff !important;
 }
-.btn-primary .button-left-side {
+.btn-primary .btn-left-side {
   -webkit-box-shadow: 7px -6px 0px 0px #ffffff;
   box-shadow: 7px -6px 0px 0px #ffffff;
+  -webkit-transform-origin: top left;
+  -moz-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-.btn-primary .button-left-side:hover,
-.btn-primary .button-left-side:active,
-.btn-primary .button-left-side:focus {
+.btn-primary .btn-left-side:hover,
+.btn-primary .btn-left-side:active,
+.btn-primary .btn-left-side:focus {
   -webkit-transform: rotate(90deg) translate(7px, -6px);
   -ms-transform: rotate(90deg) translate(7px, -6px);
   -o-transform: rotate(90deg) translate(7px, -6px);
@@ -7380,17 +7427,21 @@ body.abc {
   -webkit-box-shadow: 0px 0px 0px 0px transparent;
   box-shadow: 0px 0px 0px 0px transparent;
 }
-.btn-primary .button-right-side {
+.btn-primary .btn-right-side {
   -webkit-box-shadow: -7px 6px 0px 0px #ffffff;
   box-shadow: -7px 6px 0px 0px #ffffff;
+  -webkit-transform-origin: top right;
+  -moz-transform-origin: top right;
+  -ms-transform-origin: top right;
+  transform-origin: top right;
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
-.btn-primary .button-right-side:hover,
-.btn-primary .button-right-side:active,
-.btn-primary .button-right-side:focus {
+.btn-primary .btn-right-side:hover,
+.btn-primary .btn-right-side:active,
+.btn-primary .btn-right-side:focus {
   -webkit-transform: rotate(-90deg) translate(-7px, 6px);
   -ms-transform: rotate(-90deg) translate(-7px, 6px);
   -o-transform: rotate(-90deg) translate(-7px, 6px);

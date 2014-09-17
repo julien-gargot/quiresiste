@@ -295,8 +295,15 @@ body {
         position:absolute;
         bottom: -@outer-space;
         right: -@outer-space;
-        background-color: orange;
+        //background-color: orange;
+
+          audio{
+            display: none;
+          }
       }
+
+
+
       .galleries {
 
         li { position:static; }
@@ -308,10 +315,10 @@ body {
 
         li.references  {
           a:first-of-type {
-            top: 41%;
-            left: -26px;
+            top: 35%;
+            left: 52px;
             .btn-primary;
-            .button-left-side;
+            .btn-left-side;
           }
 
           a:last-of-type {
@@ -325,17 +332,17 @@ body {
             img {
               height: auto;
               width: 150%;
-              right : 0px;
+              float: right;
             }
           }
 
         }
         li.originaux {
           a:first-of-type {
-            top: 61%;
-            right: -27px;
+            top: 29%;
+            right: 43px;
             .btn-primary;
-            .button-right-side;
+            .btn-right-side;
           }
 
           a:last-of-type {
@@ -460,8 +467,9 @@ body.abc {
   &:focus {
     color:@btn-primary-color!important;
   }
-  .button-left-side {
+  .btn-left-side {
     .box-shadow(@btn-shadow-x -@btn-shadow-y 0px 0px @btn-primary-border);
+    .transform-origin(top left);
     .rotate(90deg);
     &:hover,
     &:active,
@@ -471,8 +479,9 @@ body.abc {
     }
   }
 
-  .button-right-side {
+  .btn-right-side {
     .box-shadow(-@btn-shadow-x @btn-shadow-y 0px 0px @btn-primary-border);
+    .transform-origin(top right);
     .rotate(-90deg);
     &:hover,
     &:active,
