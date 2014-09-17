@@ -303,49 +303,72 @@ body {
         li > a { position:absolute; }
         li > a:first-of-type { z-index: 1; }
         li > a:last-of-type { z-index: 0; }
-        li > a:last-of-type img { width: 150px; height: auto; }
+        li > a:last-of-type img { position:relative; width: 150px; height: auto; }
 
 
-        li:first-of-type  {
-
+        li.references  {
           a:first-of-type {
-            top: 50%;
-            left: -@outer-space;
+            top: 41%;
+            left: -26px;
             .btn-primary;
             .button-left-side;
           }
 
           a:last-of-type {
-            top: 50%;
-            left: -@outer-space;
+            top: 34%;
+            left: -135px;
+            //background: pink;
+            width: 149px;
+            height: auto;
+            padding: 0 0 0 0;
+            overflow: hidden;
+            img {
+              height: auto;
+              width: 150%;
+              right : 0px;
+            }
           }
 
         }
-        li:nth-of-type(2) {
-
+        li.originaux {
           a:first-of-type {
-            top: 50%;
-            right: -@outer-space;
+            top: 61%;
+            right: -27px;
             .btn-primary;
             .button-right-side;
           }
 
           a:last-of-type {
-            top: 50%;
-            right: -@outer-space;
+            top: 29%;
+            right: -134px;
+            width: 142px;
+            //background-color: purple;
+            padding: 0 0 0 0;
+            overflow: hidden;
+            img {
+              height: auto;
+              width: 150%;
+            }
           }
         }
-        li:nth-of-type(3) {
-
+        li.revue {
           a:first-of-type {
-            bottom: -4%;
-            right: 50%;
+            bottom: 4%;
+            left: 12%;
             .btn-primary;
           }
-
           a:last-of-type {
-            bottom: -4%;
-            right: 50%;
+            bottom: -24%;
+            left: 12%;
+            width: auto;
+            height: 152px;
+            //background-color: gold;
+            padding: 0 0 0 0;
+            overflow: hidden;
+            img {
+            width: auto;
+            height: 230%;
+            }
           }
 
         }

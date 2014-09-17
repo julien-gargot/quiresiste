@@ -6642,13 +6642,14 @@ fieldset[disabled] #home .container-fluid nav ol li h2.active {
 }
 #qui .container aside .galleries li > a:last-of-type img,
 #qui .container-fluid aside .galleries li > a:last-of-type img {
+  position: relative;
   width: 150px;
   height: auto;
 }
-#qui .container aside .galleries li:first-of-type a:first-of-type,
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type {
-  top: 50%;
-  left: -90px;
+#qui .container aside .galleries li.references a:first-of-type,
+#qui .container-fluid aside .galleries li.references a:first-of-type {
+  top: 41%;
+  left: -26px;
   color: #ffffff;
   background-color: transparent;
   margin-right: 7px;
@@ -6666,82 +6667,82 @@ fieldset[disabled] #home .container-fluid nav ol li h2.active {
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-#qui .container aside .galleries li:first-of-type a:first-of-type:hover,
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type:hover,
-#qui .container aside .galleries li:first-of-type a:first-of-type:focus,
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type:focus,
-#qui .container aside .galleries li:first-of-type a:first-of-type.focus,
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type.focus,
-#qui .container aside .galleries li:first-of-type a:first-of-type:active,
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type:active,
-#qui .container aside .galleries li:first-of-type a:first-of-type.active,
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type.active,
-.open > .dropdown-toggle#qui .container aside .galleries li:first-of-type a:first-of-type,
-.open > .dropdown-toggle#qui .container-fluid aside .galleries li:first-of-type a:first-of-type {
+#qui .container aside .galleries li.references a:first-of-type:hover,
+#qui .container-fluid aside .galleries li.references a:first-of-type:hover,
+#qui .container aside .galleries li.references a:first-of-type:focus,
+#qui .container-fluid aside .galleries li.references a:first-of-type:focus,
+#qui .container aside .galleries li.references a:first-of-type.focus,
+#qui .container-fluid aside .galleries li.references a:first-of-type.focus,
+#qui .container aside .galleries li.references a:first-of-type:active,
+#qui .container-fluid aside .galleries li.references a:first-of-type:active,
+#qui .container aside .galleries li.references a:first-of-type.active,
+#qui .container-fluid aside .galleries li.references a:first-of-type.active,
+.open > .dropdown-toggle#qui .container aside .galleries li.references a:first-of-type,
+.open > .dropdown-toggle#qui .container-fluid aside .galleries li.references a:first-of-type {
   color: #ffffff;
   background-color: rgba(0, 0, 0, 0);
   border-color: #e0e0e0;
 }
-#qui .container aside .galleries li:first-of-type a:first-of-type:active,
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type:active,
-#qui .container aside .galleries li:first-of-type a:first-of-type.active,
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type.active,
-.open > .dropdown-toggle#qui .container aside .galleries li:first-of-type a:first-of-type,
-.open > .dropdown-toggle#qui .container-fluid aside .galleries li:first-of-type a:first-of-type {
+#qui .container aside .galleries li.references a:first-of-type:active,
+#qui .container-fluid aside .galleries li.references a:first-of-type:active,
+#qui .container aside .galleries li.references a:first-of-type.active,
+#qui .container-fluid aside .galleries li.references a:first-of-type.active,
+.open > .dropdown-toggle#qui .container aside .galleries li.references a:first-of-type,
+.open > .dropdown-toggle#qui .container-fluid aside .galleries li.references a:first-of-type {
   background-image: none;
 }
-#qui .container aside .galleries li:first-of-type a:first-of-type.disabled,
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type.disabled,
-#qui .container aside .galleries li:first-of-type a:first-of-type[disabled],
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type[disabled],
-fieldset[disabled] #qui .container aside .galleries li:first-of-type a:first-of-type,
-fieldset[disabled] #qui .container-fluid aside .galleries li:first-of-type a:first-of-type,
-#qui .container aside .galleries li:first-of-type a:first-of-type.disabled:hover,
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type.disabled:hover,
-#qui .container aside .galleries li:first-of-type a:first-of-type[disabled]:hover,
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type[disabled]:hover,
-fieldset[disabled] #qui .container aside .galleries li:first-of-type a:first-of-type:hover,
-fieldset[disabled] #qui .container-fluid aside .galleries li:first-of-type a:first-of-type:hover,
-#qui .container aside .galleries li:first-of-type a:first-of-type.disabled:focus,
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type.disabled:focus,
-#qui .container aside .galleries li:first-of-type a:first-of-type[disabled]:focus,
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type[disabled]:focus,
-fieldset[disabled] #qui .container aside .galleries li:first-of-type a:first-of-type:focus,
-fieldset[disabled] #qui .container-fluid aside .galleries li:first-of-type a:first-of-type:focus,
-#qui .container aside .galleries li:first-of-type a:first-of-type.disabled.focus,
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type.disabled.focus,
-#qui .container aside .galleries li:first-of-type a:first-of-type[disabled].focus,
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type[disabled].focus,
-fieldset[disabled] #qui .container aside .galleries li:first-of-type a:first-of-type.focus,
-fieldset[disabled] #qui .container-fluid aside .galleries li:first-of-type a:first-of-type.focus,
-#qui .container aside .galleries li:first-of-type a:first-of-type.disabled:active,
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type.disabled:active,
-#qui .container aside .galleries li:first-of-type a:first-of-type[disabled]:active,
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type[disabled]:active,
-fieldset[disabled] #qui .container aside .galleries li:first-of-type a:first-of-type:active,
-fieldset[disabled] #qui .container-fluid aside .galleries li:first-of-type a:first-of-type:active,
-#qui .container aside .galleries li:first-of-type a:first-of-type.disabled.active,
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type.disabled.active,
-#qui .container aside .galleries li:first-of-type a:first-of-type[disabled].active,
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type[disabled].active,
-fieldset[disabled] #qui .container aside .galleries li:first-of-type a:first-of-type.active,
-fieldset[disabled] #qui .container-fluid aside .galleries li:first-of-type a:first-of-type.active {
+#qui .container aside .galleries li.references a:first-of-type.disabled,
+#qui .container-fluid aside .galleries li.references a:first-of-type.disabled,
+#qui .container aside .galleries li.references a:first-of-type[disabled],
+#qui .container-fluid aside .galleries li.references a:first-of-type[disabled],
+fieldset[disabled] #qui .container aside .galleries li.references a:first-of-type,
+fieldset[disabled] #qui .container-fluid aside .galleries li.references a:first-of-type,
+#qui .container aside .galleries li.references a:first-of-type.disabled:hover,
+#qui .container-fluid aside .galleries li.references a:first-of-type.disabled:hover,
+#qui .container aside .galleries li.references a:first-of-type[disabled]:hover,
+#qui .container-fluid aside .galleries li.references a:first-of-type[disabled]:hover,
+fieldset[disabled] #qui .container aside .galleries li.references a:first-of-type:hover,
+fieldset[disabled] #qui .container-fluid aside .galleries li.references a:first-of-type:hover,
+#qui .container aside .galleries li.references a:first-of-type.disabled:focus,
+#qui .container-fluid aside .galleries li.references a:first-of-type.disabled:focus,
+#qui .container aside .galleries li.references a:first-of-type[disabled]:focus,
+#qui .container-fluid aside .galleries li.references a:first-of-type[disabled]:focus,
+fieldset[disabled] #qui .container aside .galleries li.references a:first-of-type:focus,
+fieldset[disabled] #qui .container-fluid aside .galleries li.references a:first-of-type:focus,
+#qui .container aside .galleries li.references a:first-of-type.disabled.focus,
+#qui .container-fluid aside .galleries li.references a:first-of-type.disabled.focus,
+#qui .container aside .galleries li.references a:first-of-type[disabled].focus,
+#qui .container-fluid aside .galleries li.references a:first-of-type[disabled].focus,
+fieldset[disabled] #qui .container aside .galleries li.references a:first-of-type.focus,
+fieldset[disabled] #qui .container-fluid aside .galleries li.references a:first-of-type.focus,
+#qui .container aside .galleries li.references a:first-of-type.disabled:active,
+#qui .container-fluid aside .galleries li.references a:first-of-type.disabled:active,
+#qui .container aside .galleries li.references a:first-of-type[disabled]:active,
+#qui .container-fluid aside .galleries li.references a:first-of-type[disabled]:active,
+fieldset[disabled] #qui .container aside .galleries li.references a:first-of-type:active,
+fieldset[disabled] #qui .container-fluid aside .galleries li.references a:first-of-type:active,
+#qui .container aside .galleries li.references a:first-of-type.disabled.active,
+#qui .container-fluid aside .galleries li.references a:first-of-type.disabled.active,
+#qui .container aside .galleries li.references a:first-of-type[disabled].active,
+#qui .container-fluid aside .galleries li.references a:first-of-type[disabled].active,
+fieldset[disabled] #qui .container aside .galleries li.references a:first-of-type.active,
+fieldset[disabled] #qui .container-fluid aside .galleries li.references a:first-of-type.active {
   background-color: transparent;
   border-color: #ffffff;
 }
-#qui .container aside .galleries li:first-of-type a:first-of-type .badge,
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type .badge {
+#qui .container aside .galleries li.references a:first-of-type .badge,
+#qui .container-fluid aside .galleries li.references a:first-of-type .badge {
   color: transparent;
   background-color: #ffffff;
 }
-.active > #qui .container aside .galleries li:first-of-type a:first-of-type,
-.active > #qui .container-fluid aside .galleries li:first-of-type a:first-of-type,
-#qui .container aside .galleries li:first-of-type a:first-of-type:hover,
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type:hover,
-#qui .container aside .galleries li:first-of-type a:first-of-type:active,
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type:active,
-#qui .container aside .galleries li:first-of-type a:first-of-type:focus,
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type:focus {
+.active > #qui .container aside .galleries li.references a:first-of-type,
+.active > #qui .container-fluid aside .galleries li.references a:first-of-type,
+#qui .container aside .galleries li.references a:first-of-type:hover,
+#qui .container-fluid aside .galleries li.references a:first-of-type:hover,
+#qui .container aside .galleries li.references a:first-of-type:active,
+#qui .container-fluid aside .galleries li.references a:first-of-type:active,
+#qui .container aside .galleries li.references a:first-of-type:focus,
+#qui .container-fluid aside .galleries li.references a:first-of-type:focus {
   -webkit-transform: translate(7px, 6px);
   -ms-transform: translate(7px, 6px);
   -o-transform: translate(7px, 6px);
@@ -6749,18 +6750,18 @@ fieldset[disabled] #qui .container-fluid aside .galleries li:first-of-type a:fir
   -webkit-box-shadow: 0px 0px 0px 0px transparent;
   box-shadow: 0px 0px 0px 0px transparent;
 }
-.active > #qui .container aside .galleries li:first-of-type a:first-of-type,
-.active > #qui .container-fluid aside .galleries li:first-of-type a:first-of-type,
-#qui .container aside .galleries li:first-of-type a:first-of-type:hover,
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type:hover,
-#qui .container aside .galleries li:first-of-type a:first-of-type:active,
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type:active,
-#qui .container aside .galleries li:first-of-type a:first-of-type:focus,
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type:focus {
+.active > #qui .container aside .galleries li.references a:first-of-type,
+.active > #qui .container-fluid aside .galleries li.references a:first-of-type,
+#qui .container aside .galleries li.references a:first-of-type:hover,
+#qui .container-fluid aside .galleries li.references a:first-of-type:hover,
+#qui .container aside .galleries li.references a:first-of-type:active,
+#qui .container-fluid aside .galleries li.references a:first-of-type:active,
+#qui .container aside .galleries li.references a:first-of-type:focus,
+#qui .container-fluid aside .galleries li.references a:first-of-type:focus {
   color: #ffffff !important;
 }
-#qui .container aside .galleries li:first-of-type a:first-of-type .button-left-side,
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type .button-left-side {
+#qui .container aside .galleries li.references a:first-of-type .button-left-side,
+#qui .container-fluid aside .galleries li.references a:first-of-type .button-left-side {
   -webkit-box-shadow: 7px -6px 0px 0px #ffffff;
   box-shadow: 7px -6px 0px 0px #ffffff;
   -webkit-transform: rotate(90deg);
@@ -6768,12 +6769,12 @@ fieldset[disabled] #qui .container-fluid aside .galleries li:first-of-type a:fir
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-#qui .container aside .galleries li:first-of-type a:first-of-type .button-left-side:hover,
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type .button-left-side:hover,
-#qui .container aside .galleries li:first-of-type a:first-of-type .button-left-side:active,
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type .button-left-side:active,
-#qui .container aside .galleries li:first-of-type a:first-of-type .button-left-side:focus,
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type .button-left-side:focus {
+#qui .container aside .galleries li.references a:first-of-type .button-left-side:hover,
+#qui .container-fluid aside .galleries li.references a:first-of-type .button-left-side:hover,
+#qui .container aside .galleries li.references a:first-of-type .button-left-side:active,
+#qui .container-fluid aside .galleries li.references a:first-of-type .button-left-side:active,
+#qui .container aside .galleries li.references a:first-of-type .button-left-side:focus,
+#qui .container-fluid aside .galleries li.references a:first-of-type .button-left-side:focus {
   -webkit-transform: rotate(90deg) translate(7px, -6px);
   -ms-transform: rotate(90deg) translate(7px, -6px);
   -o-transform: rotate(90deg) translate(7px, -6px);
@@ -6781,8 +6782,8 @@ fieldset[disabled] #qui .container-fluid aside .galleries li:first-of-type a:fir
   -webkit-box-shadow: 0px 0px 0px 0px transparent;
   box-shadow: 0px 0px 0px 0px transparent;
 }
-#qui .container aside .galleries li:first-of-type a:first-of-type .button-right-side,
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type .button-right-side {
+#qui .container aside .galleries li.references a:first-of-type .button-right-side,
+#qui .container-fluid aside .galleries li.references a:first-of-type .button-right-side {
   -webkit-box-shadow: -7px 6px 0px 0px #ffffff;
   box-shadow: -7px 6px 0px 0px #ffffff;
   -webkit-transform: rotate(-90deg);
@@ -6790,12 +6791,12 @@ fieldset[disabled] #qui .container-fluid aside .galleries li:first-of-type a:fir
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
-#qui .container aside .galleries li:first-of-type a:first-of-type .button-right-side:hover,
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type .button-right-side:hover,
-#qui .container aside .galleries li:first-of-type a:first-of-type .button-right-side:active,
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type .button-right-side:active,
-#qui .container aside .galleries li:first-of-type a:first-of-type .button-right-side:focus,
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type .button-right-side:focus {
+#qui .container aside .galleries li.references a:first-of-type .button-right-side:hover,
+#qui .container-fluid aside .galleries li.references a:first-of-type .button-right-side:hover,
+#qui .container aside .galleries li.references a:first-of-type .button-right-side:active,
+#qui .container-fluid aside .galleries li.references a:first-of-type .button-right-side:active,
+#qui .container aside .galleries li.references a:first-of-type .button-right-side:focus,
+#qui .container-fluid aside .galleries li.references a:first-of-type .button-right-side:focus {
   -webkit-transform: rotate(-90deg) translate(-7px, 6px);
   -ms-transform: rotate(-90deg) translate(-7px, 6px);
   -o-transform: rotate(-90deg) translate(-7px, 6px);
@@ -6803,12 +6804,12 @@ fieldset[disabled] #qui .container-fluid aside .galleries li:first-of-type a:fir
   -webkit-box-shadow: 0px 0px 0px 0px transparent;
   box-shadow: 0px 0px 0px 0px transparent;
 }
-#qui .container aside .galleries li:first-of-type a:first-of-type:hover,
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type:hover,
-#qui .container aside .galleries li:first-of-type a:first-of-type:active,
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type:active,
-#qui .container aside .galleries li:first-of-type a:first-of-type:focus,
-#qui .container-fluid aside .galleries li:first-of-type a:first-of-type:focus {
+#qui .container aside .galleries li.references a:first-of-type:hover,
+#qui .container-fluid aside .galleries li.references a:first-of-type:hover,
+#qui .container aside .galleries li.references a:first-of-type:active,
+#qui .container-fluid aside .galleries li.references a:first-of-type:active,
+#qui .container aside .galleries li.references a:first-of-type:focus,
+#qui .container-fluid aside .galleries li.references a:first-of-type:focus {
   -webkit-transform: rotate(90deg) translate(7px, -6px);
   -ms-transform: rotate(90deg) translate(7px, -6px);
   -o-transform: rotate(90deg) translate(7px, -6px);
@@ -6816,15 +6817,25 @@ fieldset[disabled] #qui .container-fluid aside .galleries li:first-of-type a:fir
   -webkit-box-shadow: 0px 0px 0px 0px transparent;
   box-shadow: 0px 0px 0px 0px transparent;
 }
-#qui .container aside .galleries li:first-of-type a:last-of-type,
-#qui .container-fluid aside .galleries li:first-of-type a:last-of-type {
-  top: 50%;
-  left: -90px;
+#qui .container aside .galleries li.references a:last-of-type,
+#qui .container-fluid aside .galleries li.references a:last-of-type {
+  top: 34%;
+  left: -135px;
+  width: 149px;
+  height: auto;
+  padding: 0 0 0 0;
+  overflow: hidden;
 }
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type {
-  top: 50%;
-  right: -90px;
+#qui .container aside .galleries li.references a:last-of-type img,
+#qui .container-fluid aside .galleries li.references a:last-of-type img {
+  height: auto;
+  width: 150%;
+  right: 0px;
+}
+#qui .container aside .galleries li.originaux a:first-of-type,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type {
+  top: 61%;
+  right: -27px;
   color: #ffffff;
   background-color: transparent;
   margin-right: 7px;
@@ -6842,82 +6853,82 @@ fieldset[disabled] #qui .container-fluid aside .galleries li:first-of-type a:fir
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type:hover,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type:hover,
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type:focus,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type:focus,
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type.focus,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type.focus,
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type:active,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type:active,
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type.active,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type.active,
-.open > .dropdown-toggle#qui .container aside .galleries li:nth-of-type(2) a:first-of-type,
-.open > .dropdown-toggle#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type {
+#qui .container aside .galleries li.originaux a:first-of-type:hover,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type:hover,
+#qui .container aside .galleries li.originaux a:first-of-type:focus,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type:focus,
+#qui .container aside .galleries li.originaux a:first-of-type.focus,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type.focus,
+#qui .container aside .galleries li.originaux a:first-of-type:active,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type:active,
+#qui .container aside .galleries li.originaux a:first-of-type.active,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type.active,
+.open > .dropdown-toggle#qui .container aside .galleries li.originaux a:first-of-type,
+.open > .dropdown-toggle#qui .container-fluid aside .galleries li.originaux a:first-of-type {
   color: #ffffff;
   background-color: rgba(0, 0, 0, 0);
   border-color: #e0e0e0;
 }
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type:active,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type:active,
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type.active,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type.active,
-.open > .dropdown-toggle#qui .container aside .galleries li:nth-of-type(2) a:first-of-type,
-.open > .dropdown-toggle#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type {
+#qui .container aside .galleries li.originaux a:first-of-type:active,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type:active,
+#qui .container aside .galleries li.originaux a:first-of-type.active,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type.active,
+.open > .dropdown-toggle#qui .container aside .galleries li.originaux a:first-of-type,
+.open > .dropdown-toggle#qui .container-fluid aside .galleries li.originaux a:first-of-type {
   background-image: none;
 }
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type.disabled,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type.disabled,
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type[disabled],
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type[disabled],
-fieldset[disabled] #qui .container aside .galleries li:nth-of-type(2) a:first-of-type,
-fieldset[disabled] #qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type,
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type.disabled:hover,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type.disabled:hover,
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type[disabled]:hover,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type[disabled]:hover,
-fieldset[disabled] #qui .container aside .galleries li:nth-of-type(2) a:first-of-type:hover,
-fieldset[disabled] #qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type:hover,
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type.disabled:focus,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type.disabled:focus,
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type[disabled]:focus,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type[disabled]:focus,
-fieldset[disabled] #qui .container aside .galleries li:nth-of-type(2) a:first-of-type:focus,
-fieldset[disabled] #qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type:focus,
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type.disabled.focus,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type.disabled.focus,
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type[disabled].focus,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type[disabled].focus,
-fieldset[disabled] #qui .container aside .galleries li:nth-of-type(2) a:first-of-type.focus,
-fieldset[disabled] #qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type.focus,
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type.disabled:active,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type.disabled:active,
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type[disabled]:active,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type[disabled]:active,
-fieldset[disabled] #qui .container aside .galleries li:nth-of-type(2) a:first-of-type:active,
-fieldset[disabled] #qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type:active,
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type.disabled.active,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type.disabled.active,
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type[disabled].active,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type[disabled].active,
-fieldset[disabled] #qui .container aside .galleries li:nth-of-type(2) a:first-of-type.active,
-fieldset[disabled] #qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type.active {
+#qui .container aside .galleries li.originaux a:first-of-type.disabled,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type.disabled,
+#qui .container aside .galleries li.originaux a:first-of-type[disabled],
+#qui .container-fluid aside .galleries li.originaux a:first-of-type[disabled],
+fieldset[disabled] #qui .container aside .galleries li.originaux a:first-of-type,
+fieldset[disabled] #qui .container-fluid aside .galleries li.originaux a:first-of-type,
+#qui .container aside .galleries li.originaux a:first-of-type.disabled:hover,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type.disabled:hover,
+#qui .container aside .galleries li.originaux a:first-of-type[disabled]:hover,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type[disabled]:hover,
+fieldset[disabled] #qui .container aside .galleries li.originaux a:first-of-type:hover,
+fieldset[disabled] #qui .container-fluid aside .galleries li.originaux a:first-of-type:hover,
+#qui .container aside .galleries li.originaux a:first-of-type.disabled:focus,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type.disabled:focus,
+#qui .container aside .galleries li.originaux a:first-of-type[disabled]:focus,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type[disabled]:focus,
+fieldset[disabled] #qui .container aside .galleries li.originaux a:first-of-type:focus,
+fieldset[disabled] #qui .container-fluid aside .galleries li.originaux a:first-of-type:focus,
+#qui .container aside .galleries li.originaux a:first-of-type.disabled.focus,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type.disabled.focus,
+#qui .container aside .galleries li.originaux a:first-of-type[disabled].focus,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type[disabled].focus,
+fieldset[disabled] #qui .container aside .galleries li.originaux a:first-of-type.focus,
+fieldset[disabled] #qui .container-fluid aside .galleries li.originaux a:first-of-type.focus,
+#qui .container aside .galleries li.originaux a:first-of-type.disabled:active,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type.disabled:active,
+#qui .container aside .galleries li.originaux a:first-of-type[disabled]:active,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type[disabled]:active,
+fieldset[disabled] #qui .container aside .galleries li.originaux a:first-of-type:active,
+fieldset[disabled] #qui .container-fluid aside .galleries li.originaux a:first-of-type:active,
+#qui .container aside .galleries li.originaux a:first-of-type.disabled.active,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type.disabled.active,
+#qui .container aside .galleries li.originaux a:first-of-type[disabled].active,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type[disabled].active,
+fieldset[disabled] #qui .container aside .galleries li.originaux a:first-of-type.active,
+fieldset[disabled] #qui .container-fluid aside .galleries li.originaux a:first-of-type.active {
   background-color: transparent;
   border-color: #ffffff;
 }
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type .badge,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type .badge {
+#qui .container aside .galleries li.originaux a:first-of-type .badge,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type .badge {
   color: transparent;
   background-color: #ffffff;
 }
-.active > #qui .container aside .galleries li:nth-of-type(2) a:first-of-type,
-.active > #qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type,
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type:hover,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type:hover,
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type:active,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type:active,
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type:focus,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type:focus {
+.active > #qui .container aside .galleries li.originaux a:first-of-type,
+.active > #qui .container-fluid aside .galleries li.originaux a:first-of-type,
+#qui .container aside .galleries li.originaux a:first-of-type:hover,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type:hover,
+#qui .container aside .galleries li.originaux a:first-of-type:active,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type:active,
+#qui .container aside .galleries li.originaux a:first-of-type:focus,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type:focus {
   -webkit-transform: translate(7px, 6px);
   -ms-transform: translate(7px, 6px);
   -o-transform: translate(7px, 6px);
@@ -6925,18 +6936,18 @@ fieldset[disabled] #qui .container-fluid aside .galleries li:nth-of-type(2) a:fi
   -webkit-box-shadow: 0px 0px 0px 0px transparent;
   box-shadow: 0px 0px 0px 0px transparent;
 }
-.active > #qui .container aside .galleries li:nth-of-type(2) a:first-of-type,
-.active > #qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type,
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type:hover,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type:hover,
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type:active,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type:active,
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type:focus,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type:focus {
+.active > #qui .container aside .galleries li.originaux a:first-of-type,
+.active > #qui .container-fluid aside .galleries li.originaux a:first-of-type,
+#qui .container aside .galleries li.originaux a:first-of-type:hover,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type:hover,
+#qui .container aside .galleries li.originaux a:first-of-type:active,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type:active,
+#qui .container aside .galleries li.originaux a:first-of-type:focus,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type:focus {
   color: #ffffff !important;
 }
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type .button-left-side,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type .button-left-side {
+#qui .container aside .galleries li.originaux a:first-of-type .button-left-side,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type .button-left-side {
   -webkit-box-shadow: 7px -6px 0px 0px #ffffff;
   box-shadow: 7px -6px 0px 0px #ffffff;
   -webkit-transform: rotate(90deg);
@@ -6944,12 +6955,12 @@ fieldset[disabled] #qui .container-fluid aside .galleries li:nth-of-type(2) a:fi
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type .button-left-side:hover,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type .button-left-side:hover,
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type .button-left-side:active,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type .button-left-side:active,
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type .button-left-side:focus,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type .button-left-side:focus {
+#qui .container aside .galleries li.originaux a:first-of-type .button-left-side:hover,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type .button-left-side:hover,
+#qui .container aside .galleries li.originaux a:first-of-type .button-left-side:active,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type .button-left-side:active,
+#qui .container aside .galleries li.originaux a:first-of-type .button-left-side:focus,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type .button-left-side:focus {
   -webkit-transform: rotate(90deg) translate(7px, -6px);
   -ms-transform: rotate(90deg) translate(7px, -6px);
   -o-transform: rotate(90deg) translate(7px, -6px);
@@ -6957,8 +6968,8 @@ fieldset[disabled] #qui .container-fluid aside .galleries li:nth-of-type(2) a:fi
   -webkit-box-shadow: 0px 0px 0px 0px transparent;
   box-shadow: 0px 0px 0px 0px transparent;
 }
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type .button-right-side,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type .button-right-side {
+#qui .container aside .galleries li.originaux a:first-of-type .button-right-side,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type .button-right-side {
   -webkit-box-shadow: -7px 6px 0px 0px #ffffff;
   box-shadow: -7px 6px 0px 0px #ffffff;
   -webkit-transform: rotate(-90deg);
@@ -6966,12 +6977,12 @@ fieldset[disabled] #qui .container-fluid aside .galleries li:nth-of-type(2) a:fi
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type .button-right-side:hover,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type .button-right-side:hover,
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type .button-right-side:active,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type .button-right-side:active,
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type .button-right-side:focus,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type .button-right-side:focus {
+#qui .container aside .galleries li.originaux a:first-of-type .button-right-side:hover,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type .button-right-side:hover,
+#qui .container aside .galleries li.originaux a:first-of-type .button-right-side:active,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type .button-right-side:active,
+#qui .container aside .galleries li.originaux a:first-of-type .button-right-side:focus,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type .button-right-side:focus {
   -webkit-transform: rotate(-90deg) translate(-7px, 6px);
   -ms-transform: rotate(-90deg) translate(-7px, 6px);
   -o-transform: rotate(-90deg) translate(-7px, 6px);
@@ -6979,12 +6990,12 @@ fieldset[disabled] #qui .container-fluid aside .galleries li:nth-of-type(2) a:fi
   -webkit-box-shadow: 0px 0px 0px 0px transparent;
   box-shadow: 0px 0px 0px 0px transparent;
 }
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type:hover,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type:hover,
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type:active,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type:active,
-#qui .container aside .galleries li:nth-of-type(2) a:first-of-type:focus,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:first-of-type:focus {
+#qui .container aside .galleries li.originaux a:first-of-type:hover,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type:hover,
+#qui .container aside .galleries li.originaux a:first-of-type:active,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type:active,
+#qui .container aside .galleries li.originaux a:first-of-type:focus,
+#qui .container-fluid aside .galleries li.originaux a:first-of-type:focus {
   -webkit-transform: rotate(-90deg) translate(-7px, 6px);
   -ms-transform: rotate(-90deg) translate(-7px, 6px);
   -o-transform: rotate(-90deg) translate(-7px, 6px);
@@ -6992,15 +7003,23 @@ fieldset[disabled] #qui .container-fluid aside .galleries li:nth-of-type(2) a:fi
   -webkit-box-shadow: 0px 0px 0px 0px transparent;
   box-shadow: 0px 0px 0px 0px transparent;
 }
-#qui .container aside .galleries li:nth-of-type(2) a:last-of-type,
-#qui .container-fluid aside .galleries li:nth-of-type(2) a:last-of-type {
-  top: 50%;
-  right: -90px;
+#qui .container aside .galleries li.originaux a:last-of-type,
+#qui .container-fluid aside .galleries li.originaux a:last-of-type {
+  top: 29%;
+  right: -134px;
+  width: 142px;
+  padding: 0 0 0 0;
+  overflow: hidden;
 }
-#qui .container aside .galleries li:nth-of-type(3) a:first-of-type,
-#qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type {
-  bottom: -4%;
-  right: 50%;
+#qui .container aside .galleries li.originaux a:last-of-type img,
+#qui .container-fluid aside .galleries li.originaux a:last-of-type img {
+  height: auto;
+  width: 150%;
+}
+#qui .container aside .galleries li.revue a:first-of-type,
+#qui .container-fluid aside .galleries li.revue a:first-of-type {
+  bottom: 4%;
+  left: 12%;
   color: #ffffff;
   background-color: transparent;
   margin-right: 7px;
@@ -7012,82 +7031,82 @@ fieldset[disabled] #qui .container-fluid aside .galleries li:nth-of-type(2) a:fi
   box-shadow: 7px 6px 0px 0px #ffffff;
   line-height: 0.3;
 }
-#qui .container aside .galleries li:nth-of-type(3) a:first-of-type:hover,
-#qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type:hover,
-#qui .container aside .galleries li:nth-of-type(3) a:first-of-type:focus,
-#qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type:focus,
-#qui .container aside .galleries li:nth-of-type(3) a:first-of-type.focus,
-#qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type.focus,
-#qui .container aside .galleries li:nth-of-type(3) a:first-of-type:active,
-#qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type:active,
-#qui .container aside .galleries li:nth-of-type(3) a:first-of-type.active,
-#qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type.active,
-.open > .dropdown-toggle#qui .container aside .galleries li:nth-of-type(3) a:first-of-type,
-.open > .dropdown-toggle#qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type {
+#qui .container aside .galleries li.revue a:first-of-type:hover,
+#qui .container-fluid aside .galleries li.revue a:first-of-type:hover,
+#qui .container aside .galleries li.revue a:first-of-type:focus,
+#qui .container-fluid aside .galleries li.revue a:first-of-type:focus,
+#qui .container aside .galleries li.revue a:first-of-type.focus,
+#qui .container-fluid aside .galleries li.revue a:first-of-type.focus,
+#qui .container aside .galleries li.revue a:first-of-type:active,
+#qui .container-fluid aside .galleries li.revue a:first-of-type:active,
+#qui .container aside .galleries li.revue a:first-of-type.active,
+#qui .container-fluid aside .galleries li.revue a:first-of-type.active,
+.open > .dropdown-toggle#qui .container aside .galleries li.revue a:first-of-type,
+.open > .dropdown-toggle#qui .container-fluid aside .galleries li.revue a:first-of-type {
   color: #ffffff;
   background-color: rgba(0, 0, 0, 0);
   border-color: #e0e0e0;
 }
-#qui .container aside .galleries li:nth-of-type(3) a:first-of-type:active,
-#qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type:active,
-#qui .container aside .galleries li:nth-of-type(3) a:first-of-type.active,
-#qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type.active,
-.open > .dropdown-toggle#qui .container aside .galleries li:nth-of-type(3) a:first-of-type,
-.open > .dropdown-toggle#qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type {
+#qui .container aside .galleries li.revue a:first-of-type:active,
+#qui .container-fluid aside .galleries li.revue a:first-of-type:active,
+#qui .container aside .galleries li.revue a:first-of-type.active,
+#qui .container-fluid aside .galleries li.revue a:first-of-type.active,
+.open > .dropdown-toggle#qui .container aside .galleries li.revue a:first-of-type,
+.open > .dropdown-toggle#qui .container-fluid aside .galleries li.revue a:first-of-type {
   background-image: none;
 }
-#qui .container aside .galleries li:nth-of-type(3) a:first-of-type.disabled,
-#qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type.disabled,
-#qui .container aside .galleries li:nth-of-type(3) a:first-of-type[disabled],
-#qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type[disabled],
-fieldset[disabled] #qui .container aside .galleries li:nth-of-type(3) a:first-of-type,
-fieldset[disabled] #qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type,
-#qui .container aside .galleries li:nth-of-type(3) a:first-of-type.disabled:hover,
-#qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type.disabled:hover,
-#qui .container aside .galleries li:nth-of-type(3) a:first-of-type[disabled]:hover,
-#qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type[disabled]:hover,
-fieldset[disabled] #qui .container aside .galleries li:nth-of-type(3) a:first-of-type:hover,
-fieldset[disabled] #qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type:hover,
-#qui .container aside .galleries li:nth-of-type(3) a:first-of-type.disabled:focus,
-#qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type.disabled:focus,
-#qui .container aside .galleries li:nth-of-type(3) a:first-of-type[disabled]:focus,
-#qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type[disabled]:focus,
-fieldset[disabled] #qui .container aside .galleries li:nth-of-type(3) a:first-of-type:focus,
-fieldset[disabled] #qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type:focus,
-#qui .container aside .galleries li:nth-of-type(3) a:first-of-type.disabled.focus,
-#qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type.disabled.focus,
-#qui .container aside .galleries li:nth-of-type(3) a:first-of-type[disabled].focus,
-#qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type[disabled].focus,
-fieldset[disabled] #qui .container aside .galleries li:nth-of-type(3) a:first-of-type.focus,
-fieldset[disabled] #qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type.focus,
-#qui .container aside .galleries li:nth-of-type(3) a:first-of-type.disabled:active,
-#qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type.disabled:active,
-#qui .container aside .galleries li:nth-of-type(3) a:first-of-type[disabled]:active,
-#qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type[disabled]:active,
-fieldset[disabled] #qui .container aside .galleries li:nth-of-type(3) a:first-of-type:active,
-fieldset[disabled] #qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type:active,
-#qui .container aside .galleries li:nth-of-type(3) a:first-of-type.disabled.active,
-#qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type.disabled.active,
-#qui .container aside .galleries li:nth-of-type(3) a:first-of-type[disabled].active,
-#qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type[disabled].active,
-fieldset[disabled] #qui .container aside .galleries li:nth-of-type(3) a:first-of-type.active,
-fieldset[disabled] #qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type.active {
+#qui .container aside .galleries li.revue a:first-of-type.disabled,
+#qui .container-fluid aside .galleries li.revue a:first-of-type.disabled,
+#qui .container aside .galleries li.revue a:first-of-type[disabled],
+#qui .container-fluid aside .galleries li.revue a:first-of-type[disabled],
+fieldset[disabled] #qui .container aside .galleries li.revue a:first-of-type,
+fieldset[disabled] #qui .container-fluid aside .galleries li.revue a:first-of-type,
+#qui .container aside .galleries li.revue a:first-of-type.disabled:hover,
+#qui .container-fluid aside .galleries li.revue a:first-of-type.disabled:hover,
+#qui .container aside .galleries li.revue a:first-of-type[disabled]:hover,
+#qui .container-fluid aside .galleries li.revue a:first-of-type[disabled]:hover,
+fieldset[disabled] #qui .container aside .galleries li.revue a:first-of-type:hover,
+fieldset[disabled] #qui .container-fluid aside .galleries li.revue a:first-of-type:hover,
+#qui .container aside .galleries li.revue a:first-of-type.disabled:focus,
+#qui .container-fluid aside .galleries li.revue a:first-of-type.disabled:focus,
+#qui .container aside .galleries li.revue a:first-of-type[disabled]:focus,
+#qui .container-fluid aside .galleries li.revue a:first-of-type[disabled]:focus,
+fieldset[disabled] #qui .container aside .galleries li.revue a:first-of-type:focus,
+fieldset[disabled] #qui .container-fluid aside .galleries li.revue a:first-of-type:focus,
+#qui .container aside .galleries li.revue a:first-of-type.disabled.focus,
+#qui .container-fluid aside .galleries li.revue a:first-of-type.disabled.focus,
+#qui .container aside .galleries li.revue a:first-of-type[disabled].focus,
+#qui .container-fluid aside .galleries li.revue a:first-of-type[disabled].focus,
+fieldset[disabled] #qui .container aside .galleries li.revue a:first-of-type.focus,
+fieldset[disabled] #qui .container-fluid aside .galleries li.revue a:first-of-type.focus,
+#qui .container aside .galleries li.revue a:first-of-type.disabled:active,
+#qui .container-fluid aside .galleries li.revue a:first-of-type.disabled:active,
+#qui .container aside .galleries li.revue a:first-of-type[disabled]:active,
+#qui .container-fluid aside .galleries li.revue a:first-of-type[disabled]:active,
+fieldset[disabled] #qui .container aside .galleries li.revue a:first-of-type:active,
+fieldset[disabled] #qui .container-fluid aside .galleries li.revue a:first-of-type:active,
+#qui .container aside .galleries li.revue a:first-of-type.disabled.active,
+#qui .container-fluid aside .galleries li.revue a:first-of-type.disabled.active,
+#qui .container aside .galleries li.revue a:first-of-type[disabled].active,
+#qui .container-fluid aside .galleries li.revue a:first-of-type[disabled].active,
+fieldset[disabled] #qui .container aside .galleries li.revue a:first-of-type.active,
+fieldset[disabled] #qui .container-fluid aside .galleries li.revue a:first-of-type.active {
   background-color: transparent;
   border-color: #ffffff;
 }
-#qui .container aside .galleries li:nth-of-type(3) a:first-of-type .badge,
-#qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type .badge {
+#qui .container aside .galleries li.revue a:first-of-type .badge,
+#qui .container-fluid aside .galleries li.revue a:first-of-type .badge {
   color: transparent;
   background-color: #ffffff;
 }
-.active > #qui .container aside .galleries li:nth-of-type(3) a:first-of-type,
-.active > #qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type,
-#qui .container aside .galleries li:nth-of-type(3) a:first-of-type:hover,
-#qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type:hover,
-#qui .container aside .galleries li:nth-of-type(3) a:first-of-type:active,
-#qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type:active,
-#qui .container aside .galleries li:nth-of-type(3) a:first-of-type:focus,
-#qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type:focus {
+.active > #qui .container aside .galleries li.revue a:first-of-type,
+.active > #qui .container-fluid aside .galleries li.revue a:first-of-type,
+#qui .container aside .galleries li.revue a:first-of-type:hover,
+#qui .container-fluid aside .galleries li.revue a:first-of-type:hover,
+#qui .container aside .galleries li.revue a:first-of-type:active,
+#qui .container-fluid aside .galleries li.revue a:first-of-type:active,
+#qui .container aside .galleries li.revue a:first-of-type:focus,
+#qui .container-fluid aside .galleries li.revue a:first-of-type:focus {
   -webkit-transform: translate(7px, 6px);
   -ms-transform: translate(7px, 6px);
   -o-transform: translate(7px, 6px);
@@ -7095,18 +7114,18 @@ fieldset[disabled] #qui .container-fluid aside .galleries li:nth-of-type(3) a:fi
   -webkit-box-shadow: 0px 0px 0px 0px transparent;
   box-shadow: 0px 0px 0px 0px transparent;
 }
-.active > #qui .container aside .galleries li:nth-of-type(3) a:first-of-type,
-.active > #qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type,
-#qui .container aside .galleries li:nth-of-type(3) a:first-of-type:hover,
-#qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type:hover,
-#qui .container aside .galleries li:nth-of-type(3) a:first-of-type:active,
-#qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type:active,
-#qui .container aside .galleries li:nth-of-type(3) a:first-of-type:focus,
-#qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type:focus {
+.active > #qui .container aside .galleries li.revue a:first-of-type,
+.active > #qui .container-fluid aside .galleries li.revue a:first-of-type,
+#qui .container aside .galleries li.revue a:first-of-type:hover,
+#qui .container-fluid aside .galleries li.revue a:first-of-type:hover,
+#qui .container aside .galleries li.revue a:first-of-type:active,
+#qui .container-fluid aside .galleries li.revue a:first-of-type:active,
+#qui .container aside .galleries li.revue a:first-of-type:focus,
+#qui .container-fluid aside .galleries li.revue a:first-of-type:focus {
   color: #ffffff !important;
 }
-#qui .container aside .galleries li:nth-of-type(3) a:first-of-type .button-left-side,
-#qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type .button-left-side {
+#qui .container aside .galleries li.revue a:first-of-type .button-left-side,
+#qui .container-fluid aside .galleries li.revue a:first-of-type .button-left-side {
   -webkit-box-shadow: 7px -6px 0px 0px #ffffff;
   box-shadow: 7px -6px 0px 0px #ffffff;
   -webkit-transform: rotate(90deg);
@@ -7114,12 +7133,12 @@ fieldset[disabled] #qui .container-fluid aside .galleries li:nth-of-type(3) a:fi
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-#qui .container aside .galleries li:nth-of-type(3) a:first-of-type .button-left-side:hover,
-#qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type .button-left-side:hover,
-#qui .container aside .galleries li:nth-of-type(3) a:first-of-type .button-left-side:active,
-#qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type .button-left-side:active,
-#qui .container aside .galleries li:nth-of-type(3) a:first-of-type .button-left-side:focus,
-#qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type .button-left-side:focus {
+#qui .container aside .galleries li.revue a:first-of-type .button-left-side:hover,
+#qui .container-fluid aside .galleries li.revue a:first-of-type .button-left-side:hover,
+#qui .container aside .galleries li.revue a:first-of-type .button-left-side:active,
+#qui .container-fluid aside .galleries li.revue a:first-of-type .button-left-side:active,
+#qui .container aside .galleries li.revue a:first-of-type .button-left-side:focus,
+#qui .container-fluid aside .galleries li.revue a:first-of-type .button-left-side:focus {
   -webkit-transform: rotate(90deg) translate(7px, -6px);
   -ms-transform: rotate(90deg) translate(7px, -6px);
   -o-transform: rotate(90deg) translate(7px, -6px);
@@ -7127,8 +7146,8 @@ fieldset[disabled] #qui .container-fluid aside .galleries li:nth-of-type(3) a:fi
   -webkit-box-shadow: 0px 0px 0px 0px transparent;
   box-shadow: 0px 0px 0px 0px transparent;
 }
-#qui .container aside .galleries li:nth-of-type(3) a:first-of-type .button-right-side,
-#qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type .button-right-side {
+#qui .container aside .galleries li.revue a:first-of-type .button-right-side,
+#qui .container-fluid aside .galleries li.revue a:first-of-type .button-right-side {
   -webkit-box-shadow: -7px 6px 0px 0px #ffffff;
   box-shadow: -7px 6px 0px 0px #ffffff;
   -webkit-transform: rotate(-90deg);
@@ -7136,12 +7155,12 @@ fieldset[disabled] #qui .container-fluid aside .galleries li:nth-of-type(3) a:fi
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
-#qui .container aside .galleries li:nth-of-type(3) a:first-of-type .button-right-side:hover,
-#qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type .button-right-side:hover,
-#qui .container aside .galleries li:nth-of-type(3) a:first-of-type .button-right-side:active,
-#qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type .button-right-side:active,
-#qui .container aside .galleries li:nth-of-type(3) a:first-of-type .button-right-side:focus,
-#qui .container-fluid aside .galleries li:nth-of-type(3) a:first-of-type .button-right-side:focus {
+#qui .container aside .galleries li.revue a:first-of-type .button-right-side:hover,
+#qui .container-fluid aside .galleries li.revue a:first-of-type .button-right-side:hover,
+#qui .container aside .galleries li.revue a:first-of-type .button-right-side:active,
+#qui .container-fluid aside .galleries li.revue a:first-of-type .button-right-side:active,
+#qui .container aside .galleries li.revue a:first-of-type .button-right-side:focus,
+#qui .container-fluid aside .galleries li.revue a:first-of-type .button-right-side:focus {
   -webkit-transform: rotate(-90deg) translate(-7px, 6px);
   -ms-transform: rotate(-90deg) translate(-7px, 6px);
   -o-transform: rotate(-90deg) translate(-7px, 6px);
@@ -7149,10 +7168,19 @@ fieldset[disabled] #qui .container-fluid aside .galleries li:nth-of-type(3) a:fi
   -webkit-box-shadow: 0px 0px 0px 0px transparent;
   box-shadow: 0px 0px 0px 0px transparent;
 }
-#qui .container aside .galleries li:nth-of-type(3) a:last-of-type,
-#qui .container-fluid aside .galleries li:nth-of-type(3) a:last-of-type {
-  bottom: -4%;
-  right: 50%;
+#qui .container aside .galleries li.revue a:last-of-type,
+#qui .container-fluid aside .galleries li.revue a:last-of-type {
+  bottom: -24%;
+  left: 12%;
+  width: auto;
+  height: 152px;
+  padding: 0 0 0 0;
+  overflow: hidden;
+}
+#qui .container aside .galleries li.revue a:last-of-type img,
+#qui .container-fluid aside .galleries li.revue a:last-of-type img {
+  width: auto;
+  height: 230%;
 }
 #abc {
   /*
