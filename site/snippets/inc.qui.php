@@ -33,7 +33,7 @@
         <ul class="nav nav-pills nav-stacked galleries">
           <?php $j = 0 ?>
           <?php foreach ($article->children()->visible() as $gallery): ?>
-          <li>
+          <li class="<?= preg_replace('/\d+-/', '', $gallery->dirname) ?>">
             <!-- Button trigger modal -->
             <a data-toggle="modal" data-target="#gallery-<?= $i ?>-<?= $j ?>" data-src="<?= $gallery->url() ?>">
               <?= $gallery->title() ?>

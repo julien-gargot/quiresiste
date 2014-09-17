@@ -95,7 +95,7 @@ function initTabsHome() {
 
       var id = 'tab-'+i+'-'+j;
 
-      var $tab = $('<div>').attr('id',id).addClass('tab-pane fade');
+      var $tab = $('<div>').attr('id',id).addClass('tab-pane');
 
       var $a = $('<li>').append(
         $('<a>').attr({
@@ -198,12 +198,14 @@ function initScroll() {
 
   if( supportsTouch ) {
 
-    var ix, iy, dx, dy = 0;
+    var ix, iy, dx = 0, dy = 0;
     var s = 100;
     var nx = ny = 0;
 
     $(window).on({
       'touchstart': function(event) {
+        dx = 0;
+        dy = 0;
         ix = event.originalEvent.pageX;
         iy = event.originalEvent.pageY;
         nx = Math.floor( $('#qui').scrollLeft() / stepx );
@@ -238,7 +240,8 @@ function initScroll() {
           }
         }
 
-
+        dx = 0;
+        dy = 0;
         console.log("["+nx+','+ny+"]");
       }
     });
