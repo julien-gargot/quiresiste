@@ -13,57 +13,6 @@
       <a class="btn btn-default" data-toggle="modal" data-target="#credits-box"> crédits </a>
     </header>
 
-    <!-- Modal -->
-    <div class="modal fade" id="introduction-box" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title" id="myModalLabel">Introduction</h4>
-          </div>
-          <div class="modal-body">
-            <p><?= kirbytext($page->introduction()) ?></p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default text-uppercase" data-dismiss="modal">Fermer</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal fade" id="tutorial-box" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title" id="myModalLabel">TUTORIAL</h4>
-          </div>
-          <div class="modal-body">
-            <img src="<?= url('assets/images/tutorial.png') ?>"></img>
-            <?= kirbytext($page->tutorial()) ?>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default text-uppercase" data-dismiss="modal">Fermer</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal fade" id="credits-box" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title" id="myModalLabel">Crédits</h4>
-          </div>
-          <div class="modal-body">
-            <p><?= kirbytext($page->credits()) ?></p>
-            <img src="<?= url('assets/images/logos-partenaires.png') ?>"/>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default text-uppercase" data-dismiss="modal">Fermer</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <nav>
 
       <ol class="row">
@@ -87,6 +36,56 @@
 <?php snippet('inc.qui') ?>
 
 <?php snippet('inc.abc') ?>
+
+<!-- Modal -->
+<div class="modal fade" id="introduction-box" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Introduction</h4>
+      </div>
+      <div class="modal-body">
+        <p><?= kirbytext($page->introduction()) ?></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default text-uppercase" data-dismiss="modal">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="tutorial-box" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">TUTORIAL</h4>
+      </div>
+      <div class="modal-body">
+        <img src="<?= url('assets/images/tutorial.png') ?>"></img>
+        <?= kirbytext($page->tutorial()) ?>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default text-uppercase" data-dismiss="modal">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="credits-box" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Crédits</h4>
+      </div>
+      <div class="modal-body">
+        <p><?= kirbytext($page->credits()) ?></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default text-uppercase" data-dismiss="modal">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <?php snippet('inc.gallery') ?>
 

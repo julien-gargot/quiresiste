@@ -15,7 +15,12 @@
         <ul>
           <?php foreach($items as $item): ?>
           <li>
-            <a href="<?php echo $item->url()?>">
+            <?php if ( $item->hasSounds() ): ?>
+            <?php $attribut = 'class="audio-link" data-target="'.$item->sounds()->first()->url().'"' ?>
+            <?php else: ?>
+            <?php $attribut = "" ?>
+            <?php endif ?>
+            <a <?= $attribut ?>>
               <span class="glyphicon glyphicon-volume-up"></span>
               <?= $item->title()?>
               <?= kirbytext($item->text()) ?>

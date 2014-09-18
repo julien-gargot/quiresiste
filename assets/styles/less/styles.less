@@ -162,11 +162,6 @@ body {
   > footer { bottom: 0; height: @footer-heigth;  }
 }
 
-    .modal-content .modal-footer {
-      border-top: none;
-      }  
-      
-
 #home {
 
   /*
@@ -209,9 +204,8 @@ body {
 
 #tutorial-box {
   .modal-dialog{width:77%;}
-  img, p { display: flex;}
    img { width: 70%;}
-   p { width: 28%;}
+   p { width: 28%; float:right;}
 }
 
 #credits-box{
@@ -229,7 +223,7 @@ body {
 
     header {
       position:absolute;
-      top: 15.4%;
+      top: 77px;
       left: -13%;
       width: 58%;
     }
@@ -269,6 +263,8 @@ body {
    * Work here to theme “Qui? Résiste” screens.
    */
 
+  #sound-play-pause { position: fixed; top: @grid-gutter-width; left: @grid-gutter-width; background-color: pink; z-index: 10; }
+
   .container,
   .container-fluid {
 
@@ -286,28 +282,14 @@ body {
       width: 50%;
     }
 
-    .tab-content{
-     // width: 120%;
-     // float: right;
-     // -webkit-columns: 2;
-     // -moz-columns: 2;
-     // columns: 2;
-    }
-
     aside {
+
       .sounds {
         position:absolute;
         bottom: -@outer-space;
         right: -@outer-space;
         //background-color: orange;
-
-        audio{
-          display: none;
-        }
       }
-
-
-
 
       .galleries {
 
@@ -316,7 +298,7 @@ body {
         li > a:first-of-type { z-index: 1; }
         li > a:last-of-type { z-index: 0; }
         li > a:nth-of-type(2) img { position:relative; width: 150px; height: auto; }
-        
+
 
         li.references  {
           a:first-of-type {
@@ -409,6 +391,19 @@ body {
       }
    }
 
+}
+
+#qui,
+#abc {
+  .audio-link {
+    cursor: pointer;
+    &.sound-playing {
+      background-color: #F0F;
+    }
+    &.sound-selected {
+      box-shadow: 0 0 0 3px #FF0;
+    }
+  }
 }
 
 body.gallery,
