@@ -4,14 +4,6 @@
 
   <?php if($page->hasImages()): ?>
   <article id="carousel-gallery" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <?php $i = 0 ?>
-      <?php foreach($page->images() as $image): ?>
-      <li data-target="#carousel-gallery" data-slide-to="<?= $i ?>" <?php if($i==0) echo 'class="active"' ?>></li>
-      <?php $i++; endforeach ?>
-    </ol>
-
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <?php $i = 0 ?>
