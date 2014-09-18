@@ -37,11 +37,8 @@
             <!-- Button trigger modal -->
             <a data-toggle="modal" data-target="#gallery-<?= $i ?>-<?= $j ?>" data-src="<?= $gallery->url() ?>">
               <?= $gallery->title() ?>
-              <?php if ($article->hasImages()): ?>
-                <img src="<?= $article->images()->find($gallery->dirname.'.png')->url() ?>" alt="">
-              <?php endif ?>
             </a>
-            <?php if ($article->hasImages()): ?>
+            <?php if ($article->hasImages() && $article->images()->find($gallery->dirname.'.png')): ?>
             <a data-toggle="modal" data-target="#gallery-<?= $i ?>-<?= $j ?>" data-src="<?= $gallery->url() ?>">
               <img src="<?= $article->images()->find($gallery->dirname.'.png')->url() ?>" alt="">
             </a>
