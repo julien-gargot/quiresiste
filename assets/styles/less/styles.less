@@ -108,7 +108,7 @@ body {
   > header {
     width: 46%;
     top: 0; height: @header-heigth;
-    z-index: 1; 
+    z-index: 1;
     h1 {margin-top: ceil((@outer-space - @outer-border-width)); margin-left: ceil((@outer-space - @outer-border-width)); }
     img { display: block; width:100%; height: auto; }
   }
@@ -303,7 +303,7 @@ body {
         li > a { position:absolute; }
         li > a:first-of-type { z-index: 1; }
         li > a:last-of-type { z-index: 0; }
-        li > a:last-of-type img { position:relative; width: 150px; height: auto; }
+        li > a:nth-of-type(2) img { position:relative; width: 150px; height: auto; }
 
 
         li.references  {
@@ -314,7 +314,7 @@ body {
             .button-left-side;
           }
 
-          a:last-of-type {
+          a:nth-of-type(2) {
             top: 34%;
             left: -135px;
             //background: pink;
@@ -338,7 +338,7 @@ body {
             .button-right-side;
           }
 
-          a:last-of-type {
+          a:nth-of-type(2) {
             top: 29%;
             right: -134px;
             width: 142px;
@@ -357,7 +357,7 @@ body {
             left: 12%;
             .btn-primary;
           }
-          a:last-of-type {
+          a:nth-of-type(2) {
             bottom: -24%;
             left: 12%;
             width: auto;
