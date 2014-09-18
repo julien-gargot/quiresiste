@@ -55,6 +55,7 @@
           </div>
           <div class="modal-body">
             <p><?= kirbytext($page->credits()) ?></p>
+            <img src="<?= url('assets/images/logos-partenaires.png') ?>"/>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default text-uppercase" data-dismiss="modal">Fermer</button>

@@ -206,13 +206,25 @@ body {
 
 #tutorial-box {
   .modal-dialog{width:77%;}
-   img { width: 70%;}
-   p { width: 28%; float:right;}
+
+  .modal-body {
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+      img{
+        width:106%;
+      }
+  }
+  // p{ width: 50%; float: right; }
+  // img { width: 50%;}
 }
 
 #credits-box{
       .modal-dialog {
         width: 30%;
+      }
+      img{
+        width:100%;
       }
 }
 
@@ -264,7 +276,7 @@ body {
   /*
    * Work here to theme “Qui? Résiste” screens.
    */
-   overflow: hidden;
+   
   .container,
   .container-fluid {
 
@@ -371,7 +383,7 @@ body {
             height: 152px;
             //background-color: gold;
             padding: 0;
-            
+            overflow: hidden;
             img {
             width: auto;
             height: 230%;

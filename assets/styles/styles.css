@@ -6460,15 +6460,21 @@ body > footer {
 #home #tutorial-box .modal-dialog {
   width: 77%;
 }
-#home #tutorial-box img {
-  width: 70%;
+#home #tutorial-box .modal-body {
+  -webkit-column-count: 2;
+  /* Chrome, Safari, Opera */
+  -moz-column-count: 2;
+  /* Firefox */
+  column-count: 2;
 }
-#home #tutorial-box p {
-  width: 28%;
-  float: right;
+#home #tutorial-box .modal-body img {
+  width: 106%;
 }
 #home #credits-box .modal-dialog {
   width: 30%;
+}
+#home #credits-box img {
+  width: 100%;
 }
 #home .container header,
 #home .container-fluid header {
@@ -6602,7 +6608,6 @@ fieldset[disabled] #home .container-fluid nav ol li h2.active {
   /*
    * Work here to theme “Qui? Résiste” screens.
    */
-  overflow: hidden;
 }
 #qui .container header,
 #qui .container-fluid header {
@@ -7211,6 +7216,7 @@ fieldset[disabled] #qui .container-fluid aside .galleries li.revue a:first-of-ty
   width: auto;
   height: 152px;
   padding: 0;
+  overflow: hidden;
 }
 #qui .container aside .galleries li.revue a:last-of-type img,
 #qui .container-fluid aside .galleries li.revue a:last-of-type img {
