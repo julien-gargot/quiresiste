@@ -6838,7 +6838,7 @@ fieldset[disabled] #qui .container-fluid aside .galleries li.references a:first-
   left: -135px;
   width: 149px;
   height: auto;
-  padding: 0 0 0 0;
+  padding: 0;
   overflow: hidden;
 }
 #qui .container aside .galleries li.references a:last-of-type img,
@@ -7035,13 +7035,13 @@ fieldset[disabled] #qui .container-fluid aside .galleries li.originaux a:first-o
   top: 29%;
   right: -134px;
   width: 142px;
-  padding: 0 0 0 0;
+  padding: 0;
   overflow: hidden;
 }
 #qui .container aside .galleries li.originaux a:last-of-type img,
 #qui .container-fluid aside .galleries li.originaux a:last-of-type img {
-  height: auto;
-  width: 150%;
+  width: auto;
+  height: 238px;
 }
 #qui .container aside .galleries li.revue a:first-of-type,
 #qui .container-fluid aside .galleries li.revue a:first-of-type {
@@ -7209,8 +7209,7 @@ fieldset[disabled] #qui .container-fluid aside .galleries li.revue a:first-of-ty
   left: 12%;
   width: auto;
   height: 152px;
-  padding: 0 0 0 0;
-  overflow: hidden;
+  padding: 0;
 }
 #qui .container aside .galleries li.revue a:last-of-type img,
 #qui .container-fluid aside .galleries li.revue a:last-of-type img {
