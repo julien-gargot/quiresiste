@@ -7,10 +7,8 @@
  * Work here to theme typography of common things.
  */
 
-body {line-height: normal;}
-a { text-transform: uppercase;
-}
-ul, ol {padding-left:0px;}
+a { text-transform: uppercase; }
+ul, ol { padding-left:0px; }
 a:hover, a:active, a:focus { outline:0!important;  text-decoration:none; }
 ul li {
   list-style-type: none;
@@ -108,7 +106,7 @@ body {
   > header {
     width: 46%;
     top: 0; height: @header-heigth;
-    z-index: 1; 
+    z-index: 1;
     h1 {margin-top: ceil((@outer-space - @outer-border-width)); margin-left: ceil((@outer-space - @outer-border-width)); }
     img { display: block; width:100%; height: auto; }
   }
@@ -180,7 +178,7 @@ body {
     margin-top: 42.5%;
   }
 
-  modal-content {
+  .modal-content {
     box-shadow: none
   }
   .modal-header {
@@ -191,14 +189,14 @@ body {
   }
 
 #introduction-box{
-      .modal-dialog {
-        width: 77%;
-      }
-      .modal-body{
-        -webkit-column-count: 2; /* Chrome, Safari, Opera */
-        -moz-column-count: 2; /* Firefox */
-        column-count: 2;
-      }
+    .modal-dialog {
+      width: 77%;
+    }
+    .modal-body{
+      -webkit-column-count: 2; /* Chrome, Safari, Opera */
+      -moz-column-count: 2;    /* Firefox */
+      column-count: 2;
+    }
     h2:first-of-type{
     margin-top: -10px;
    }
@@ -206,26 +204,14 @@ body {
 
 #tutorial-box {
   .modal-dialog{width:77%;}
-
-  .modal-body {
-    -webkit-column-count: 2; /* Chrome, Safari, Opera */
-    -moz-column-count: 2; /* Firefox */
-    column-count: 2;
-      img{
-        width:106%;
-      }
-  }
-  // p{ width: 50%; float: right; }
-  // img { width: 50%;}
+   img { width: 70%;}
+   p { width: 28%; float:right;}
 }
 
 #credits-box{
-      .modal-dialog {
-        width: 30%;
-      }
-      img{
-        width:100%;
-      }
+  .modal-dialog {
+    width: 30%;
+  }
 }
 
 
@@ -276,7 +262,7 @@ body {
   /*
    * Work here to theme “Qui? Résiste” screens.
    */
-   
+
   .container,
   .container-fluid {
 
@@ -309,9 +295,9 @@ body {
         right: -@outer-space;
         //background-color: orange;
 
-          audio{
-            display: none;
-          }
+        audio{
+          display: none;
+        }
       }
 
 
@@ -322,7 +308,7 @@ body {
         li > a { position:absolute; }
         li > a:first-of-type { z-index: 1; }
         li > a:last-of-type { z-index: 0; }
-        li > a:last-of-type img { position:relative; width: 150px; height: auto; }
+        li > a:nth-of-type(2) img { position:relative; width: 150px; height: auto; }
 
 
         li.references  {
@@ -333,7 +319,7 @@ body {
             .btn-left-side;
           }
 
-          a:last-of-type {
+          a:nth-of-type(2) {
             top: 34%;
             left: -135px;
             //background: pink;
@@ -357,7 +343,7 @@ body {
             .btn-right-side;
           }
 
-          a:last-of-type {
+          a:nth-of-type(2) {
             top: 29%;
             right: -134px;
             width: 142px;
@@ -376,17 +362,16 @@ body {
             left: 12%;
             .btn-primary;
           }
-          a:last-of-type {
+          a:nth-of-type(2) {
             bottom: -24%;
             left: 12%;
             width: auto;
             height: 152px;
             //background-color: gold;
             padding: 0;
-            overflow: hidden;
             img {
-            width: auto;
-            height: 230%;
+              width: auto;
+              height: 230%;
             }
           }
 
