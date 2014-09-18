@@ -162,6 +162,11 @@ body {
   > footer { bottom: 0; height: @footer-heigth;  }
 }
 
+    .modal-content .modal-footer {
+      border-top: none;
+      }  
+      
+
 #home {
 
   /*
@@ -204,8 +209,9 @@ body {
 
 #tutorial-box {
   .modal-dialog{width:77%;}
+  img, p { display: flex;}
    img { width: 70%;}
-   p { width: 28%; float:right;}
+   p { width: 28%;}
 }
 
 #credits-box{
@@ -223,7 +229,7 @@ body {
 
     header {
       position:absolute;
-      top: 77px;
+      top: 15.4%;
       left: -13%;
       width: 58%;
     }
@@ -302,6 +308,7 @@ body {
 
 
 
+
       .galleries {
 
         li { position:static; }
@@ -309,7 +316,7 @@ body {
         li > a:first-of-type { z-index: 1; }
         li > a:last-of-type { z-index: 0; }
         li > a:nth-of-type(2) img { position:relative; width: 150px; height: auto; }
-
+        
 
         li.references  {
           a:first-of-type {

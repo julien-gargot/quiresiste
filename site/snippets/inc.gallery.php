@@ -10,7 +10,7 @@
             <iframe frameborder="0"></iframe>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">FERMER</button>
           </div>
         </div>
       </div>
