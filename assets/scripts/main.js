@@ -6,10 +6,11 @@ var ontasticY = true;
 var leaveTouch = true;
 var stepx = 0;
 var stepy = 0;
+var _audio = {path:null,player:null};
 
 jQuery(document).ready(function($) {
 
-  console.log("version 1");
+  console.log("version 2");
 
   //
   initClickIOS();
@@ -22,6 +23,9 @@ jQuery(document).ready(function($) {
 
   // SCROLL
   initScroll();
+
+  // AUDIO PLAYER
+  initSound();
 
 });
 
@@ -187,6 +191,53 @@ function initGalleries() {
   });
 }
 
+function initSound() {
+
+  $('.audio-link').on('click', function(event) {
+
+    if( $("#sound-play-pause").hasClass('invisible') )
+      $("#sound-play-pause").removeClass('invisible').addClass('visible');
+
+    var path = $(this).attr("data-target");
+
+    if( _audio.path != path ) {
+      if( _audio.player && !_audio.player.paused ) {
+        _audio.player.pause();
+      }
+      _audio.path   = path;
+      _audio.player = new Audio(path);
+      $('.audio-link').removeClass('sound-selected');
+      $(this).addClass('sound-selected');
+    }
+
+
+    if( _audio.player && _audio.player.paused ) {
+      _audio.player.play();
+      $('.audio-link').removeClass('sound-playing');
+      $(this).addClass('sound-playing');
+    }
+    else {
+      _audio.player.pause();
+      $(this).removeClass('sound-playing');
+    }
+
+  });
+
+  $("#sound-play-pause").click(function(event) {
+
+    if( _audio.player && _audio.player.paused ) {
+      _audio.player.play();
+      $('.sound-selected').addClass('sound-playing');
+    }
+    else {
+      _audio.player.pause();
+      $('.sound-selected').removeClass('sound-playing');
+    }
+
+  });
+
+}
+
 /*
  * SCROLL STUFF
  */
@@ -266,21 +317,21 @@ function shakeCamera(x,y) {
 
 function scrollYStart(event) {
   // if( ontasticY && leaveTouch ) {
-    console.log("vertical start", event);
+    // console.log("vertical start", event);
     startY = $(event.currentTarget).scrollTop();
   // }
 }
 
 function scrollXStart(event) {
   // if( ontasticX && leaveTouch ) {
-    console.log("horizontal start", event);
+    // console.log("horizontal start", event);
     startX = $(event.currentTarget).scrollLeft();
   // }
 }
 
 function scrollYStop(event) {
 
-  console.log("vertical stop ("+ontasticX+"/"+ontasticY+"/"+leaveTouch+")", event);
+  // console.log("vertical stop ("+ontasticX+"/"+ontasticY+"/"+leaveTouch+")", event);
 
   var value  = $(event.currentTarget).scrollTop();
   var diff = Math.abs(startY - value);
@@ -303,7 +354,7 @@ function scrollYStop(event) {
 
 function scrollXStop(event) {
 
-  console.log("horizontal stop ("+ontasticX+"/"+ontasticY+"/"+leaveTouch+")", event);
+  // console.log("horizontal stop ("+ontasticX+"/"+ontasticY+"/"+leaveTouch+")", event);
 
   var value  = $(event.currentTarget).scrollLeft();
   var diff = Math.abs(startX - value);
@@ -315,9 +366,9 @@ function scrollXStop(event) {
 
     var total  = $(event.currentTarget).width();
     var ratio  = Math.round( value / total );
-    console.log("value",value);
-    console.log("total",total);
-    console.log("ratio",ratio);
+    // console.log("value",value);
+    // console.log("total",total);
+    // console.log("ratio",ratio);
 
     $(event.currentTarget).animate({ scrollLeft: ratio * total +"px" }, 500, "swing", function() {
       setTimeout(function(){ontasticX = true;leaveTouch = true;},1000);

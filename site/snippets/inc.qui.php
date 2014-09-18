@@ -20,15 +20,14 @@
       <aside>
 
         <ul class="nav nav-pills nav-stacked sounds">
+          <?php $j = 0 ?>
           <?php foreach (related($article->related()) as $related): ?>
           <li>
-            <p><span class="glyphicon glyphicon-volume-up"></span> <?php echo html($related->title()) ?></p>
-            <audio controls>
-              <source src="<?php echo $related->url() ?>" type="audio/mpeg">
-              Your browser does not support this audio format.
-            </audio>
+            <?php if ( $related->hasSounds() ): ?>
+            <p class="audio-link" data-target="<?= $related->sounds()->first()->url() ?>"><span class="glyphicon glyphicon-volume-up"></span> <?php echo html($related->title()) ?></p>
+            <?php endif ?>
           </li>
-          <?php endforeach ?>
+          <?php $j++; endforeach; ?>
         </ul>
         <ul class="nav nav-pills nav-stacked galleries">
           <?php $j = 0 ?>
@@ -44,7 +43,7 @@
             </a>
             <?php endif ?>
           </li>
-          <?php $j++; endforeach ?>
+          <?php $j++; endforeach; ?>
         </ul>
       </aside>
 
@@ -54,4 +53,7 @@
 
   <?php $i++; endforeach ?>
 -->
+  <button id="sound-play-pause" class="invisible btn">
+    <span class="glyphicon glyphicon glyphicon-play"></span> / <span class="glyphicon glyphicon glyphicon-stop"></span>
+  </button>
 </section>

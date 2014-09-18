@@ -263,6 +263,8 @@ body {
    * Work here to theme “Qui? Résiste” screens.
    */
 
+  #sound-play-pause { position: fixed; top: @grid-gutter-width; left: @grid-gutter-width; background-color: pink; z-index: 10; }
+
   .container,
   .container-fluid {
 
@@ -295,8 +297,17 @@ body {
         right: -@outer-space;
         //background-color: orange;
 
+        .audio-link {
+          cursor: pointer;
+          &.sound-playing {
+            background-color: #F0F;
+          }
+          &.sound-selected {
+            box-shadow: 0 0 0 3px #FF0;
+          }
+        }
         audio{
-          display: none;
+          // display: none;
         }
       }
 
