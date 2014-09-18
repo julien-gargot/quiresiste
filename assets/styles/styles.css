@@ -6602,6 +6602,7 @@ fieldset[disabled] #home .container-fluid nav ol li h2.active {
   /*
    * Work here to theme “Qui? Résiste” screens.
    */
+  overflow: hidden;
 }
 #qui .container header,
 #qui .container-fluid header {
