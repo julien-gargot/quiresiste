@@ -282,36 +282,14 @@ body {
       width: 50%;
     }
 
-    .tab-content{
-     // width: 120%;
-     // float: right;
-     // -webkit-columns: 2;
-     // -moz-columns: 2;
-     // columns: 2;
-    }
-
     aside {
+
       .sounds {
         position:absolute;
         bottom: -@outer-space;
         right: -@outer-space;
         //background-color: orange;
-
-        .audio-link {
-          cursor: pointer;
-          &.sound-playing {
-            background-color: #F0F;
-          }
-          &.sound-selected {
-            box-shadow: 0 0 0 3px #FF0;
-          }
-        }
-        audio{
-          // display: none;
-        }
       }
-
-
 
       .galleries {
 
@@ -413,6 +391,19 @@ body {
       }
    }
 
+}
+
+#qui,
+#abc {
+  .audio-link {
+    cursor: pointer;
+    &.sound-playing {
+      background-color: #F0F;
+    }
+    &.sound-selected {
+      box-shadow: 0 0 0 3px #FF0;
+    }
+  }
 }
 
 body.gallery,
