@@ -53,7 +53,4 @@
 
   <?php $i++; endforeach ?>
 -->
-  <button id="sound-play-pause" class="invisible btn">
-    <span class="glyphicon glyphicon glyphicon-play"></span> / <span class="glyphicon glyphicon glyphicon-stop"></span>
-  </button>
 </section>

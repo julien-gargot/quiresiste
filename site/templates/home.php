@@ -37,6 +37,10 @@
 
 <?php snippet('inc.abc') ?>
 
+<button id="sound-play-pause" class="invisible btn">
+  <span class="glyphicon glyphicon glyphicon-play"></span> / <span class="glyphicon glyphicon glyphicon-stop"></span>
+</button>
+
 <!-- Modal -->
 <div class="modal fade" id="introduction-box" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">

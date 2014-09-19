@@ -229,9 +229,6 @@ body {
    * Work here to theme “Qui? Résiste” screens.
    */
 
-  #sound-play-pause { position: fixed; bottom: @grid-gutter-width; right: @grid-gutter-width; background-color: rgba(255, 51, 0, 0.8) ; z-index: 10; opacity: 0.5;
-                      &:hover{opacity:1;} }
-
   .container,
   .container-fluid {
 
@@ -363,6 +360,13 @@ body {
 
 }
 
+#sound-play-pause {
+  position: fixed; bottom: @grid-gutter-width; right: @grid-gutter-width; z-index: 10;
+  background-color: rgba(255, 51, 0, 0.8) ; opacity: 0.5;
+  &:hover, &:focus { opacity:1; }
+}
+
+
 .modal-content {
     box-shadow: none
   }
@@ -412,7 +416,7 @@ body {
     &.sound-playing {
       background-color: rgba(255, 51, 0, 0.8);
 
-      
+
     }
     &.sound-selected {
       //box-shadow: 0 0 0 3px white;
@@ -526,8 +530,8 @@ body.abc {
 
 /* =Development
 -----------------------------------------------------------------------------*/
-body > section > article { box-shadow: 0px 0px 0px 1px #F0F inset; }
-body > section > article > .in { box-shadow: 0px 0px 0px 1px #0FF inset; }
+// body > section > article { box-shadow: 0px 0px 0px 1px #F0F inset; }
+// body > section > article > .in { box-shadow: 0px 0px 0px 1px #0FF inset; }
 
 
 #dev  {
