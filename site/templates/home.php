@@ -18,7 +18,7 @@
       <ol class="row">
         <?php foreach($pages->find('qui-resiste')->children()->visible() as $article): ?>
         <li class="col-xs-6 col-sm-4">
-          <h2><a href="#<?= $article->uid() ?>"><?= html($article->title()) ?></a></h2>
+          <a href="#<?= $article->uid() ?>"><h2><?= html($article->title()) ?></h2></a>
         </li>
         <?php endforeach ?>
         <li class="col-xs-6 col-sm-4">
@@ -60,9 +60,9 @@
       <div class="modal-header">
         <h4 class="modal-title" id="myModalLabel">TUTORIAL</h4>
       </div>
-      <div class="modal-body">
-        <img src="<?= url('assets/images/tutorial.png') ?>"></img>
-        <?= kirbytext($page->tutorial()) ?>
+      <div class="modal-body row">
+        <div class="col-sm-8"><img src="<?= url('assets/images/tutorial.png') ?>"></img></div>
+        <div class="col-sm-4"><?= kirbytext($page->tutorial()) ?></div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default text-uppercase" data-dismiss="modal">Fermer</button>

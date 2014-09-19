@@ -59,6 +59,8 @@ ul li {
    font-size: @font-size-h1;
   }
 
+  .tab-content li:before {  content: "\00b7" " " ;}
+
 }
 
 #abc {
@@ -348,11 +350,14 @@ body {
       -moz-columns: 4;
       columns: 4;
       li {
-        .btn-primary;
-        line-height: 1em;
-        margin-bottom: 20px;
         display:inline-block;
+        margin-bottom: 20px;
+        a{
+        .btn-primary;
+        display: block;
+        line-height: 1em;
         padding: 3px 3px 3px 3px;
+        }
       }
    }
 
@@ -383,8 +388,11 @@ body {
 
 #tutorial-box {
   .modal-dialog{width:77%;}
-   img { width: 70%;}
-   p { width: 28%; float:right;}
+   img { width: 100%;}
+   p { width: 100%;}
+   h2:first-of-type{
+    margin-top: 0px;
+   }
 }
 
 #credits-box{

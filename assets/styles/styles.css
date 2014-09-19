@@ -6336,6 +6336,9 @@ ul li {
   text-transform: uppercase;
   font-size: 44px;
 }
+#qui .tab-content li:before {
+  content: "\00b7" " ";
+}
 #abc {
   /*
    * Work here to theme typography of “abécédaire” screen.
@@ -7224,6 +7227,10 @@ fieldset[disabled] #qui .container-fluid aside .galleries li.revue a:first-of-ty
   columns: 4;
 }
 #abc section li {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+#abc section li a {
   color: #ffffff;
   background-color: transparent;
   margin-right: 7px;
@@ -7234,55 +7241,54 @@ fieldset[disabled] #qui .container-fluid aside .galleries li.revue a:first-of-ty
   -webkit-box-shadow: 7px 6px 0px 0px #ffffff;
   box-shadow: 7px 6px 0px 0px #ffffff;
   line-height: 0.3;
+  display: block;
   line-height: 1em;
-  margin-bottom: 20px;
-  display: inline-block;
   padding: 3px 3px 3px 3px;
 }
-#abc section li:hover,
-#abc section li:focus,
-#abc section li.focus,
-#abc section li:active,
-#abc section li.active,
-.open > .dropdown-toggle#abc section li {
+#abc section li a:hover,
+#abc section li a:focus,
+#abc section li a.focus,
+#abc section li a:active,
+#abc section li a.active,
+.open > .dropdown-toggle#abc section li a {
   color: #ffffff;
   background-color: rgba(0, 0, 0, 0);
   border-color: #e0e0e0;
 }
-#abc section li:active,
-#abc section li.active,
-.open > .dropdown-toggle#abc section li {
+#abc section li a:active,
+#abc section li a.active,
+.open > .dropdown-toggle#abc section li a {
   background-image: none;
 }
-#abc section li.disabled,
-#abc section li[disabled],
-fieldset[disabled] #abc section li,
-#abc section li.disabled:hover,
-#abc section li[disabled]:hover,
-fieldset[disabled] #abc section li:hover,
-#abc section li.disabled:focus,
-#abc section li[disabled]:focus,
-fieldset[disabled] #abc section li:focus,
-#abc section li.disabled.focus,
-#abc section li[disabled].focus,
-fieldset[disabled] #abc section li.focus,
-#abc section li.disabled:active,
-#abc section li[disabled]:active,
-fieldset[disabled] #abc section li:active,
-#abc section li.disabled.active,
-#abc section li[disabled].active,
-fieldset[disabled] #abc section li.active {
+#abc section li a.disabled,
+#abc section li a[disabled],
+fieldset[disabled] #abc section li a,
+#abc section li a.disabled:hover,
+#abc section li a[disabled]:hover,
+fieldset[disabled] #abc section li a:hover,
+#abc section li a.disabled:focus,
+#abc section li a[disabled]:focus,
+fieldset[disabled] #abc section li a:focus,
+#abc section li a.disabled.focus,
+#abc section li a[disabled].focus,
+fieldset[disabled] #abc section li a.focus,
+#abc section li a.disabled:active,
+#abc section li a[disabled]:active,
+fieldset[disabled] #abc section li a:active,
+#abc section li a.disabled.active,
+#abc section li a[disabled].active,
+fieldset[disabled] #abc section li a.active {
   background-color: transparent;
   border-color: #ffffff;
 }
-#abc section li .badge {
+#abc section li a .badge {
   color: transparent;
   background-color: #ffffff;
 }
-.active > #abc section li,
-#abc section li:hover,
-#abc section li:active,
-#abc section li:focus {
+.active > #abc section li a,
+#abc section li a:hover,
+#abc section li a:active,
+#abc section li a:focus {
   -webkit-transform: translate(7px, 6px);
   -ms-transform: translate(7px, 6px);
   -o-transform: translate(7px, 6px);
@@ -7290,13 +7296,13 @@ fieldset[disabled] #abc section li.active {
   -webkit-box-shadow: 0px 0px 0px 0px transparent;
   box-shadow: 0px 0px 0px 0px transparent;
 }
-.active > #abc section li,
-#abc section li:hover,
-#abc section li:active,
-#abc section li:focus {
+.active > #abc section li a,
+#abc section li a:hover,
+#abc section li a:active,
+#abc section li a:focus {
   color: #ffffff !important;
 }
-#abc section li .btn-left-side {
+#abc section li a .btn-left-side {
   -webkit-box-shadow: 7px -6px 0px 0px #ffffff;
   box-shadow: 7px -6px 0px 0px #ffffff;
   -webkit-transform-origin: top left;
@@ -7308,9 +7314,9 @@ fieldset[disabled] #abc section li.active {
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-#abc section li .btn-left-side:hover,
-#abc section li .btn-left-side:active,
-#abc section li .btn-left-side:focus {
+#abc section li a .btn-left-side:hover,
+#abc section li a .btn-left-side:active,
+#abc section li a .btn-left-side:focus {
   -webkit-transform: rotate(90deg) translate(7px, -6px);
   -ms-transform: rotate(90deg) translate(7px, -6px);
   -o-transform: rotate(90deg) translate(7px, -6px);
@@ -7318,7 +7324,7 @@ fieldset[disabled] #abc section li.active {
   -webkit-box-shadow: 0px 0px 0px 0px transparent;
   box-shadow: 0px 0px 0px 0px transparent;
 }
-#abc section li .btn-right-side {
+#abc section li a .btn-right-side {
   -webkit-box-shadow: -7px 6px 0px 0px #ffffff;
   box-shadow: -7px 6px 0px 0px #ffffff;
   -webkit-transform-origin: top right;
@@ -7330,9 +7336,9 @@ fieldset[disabled] #abc section li.active {
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
-#abc section li .btn-right-side:hover,
-#abc section li .btn-right-side:active,
-#abc section li .btn-right-side:focus {
+#abc section li a .btn-right-side:hover,
+#abc section li a .btn-right-side:active,
+#abc section li a .btn-right-side:focus {
   -webkit-transform: rotate(-90deg) translate(-7px, 6px);
   -ms-transform: rotate(-90deg) translate(-7px, 6px);
   -o-transform: rotate(-90deg) translate(-7px, 6px);
@@ -7366,11 +7372,13 @@ fieldset[disabled] #abc section li.active {
   width: 77%;
 }
 #tutorial-box img {
-  width: 70%;
+  width: 100%;
 }
 #tutorial-box p {
-  width: 28%;
-  float: right;
+  width: 100%;
+}
+#tutorial-box h2:first-of-type {
+  margin-top: 0px;
 }
 #credits-box .modal-dialog {
   width: 30%;
