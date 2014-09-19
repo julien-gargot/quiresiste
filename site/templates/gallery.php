@@ -11,7 +11,7 @@
       <figure class="item <?php if($i==0) echo 'active' ?>">
         <img src="<?= $image->url() ?>" alt="">
         <figcaption class="carousel-caption">
-          <h3><?= $image->title() ?></h3>
+          <?= kirbytext($image->title()) ?>
           <?= kirbytext($image->text()) ?>
         </figcaption>
       </figure>

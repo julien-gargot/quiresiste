@@ -44,7 +44,7 @@ c::set('url', '/');
 
 */
 
-c::set('url', 'http://dev.quiresiste.com/app');
+c::set('url', '/app');
 
 /*
 

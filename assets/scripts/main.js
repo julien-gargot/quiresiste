@@ -10,7 +10,7 @@ var _audio = {path:null,player:null};
 
 jQuery(document).ready(function($) {
 
-  console.log("version 2");
+  console.log("version 3");
 
   //
   initClickIOS();
@@ -23,6 +23,7 @@ jQuery(document).ready(function($) {
 
   // SCROLL
   initScroll();
+  initHomeNavClick();
 
   // AUDIO PLAYER
   initSound();
@@ -44,98 +45,6 @@ function initClickIOS() {
 function initTabs() {
 
   $('.tabulize').each(function(i) {
-
-    var _this = $(this);
-    var $navtabs = $('<nav>').append( $('<ul>').addClass('nav nav-pills').attr('role','tablist') );
-    var $tabs = $('<div>').attr('class','tab-content');
-
-    $('h3', _this).each(function(j) {
-
-      var id = 'tab-'+i+'-'+j;
-
-      var $tab = $('<div>').attr('id',id).addClass('tab-pane fade');
-
-      var $a = $('<li>').append(
-        $('<a>').attr({
-          'href':'#'+id,
-          'role':"tab",
-          'data-toggle':"tab"
-        }).addClass('btn btn-primary').html( $(this).html() )
-      );
-
-      if( j==0 ) {
-        $tab.addClass('active in');
-        $a.addClass('active');
-      }
-
-      $(this)
-        .nextUntil( "h3" )
-        .appendTo( $tab );
-
-      $('ul', $navtabs).append( $a );
-      $tabs.append( $tab );
-
-      $(this).remove();
-
-    });
-
-    $(_this)
-      .append( $navtabs )
-      .append( $tabs );
-
-  });
-
-}
-
-function initTabsHome() {
-
-  $('#home .content').each(function(i) {
-
-    var _this = $(this);
-    var $navtabs = $('<nav>').append( $('<ul>').addClass('nav nav-pills').attr('role','tablist') );
-    var $tabs = $('<div>').attr('class','tab-content');
-
-    $('h3', _this).each(function(j) {
-
-      var id = 'tab-'+i+'-'+j;
-
-      var $tab = $('<div>').attr('id',id).addClass('tab-pane');
-
-      var $a = $('<li>').append(
-        $('<a>').attr({
-          'href':'#'+id,
-          'role':"tab",
-          'data-toggle':"tab"
-        }).addClass('btn btn-default').html( $(this).html() )
-      );
-
-      if( j==0 ) {
-        $tab.addClass('active in');
-        $a.addClass('active');
-      }
-
-      $(this)
-        .nextUntil( "h3" )
-        .appendTo( $tab );
-
-      $('ul', $navtabs).append( $a );
-      $tabs.append( $tab );
-
-      $(this).remove();
-
-    });
-
-    $(_this)
-      .append( $navtabs )
-      .append( $tabs );
-
-  });
-
-}
-
-function initTabsQuiResiste() {
-
-  $('#qui .tabulize').each(function(i) {
 
     var _this = $(this);
     var $navtabs = $('<nav>').append( $('<ul>').addClass('nav nav-pills').attr('role','tablist') );
@@ -238,6 +147,18 @@ function initSound() {
 
 }
 
+function initHomeNavClick() {
+
+  $('#home nav').on('click', 'a', function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    var target = $(this).attr("href");
+    var index  = $(target).index();
+    moveCamera(index,1);
+  });
+
+}
+
 /*
  * SCROLL STUFF
  */
@@ -247,6 +168,12 @@ function initScroll() {
   stepx = $('article').width();
   stepy = $('article').height();
 
+  $(window).on('resize', function () {
+    stepx = $('article').width();
+    stepy = $('article').height();
+  });
+
+
   if( supportsTouch ) {
 
     var ix, iy, dx = 0, dy = 0;
@@ -255,6 +182,7 @@ function initScroll() {
 
     $(window).on({
       'touchstart': function(event) {
+        console.log('touchstart');
         dx = 0;
         dy = 0;
         ix = event.originalEvent.pageX;
@@ -263,11 +191,15 @@ function initScroll() {
         ny = Math.floor( $('body').scrollTop() / stepy );
       },
       'touchmove': function(event) {
+        console.log('touchmove');
         event.preventDefault();
         dx = ix - event.originalEvent.pageX;
         dy = iy - event.originalEvent.pageY;
       },
       'touchend': function(event) {
+        console.log('touchend');
+        console.log('dx',dx);
+        console.log('dy',dy);
 
         if( dx > s && ny == 1 ) {
           if( nx < $('#qui > article').length ) {
@@ -307,8 +239,16 @@ function initScroll() {
 }
 
 function moveCamera(x,y) {
+  console.log( 'goto: ['+x+','+y+']' );
   $('#qui').animate({ scrollLeft: (x * stepx) +"px" }, 200, "swing");
   $('html, body').animate({ scrollTop: (y * stepy) +"px" }, 200, "swing");
+
+  // $('#qui').css({ 'transform': 'translateX('+ (-x * stepx) +"px)", });
+  // $('body').css({ 'transform': 'translateY('+ (-y * stepy) +"px)", });
+
+  // console.log( 'new x = '+ (-x * stepx) );
+  // console.log( 'new y = '+ (-y * stepy) );
+
 }
 
 function shakeCamera(x,y) {
