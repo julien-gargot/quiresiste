@@ -15,7 +15,7 @@ ul li {
 }
 
 
-#home {
+#home, #introduction-box, #tutorial-box, #credits-box {
 
   /*
    * Work here to theme typography of “home” screen.
@@ -83,6 +83,8 @@ ul li {
   }
 
 }
+
+
 
 /* =Layout
 -----------------------------------------------------------------------------*/
@@ -178,44 +180,6 @@ body {
     margin-top: 42.5%;
   }
 
-  .modal-content {
-    box-shadow: none
-  }
-  .modal-header {
-    border-bottom: none;
-  }
-  .modal-footer {
-    border-top: none;
-  }
-
-#introduction-box{
-    .modal-dialog {
-      width: 77%;
-    }
-    .modal-body{
-      -webkit-column-count: 2; /* Chrome, Safari, Opera */
-      -moz-column-count: 2;    /* Firefox */
-      column-count: 2;
-    }
-    h2:first-of-type{
-    margin-top: -10px;
-   }
-}
-
-#tutorial-box {
-  .modal-dialog{width:77%;}
-   img { width: 70%;}
-   p { width: 28%; float:right;}
-}
-
-#credits-box{
-  .modal-dialog {
-    width: 30%;
-  }
-}
-
-
-
 
 
   .container,
@@ -263,7 +227,8 @@ body {
    * Work here to theme “Qui? Résiste” screens.
    */
 
-  #sound-play-pause { position: fixed; top: @grid-gutter-width; left: @grid-gutter-width; background-color: pink; z-index: 10; }
+  #sound-play-pause { position: fixed; bottom: @grid-gutter-width; right: @grid-gutter-width; background-color: rgba(255, 51, 0, 0.8) ; z-index: 10; opacity: 0.5;
+                      &:hover{opacity:1;} }
 
   .container,
   .container-fluid {
@@ -393,15 +358,57 @@ body {
 
 }
 
+.modal-content {
+    box-shadow: none
+  }
+.modal-header {
+    border-bottom: none;
+  }
+.modal-footer {
+    border-top: none;
+  }
+#introduction-box{
+    .modal-dialog {
+      width: 77%;
+    }
+    .modal-body{
+      -webkit-column-count: 2; /* Chrome, Safari, Opera */
+      -moz-column-count: 2;    /* Firefox */
+      column-count: 2;
+    }
+    h2:first-of-type{
+    margin-top: -10px;
+   }
+}
+
+#tutorial-box {
+  .modal-dialog{width:77%;}
+   img { width: 70%;}
+   p { width: 28%; float:right;}
+}
+
+#credits-box{
+  .modal-dialog {
+    width: 30%;
+  }
+  img {width: 100%}
+}
+
+
+
+
 #qui,
 #abc {
   .audio-link {
     cursor: pointer;
     &.sound-playing {
-      background-color: #F0F;
+      background-color: rgba(255, 51, 0, 0.8);
+
+      
     }
     &.sound-selected {
-      box-shadow: 0 0 0 3px #FF0;
+      //box-shadow: 0 0 0 3px white;
+      //text-decoration:underline;
     }
   }
 }
