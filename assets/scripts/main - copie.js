@@ -36,8 +36,8 @@ function initClickIOS() {
   $('body').on('click', 'a', function(event) {
     event.preventDefault();
     /* Act on the event */
-    // if( $(this).attr("href") )
-    //   window.location.href = $(this).attr("href");
+    if( $(this).attr("href") )
+      window.location.href = $(this).attr("href");
   });
 
 }
@@ -250,20 +250,13 @@ function moveCamera(x,y) {
   else if( y < 0 )
     y = 0;
 
-  // if( y == 1 )
-  //   $('#qui').css({ 'transform': 'translateX('+ (-x * stepx) +"px)", });
-  // $('body').css({ 'transform': 'translateY('+ (-y * stepy) +"px)", });
+  console.log( 'goto: ['+x+','+y+']' );
+  // $('#qui').animate({ scrollLeft: (x * stepx) +"px" }, 500, "swing");
+  // $('html, body').animate({ scrollTop: (y * stepy) +"px" }, 500, "swing");
 
   if( y == 1 )
-    $('#qui').animate({ scrollLeft: (x * stepx) +"px" }, 500);
-  $('html, body').animate({ scrollTop: (y * stepy) +"px" }, 500);
-
-  console.log( 'goto: ['+x+','+y+']' );
-
-  $('.viewport').css('visibility','hidden');
-  $('.viewport-'+(x-1)+'-1').css('visibility','visible');
-  $('.viewport-'+x+'-1').css('visibility','visible');
-  $('.viewport-'+(x+1)+'-1').css('visibility','visible');
+    $('#qui').css({ 'transform': 'translateX('+ (-x * stepx) +"px)", });
+  $('body').css({ 'transform': 'translateY('+ (-y * stepy) +"px)", });
 
   // console.log( 'new x = '+ (-x * stepx) );
   // console.log( 'new y = '+ (-y * stepy) );
