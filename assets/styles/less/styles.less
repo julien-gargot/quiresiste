@@ -14,7 +14,6 @@ ul li {
   list-style-type: none;
 }
 
-
 #home, #introduction-box, #tutorial-box, #credits-box {
 
   /*
@@ -164,6 +163,19 @@ body {
   }
 
   > footer { bottom: 0; height: @footer-heigth;  }
+}
+
+
+#loader {
+  position: fixed;
+  z-index: 1045;
+  top:50%; left: 50%;
+  margin-top: -33px; margin-left: -33px;
+  display: none;
+
+  .modal-open & {
+    display: block;
+  }
 }
 
 #home {

@@ -153,8 +153,12 @@ function initHomeNavClick() {
     event.preventDefault();
     event.stopPropagation();
     var target = $(this).attr("href");
-    var index  = $(target).index();
-    moveCamera(index,1);
+    if( target == "#abc")
+      moveCamera(0,2);
+    else {
+      var index  = $(target).index();
+      moveCamera(index,1);
+    }
   });
 
 }
@@ -180,7 +184,11 @@ function initScroll() {
     var s = 100;
     var nx = ny = 0;
 
-    $(window).on({
+    $('body').on('hidden.bs.modal', '.modal', function () {
+      moveCamera(nx,ny);
+    });
+
+    $('#home, #qui, #abc').on({
       'touchstart': function(event) {
         console.log('touchstart');
         dx = 0;
@@ -240,8 +248,8 @@ function initScroll() {
 
 function moveCamera(x,y) {
   console.log( 'goto: ['+x+','+y+']' );
-  $('#qui').animate({ scrollLeft: (x * stepx) +"px" }, 200, "swing");
-  $('html, body').animate({ scrollTop: (y * stepy) +"px" }, 200, "swing");
+  $('#qui').animate({ scrollLeft: (x * stepx) +"px" }, 500, "swing");
+  $('html, body').animate({ scrollTop: (y * stepy) +"px" }, 500, "swing");
 
   // $('#qui').css({ 'transform': 'translateX('+ (-x * stepx) +"px)", });
   // $('body').css({ 'transform': 'translateY('+ (-y * stepy) +"px)", });

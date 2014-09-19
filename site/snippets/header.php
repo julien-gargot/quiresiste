@@ -29,3 +29,5 @@
   <header id="header">
     <h1><a href="<?= url() ?>"><img src="<?= url('assets/images/logo.png') ?>" alt="<?= html($site->title()) ?>" /></a></h1>
   </header>
+
+  <img id="loader" src="<?= url('assets/images/loader.gif') ?>" alt="Loading…">
