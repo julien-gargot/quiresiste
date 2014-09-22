@@ -6467,7 +6467,7 @@ body > footer {
    * Work here to theme “home” screen.
    */
   background: url('../images/background.jpg') 0 0 no-repeat fixed;
-  background-size: 100% auto;
+  background-size: 1024px auto;
 }
 #home .tabulize a {
   display: inline-block;
@@ -7209,6 +7209,7 @@ fieldset[disabled] #qui .container-fluid aside .galleries li.revue a:first-of-ty
   left: 12%;
   width: auto;
   height: 152px;
+  overflow: hidden;
   padding: 0;
 }
 #qui .container aside .galleries li.revue a:nth-of-type(2) img,
@@ -7423,7 +7424,7 @@ body.abc {
 }
 .modal iframe {
   width: 100%;
-  height: 600px;
+  height: 550px;
 }
 /* =Bootstrap Upgrade
 -----------------------------------------------------------------------------*/

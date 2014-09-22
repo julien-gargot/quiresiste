@@ -102,8 +102,8 @@ html, body { position: relative; width: 100%; height: 100%; }
  */
 body {
 
-  overflow-x: hidden; -webkit-overflow-scrolling: touch;
-  // overflow:visible;
+  // overflow-x: hidden; -webkit-overflow-scrolling: touch;
+  overflow:visible;
 
   > header, > footer { position: absolute!important; right: 0; left: 0; overflow: hidden; }
 
@@ -120,7 +120,7 @@ body {
     position: relative;
     height: 100%;
     white-space: nowrap;
-    overflow-y: hidden; -webkit-overflow-scrolling: touch;
+    // overflow-y: hidden; -webkit-overflow-scrolling: touch;
 
     > article {
 
@@ -374,11 +374,11 @@ body {
 
 }
 
-// body, #qui {
-//   .transition(-webkit-transform 1s ease-out);
-//   .transition(-moz-transform 1s ease-out);
-//   .transition(transform 1s ease-out);
-// }
+body, #qui {
+  .transition(-webkit-transform 1s);
+  .transition(-moz-transform 1s);
+  .transition(transform 1s);
+}
 
 #sound-play-pause {
   position: fixed; bottom: @grid-gutter-width; right: @grid-gutter-width; z-index: 10;
@@ -464,7 +464,7 @@ body.abc {
 
 }
 
-.modal iframe { width: 100%; height: 550px; }
+.modal iframe { width: 100%; height: 600px; }
 
 /* =Bootstrap Upgrade
 -----------------------------------------------------------------------------*/
