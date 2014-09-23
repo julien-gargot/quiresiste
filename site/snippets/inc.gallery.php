@@ -8,10 +8,11 @@
         <div class="modal-content">
           <div class="modal-body">
             <iframe frameborder="0"></iframe>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">FERMER</button>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">FERMER</button>
-          </div>
+<!--           <div class="modal-footer">
+            
+          </div> -->
         </div>
       </div>
     </div>

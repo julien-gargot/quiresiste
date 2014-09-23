@@ -38,9 +38,9 @@
               <?= $gallery->title() ?>
             </a>
             <?php if ($article->hasImages() && $article->images()->find($gallery->dirname.'.png')): ?>
-            <!-- <a data-toggle="modal" data-target="#gallery-<?= $i ?>-<?= $j ?>" data-src="<?= $gallery->url() ?>">
+            <a data-toggle="modal" data-target="#gallery-<?= $i ?>-<?= $j ?>" data-src="<?= $gallery->url() ?>">
               <img src="<?= $article->images()->find($gallery->dirname.'.png')->url() ?>" alt="">
-            </a> -->
+            </a>
             <?php endif ?>
           </li>
           <?php $j++; endforeach; ?>
