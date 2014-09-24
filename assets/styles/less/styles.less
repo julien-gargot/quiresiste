@@ -169,15 +169,30 @@ body {
 
 #loader {
   position: fixed;
-  z-index: 1045;
+  z-index: 100;
   top:50%; left: 50%;
   margin-top: -33px; margin-left: -33px;
   display: none;
-
   .modal-open & {
     display: block;
   }
 }
+
+
+
+.help {
+  display: none;
+  position:fixed; bottom:53px; left:53px;
+  a{
+    color:white;
+    font-size: 19px;
+    opacity: 0.5;
+    z-index: 30;
+    &:hover, &:focus, &:active{opacity: 1;}
+  }
+}
+
+
 
 #home {
 

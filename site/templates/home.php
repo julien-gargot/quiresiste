@@ -104,4 +104,8 @@
 
 <?php snippet('inc.gallery') ?>
 
+<div class="help">
+      <a class="glyphicon glyphicon-question-sign" data-toggle="modal" data-target="#tutorial-box"></a>
+</div>
+
 <?php snippet('footer') ?>

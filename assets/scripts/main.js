@@ -28,6 +28,7 @@ jQuery(document).ready(function($) {
   // AUDIO PLAYER
   initSound();
 
+
 });
 
 function initClickIOS() {
@@ -163,6 +164,8 @@ function initHomeNavClick() {
 
 }
 
+
+
 /*
  * SCROLL STUFF
  */
@@ -269,6 +272,13 @@ function moveCamera(x,y) {
   // console.log( 'new y = '+ (-y * stepy) );
 
 
+
+// Display button help
+
+  if(y>=1) {
+      $(".help").css("display", "block");
+    } else if (y==0) {$(".help").css("display", "none");
+  }
 }
 
 function shakeCamera(x,y) {
