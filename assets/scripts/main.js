@@ -268,6 +268,7 @@ function moveCamera(x,y) {
   // console.log( 'new x = '+ (-x * stepx) );
   // console.log( 'new y = '+ (-y * stepy) );
 
+
 }
 
 function shakeCamera(x,y) {
