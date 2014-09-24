@@ -1,5 +1,15 @@
 <?php snippet('header') ?>
 
+<!-- Message en format portrai -->
+<div class="portrait-msg">
+  <div class="container">
+  <h1>L'application "Qui ? résiste, Laboratoire graphique et poétique de Pierre Di Sciullo" s'utilise en format paysage.</h1>
+  <!-- <div class="ipad-draw-P col-xs-4"></div><div class="col-xs-3"><span class="glyphicon glyphicon-arrow-right"></div><div class="ipad-draw-L col-xs-5"></div>-->
+  <img src="<?= url('assets/images/TurnTheIPAD.jpg') ?>" alt="<?= html($site->title()) ?>" />
+  </div>
+</div>
+<!--  Jusque là -->
+
 <section id="home">
 
   <article><div class="in"><div class="container-fluid">

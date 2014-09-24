@@ -7529,15 +7529,49 @@ body.abc {
 .nav-pills > li.active > a:focus {
   background-color: transparent;
 }
+/* =Msg format portrait
+-----------------------------------------------------------------------------*/
 @media (orientation: portrait) {
+  header,
+  section,
+  footer,
+  button {
+    display: none;
+  }
   body {
+    height: 0;
+  }
+  .portrait-msg {
+    margin-top: 31%;
+  }
+  .portrait-msg .container {
+    width: 69%;
+  }
+  .portrait-msg .container h1 {
+    font-size: 26px;
+    text-align: center;
+  }
+  .portrait-msg .container .ipad-draw-P {
+    height: 198px;
+    border: 13px solid white;
+  }
+  .portrait-msg .container span {
+    font-size: 43px;
+  }
+  .portrait-msg .container .ipad-draw-L {
+    height: 150px;
+    border: 13px solid white;
+  }
+}
+@media (orientation: landscape) {
+  .portrait-msg {
     display: none;
   }
 }
 /* =Development
 -----------------------------------------------------------------------------*/
 #dev {
-  /*display: none;*/
+  display: none;
   font-size: 10px;
   position: fixed;
   bottom: 15px;
