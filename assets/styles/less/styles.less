@@ -6,7 +6,7 @@
 /*
  * Work here to theme typography of common things.
  */
-
+body{font-family: 'Franklin Gothic Demi';}
 a { text-transform: uppercase; }
 ul, ol { padding-left:0px; }
 a:hover, a:active, a:focus { outline:0!important;  text-decoration:none; }
@@ -23,17 +23,27 @@ ul li {
 
   a{color: inherit;}
   span.glyphicon-volume-up {font-size: 42px;}
-  p {font-weight: 100;font-stretch:normal;font-size: 12px;}
+  p {
+    font-family: 'Franklin Gothic';
+    //font-weight: 100;
+    //font-stretch:normal;
+    font-size: 12px;}
 
   h1 {
-   font-stretch:condensed;
+   font-family: 'Franklin Gothic Demi Com';
+   //font-stretch:condensed;
    .text-center;
    text-transform: uppercase;
   }
 
   ol { counter-reset: quiresiste; }
-  nav h2:before { content: counter(quiresiste); display: block; font-size: @font-size-h1; font-stretch:normal; line-height: 42px;}
-  h2 {counter-increment: quiresiste; font-size: 15px; font-stretch:condensed; }
+  nav h2:before { content: counter(quiresiste); display: block; font-size: @font-size-h1;
+    font-family: 'Franklin Gothic Demi'; 
+    //font-stretch:normal; 
+    line-height: 42px;}
+  h2 {counter-increment: quiresiste; font-size: 15px; font-family: 'Franklin Gothic Demi Com';
+    //font-stretch:condensed; 
+  }
   li:last-of-type h2:before { content:""; }
 }
 
@@ -52,13 +62,14 @@ ul li {
   }
 
   h2 {
-   font-stretch:condensed;
+    font-family: 'Franklin Gothic Demi Com';
+   // font-stretch:condensed;
    .text-center;
    text-transform: uppercase;
    font-size: @font-size-h1;
   }
 
-  .tab-content li:before {  content: "\00b7" " " ;}
+  .tab-content li:before {  content: "-" " " ;}
 
 }
 
@@ -71,7 +82,8 @@ ul li {
   .container{width:95%};
   ul, ol {padding-left:30px;}
   h2 {
-   font-stretch:condensed;
+    font-family: 'Franklin Gothic Demi Com';
+   //font-stretch:condensed;
    .text-center;
    text-transform: uppercase;
    font-size: @font-size-h1;
@@ -95,7 +107,7 @@ ul li {
 @outer-border-width: ceil((@outer-space * 0.5));
 @outer-border-color: rgba(255, 51, 0, 0.8);
 
-html, body { position: relative; width: 100%; height: 100%; }
+html, body { position: relative; width: 100%; height: 100%;}
 
 /*
  * Screen grid system. You do not want to change it.
@@ -312,6 +324,7 @@ body {
               height: auto;
               width: 150%;
               float: right;
+              &:hover{opacity:0.5;}
             }
           }
 
@@ -334,6 +347,7 @@ body {
             img {
               width: auto;
               height: 238px;
+              &:hover{opacity:0.5;}
             }
           }
         }
@@ -354,6 +368,7 @@ body {
             img {
               width: auto;
               height: 230%;
+              &:hover{opacity:0.5;}
             }
           }
 
@@ -526,6 +541,8 @@ body.abc {
   border-color:@btn-primary-border;
   .box-shadow(@btn-shadow-x @btn-shadow-y 0px 0px @btn-primary-border);
   line-height: 0.3;
+  padding-left: 6px;
+  padding-right: 6px;
 
   .active > &,
   &:hover,

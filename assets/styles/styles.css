@@ -2,22 +2,16 @@
   font-family: 'Franklin Gothic';
   src: url('webfonts/webfonts/2BEE1B_0_0.eot');
   src: url('webfonts/webfonts/2BEE1B_0_0.eot?#iefix') format('embedded-opentype'), url('webfonts/webfonts/2BEE1B_0_0.woff') format('woff'), url('webfonts/webfonts/2BEE1B_0_0.ttf') format('truetype');
-  font-weight: 100;
-  font-stretch: normal;
 }
 @font-face {
-  font-family: 'Franklin Gothic';
+  font-family: 'Franklin Gothic Demi';
   src: url('webfonts/webfonts/2BEE1B_1_0.eot');
   src: url('webfonts/webfonts/2BEE1B_1_0.eot?#iefix') format('embedded-opentype'), url('webfonts/webfonts/2BEE1B_1_0.woff') format('woff'), url('webfonts/webfonts/2BEE1B_1_0.ttf') format('truetype');
-  font-weight: 500;
-  font-stretch: normal;
 }
 @font-face {
-  font-family: 'Franklin Gothic';
+  font-family: 'Franklin Gothic Demi Com';
   src: url('webfonts/webfonts/2BEE1B_2_0.eot');
   src: url('webfonts/webfonts/2BEE1B_2_0.eot?#iefix') format('embedded-opentype'), url('webfonts/webfonts/2BEE1B_2_0.woff') format('woff'), url('webfonts/webfonts/2BEE1B_2_0.ttf') format('truetype');
-  font-weight: 500;
-  font-stretch: condensed;
 }
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -6232,6 +6226,9 @@ button.close {
 /*
  * Work here to theme typography of common things.
  */
+body {
+  font-family: 'Franklin Gothic Demi';
+}
 a {
   text-transform: uppercase;
 }
@@ -6273,15 +6270,14 @@ ul li {
 #introduction-box p,
 #tutorial-box p,
 #credits-box p {
-  font-weight: 100;
-  font-stretch: normal;
+  font-family: 'Franklin Gothic';
   font-size: 12px;
 }
 #home h1,
 #introduction-box h1,
 #tutorial-box h1,
 #credits-box h1 {
-  font-stretch: condensed;
+  font-family: 'Franklin Gothic Demi Com';
   text-align: center;
   text-transform: uppercase;
 }
@@ -6298,7 +6294,7 @@ ul li {
   content: counter(quiresiste);
   display: block;
   font-size: 44px;
-  font-stretch: normal;
+  font-family: 'Franklin Gothic Demi';
   line-height: 42px;
 }
 #home h2,
@@ -6307,7 +6303,7 @@ ul li {
 #credits-box h2 {
   counter-increment: quiresiste;
   font-size: 15px;
-  font-stretch: condensed;
+  font-family: 'Franklin Gothic Demi Com';
 }
 #home li:last-of-type h2:before,
 #introduction-box li:last-of-type h2:before,
@@ -6331,13 +6327,13 @@ ul li {
   content: "N°" counter(numeros) " ";
 }
 #qui h2 {
-  font-stretch: condensed;
+  font-family: 'Franklin Gothic Demi Com';
   text-align: center;
   text-transform: uppercase;
   font-size: 44px;
 }
 #qui .tab-content li:before {
-  content: "\00b7" " ";
+  content: "-" " ";
 }
 #abc {
   /*
@@ -6352,7 +6348,7 @@ ul li {
   padding-left: 30px;
 }
 #abc h2 {
-  font-stretch: condensed;
+  font-family: 'Franklin Gothic Demi Com';
   text-align: center;
   text-transform: uppercase;
   font-size: 44px;
@@ -6680,6 +6676,8 @@ fieldset[disabled] #home .container-fluid nav ol li h2.active {
   -webkit-box-shadow: 7px 6px 0px 0px #ffffff;
   box-shadow: 7px 6px 0px 0px #ffffff;
   line-height: 0.3;
+  padding-left: 6px;
+  padding-right: 6px;
   -webkit-box-shadow: 7px -6px 0px 0px #ffffff;
   box-shadow: 7px -6px 0px 0px #ffffff;
   -webkit-transform-origin: top left;
@@ -6864,6 +6862,10 @@ fieldset[disabled] #qui .container-fluid aside .galleries li.references a:first-
   width: 150%;
   float: right;
 }
+#qui .container aside .galleries li.references a:nth-of-type(2) img:hover,
+#qui .container-fluid aside .galleries li.references a:nth-of-type(2) img:hover {
+  opacity: 0.5;
+}
 #qui .container aside .galleries li.originaux a:first-of-type,
 #qui .container-fluid aside .galleries li.originaux a:first-of-type {
   top: 29%;
@@ -6878,6 +6880,8 @@ fieldset[disabled] #qui .container-fluid aside .galleries li.references a:first-
   -webkit-box-shadow: 7px 6px 0px 0px #ffffff;
   box-shadow: 7px 6px 0px 0px #ffffff;
   line-height: 0.3;
+  padding-left: 6px;
+  padding-right: 6px;
   -webkit-box-shadow: -7px 6px 0px 0px #ffffff;
   box-shadow: -7px 6px 0px 0px #ffffff;
   -webkit-transform-origin: top right;
@@ -7060,6 +7064,10 @@ fieldset[disabled] #qui .container-fluid aside .galleries li.originaux a:first-o
   width: auto;
   height: 238px;
 }
+#qui .container aside .galleries li.originaux a:nth-of-type(2) img:hover,
+#qui .container-fluid aside .galleries li.originaux a:nth-of-type(2) img:hover {
+  opacity: 0.5;
+}
 #qui .container aside .galleries li.revue a:first-of-type,
 #qui .container-fluid aside .galleries li.revue a:first-of-type {
   bottom: 4%;
@@ -7074,6 +7082,8 @@ fieldset[disabled] #qui .container-fluid aside .galleries li.originaux a:first-o
   -webkit-box-shadow: 7px 6px 0px 0px #ffffff;
   box-shadow: 7px 6px 0px 0px #ffffff;
   line-height: 0.3;
+  padding-left: 6px;
+  padding-right: 6px;
 }
 #qui .container aside .galleries li.revue a:first-of-type:hover,
 #qui .container-fluid aside .galleries li.revue a:first-of-type:hover,
@@ -7234,6 +7244,10 @@ fieldset[disabled] #qui .container-fluid aside .galleries li.revue a:first-of-ty
   width: auto;
   height: 230%;
 }
+#qui .container aside .galleries li.revue a:nth-of-type(2) img:hover,
+#qui .container-fluid aside .galleries li.revue a:nth-of-type(2) img:hover {
+  opacity: 0.5;
+}
 #abc {
   /*
    * Work here to theme “abécédaire” screen.
@@ -7260,6 +7274,8 @@ fieldset[disabled] #qui .container-fluid aside .galleries li.revue a:first-of-ty
   -webkit-box-shadow: 7px 6px 0px 0px #ffffff;
   box-shadow: 7px 6px 0px 0px #ffffff;
   line-height: 0.3;
+  padding-left: 6px;
+  padding-right: 6px;
   display: block;
   line-height: 1em;
   padding: 3px 3px 3px 3px;
@@ -7483,6 +7499,8 @@ body.abc {
   -webkit-box-shadow: 7px 6px 0px 0px #ffffff;
   box-shadow: 7px 6px 0px 0px #ffffff;
   line-height: 0.3;
+  padding-left: 6px;
+  padding-right: 6px;
 }
 .active > .btn-primary,
 .btn-primary:hover,

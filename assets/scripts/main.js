@@ -23,7 +23,7 @@ jQuery(document).ready(function($) {
 
   // SCROLL
   initScroll();
-  initHomeNavClick();
+  //initHomeNavClick();
 
   // AUDIO PLAYER
   initSound();
@@ -148,7 +148,7 @@ function initSound() {
 
 }
 
-function initHomeNavClick() {
+/*function initHomeNavClick() {
 
   $('#home nav').on('click', 'a', function(event) {
     event.preventDefault();
@@ -162,7 +162,7 @@ function initHomeNavClick() {
     }
   });
 
-}
+}*/
 
 
 
@@ -172,6 +172,9 @@ function initHomeNavClick() {
 
 function initScroll() {
 
+  var nx = ny = 0;
+
+
   stepx = $('article').width();
   stepy = $('article').height();
 
@@ -180,16 +183,32 @@ function initScroll() {
     stepy = $('article').height();
   });
 
+  $('#home nav').on('click', 'a', function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      var target = $(this).attr("href");
+      if( target == "#abc"){
+        nx=0;
+        ny=2;
+        moveCamera(nx,ny)
+      }else {
+        var index  = $(target).index();
+        nx=index;
+        ny=1;
+        moveCamera(index,1);
+      }
+    });
+
 
   if( supportsTouch ) {
 
     var ix, iy, dx = 0, dy = 0;
     var s = 50;
-    var nx = ny = 0;
+    /*var nx = ny = 0;*/
 
-    $('body').on('hidden.bs.modal', '.modal', function () {
-      moveCamera(nx,ny);
-    });
+  //  $('body').on('hidden.bs.modal', '.modal', function () {
+  //    moveCamera(nx,ny);
+  //  });
 
     $('#home, #qui, #abc').on({
       'touchstart': function(event) {
@@ -213,22 +232,38 @@ function initScroll() {
         // console.log('dy',dy);
 
         if( dx > s ) {
-          nx ++;
-          moveCamera(nx,ny);
+          if (nx<12){
+              nx ++;
+              moveCamera(nx,ny);
+            } else {
+              moveCamera(12,ny);
+            }
         } else if( dx < -s ) {
-          nx --;
-          moveCamera(nx,ny);
+          if (nx>0){
+              nx --;
+              moveCamera(nx,ny);
+            } else {
+              moveCamera(0,ny);
+            }
         } else if( dy > s ) {
-          ny ++;
-          moveCamera(nx,ny);
+          if (ny<2){
+              ny ++;
+              moveCamera(nx,ny);
+            } else {
+              moveCamera(nx,2);
+            }
         } else if( dy < -s ) {
-          ny --;
-          moveCamera(nx,ny);
+          if (ny>0){
+              ny --;
+              moveCamera(nx,ny);
+            } else {
+              moveCamera(nx,0);
+            }
         }
 
         dx = 0;
         dy = 0;
-        // console.log("["+nx+','+ny+"]");
+        //console.log("["+nx+','+ny+"]");
       }
     });
 
@@ -240,6 +275,7 @@ function initScroll() {
     $('body > section').on('scrollstop', {latency: 100}, scrollXStop);
   }
 }
+
 
 function moveCamera(x,y) {
 
