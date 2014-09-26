@@ -415,7 +415,6 @@ body {
 #sound-play-pause {
   position: fixed; bottom: @grid-gutter-width; right: @grid-gutter-width; z-index: 10;
   background-color: rgba(255, 51, 0, 0.8) ; opacity: 0.5;
-  &:hover, &:focus { opacity:1; }
 }
 
 
@@ -597,7 +596,7 @@ body.abc {
 -----------------------------------------------------------------------------*/
 
 @media (orientation: portrait) {
-header, section, footer, button{display:none;}
+header, section, footer, button, #sound-play-pause, .help, .modal.fade.in, .modal-backdrop, #loader {display:none!important;}
   body {height: 0;}
   .portrait-msg{
     margin-top: 31%;

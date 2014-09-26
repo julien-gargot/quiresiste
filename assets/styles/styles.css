@@ -7389,10 +7389,6 @@ fieldset[disabled] #abc section li a.active {
   background-color: rgba(255, 51, 0, 0.8);
   opacity: 0.5;
 }
-#sound-play-pause:hover,
-#sound-play-pause:focus {
-  opacity: 1;
-}
 .modal-content {
   box-shadow: none;
 }
@@ -7570,8 +7566,13 @@ body.abc {
   header,
   section,
   footer,
-  button {
-    display: none;
+  button,
+  #sound-play-pause,
+  .help,
+  .modal.fade.in,
+  .modal-backdrop,
+  #loader {
+    display: none!important;
   }
   body {
     height: 0;
